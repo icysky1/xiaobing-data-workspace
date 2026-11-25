@@ -1,0 +1,18 @@
+tio":1,"totalTime":0,"logo":{"type":"none"},"background":{"type":"color","color":{"x":0,"y":0,"z":0,"w":1}},"watermarkLocation":"default","autoFit":true},"physics":{"physicsEngine":"","gravity":{"x":0,"y":-10,"z":0},"allowSleep":true,"sleepThreshold":0.1,"autoSimulation":true,"fixedTimeStep":0.0166667,"maxSubSteps":1,"defaultMaterial":"ba21476f-2866-4f81-9c4d-6e359316e448"}}
+	define("@babel/runtime/helpers/Arrayincludes.js", function(require, module, exports){ 			
+Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{value:function(r,e){if(null==this)throw new TypeError('"this" is null or not defined');var t=Object(this),n=t.length>>>0;if(0==n)return!1;for(var i,o,a=0|e,u=Math.max(0<=a?a:n-Math.abs(a),0);u<n;){if((i=t[u])===(o=r)||"number"==typeof i&&"number"==typeof o&&isNaN(i)&&isNaN(o))return!0;u++}return!1}}); 
+ 			});
+ 		define("@babel/runtime/helpers/Objectentries.js", function(require, module, exports){ 			
+Object.entries||(Object.entries=function(e){for(var r=Object.keys(e),t=r.length,n=new Array(t);t--;)n[t]=[r[t],e[r[t]]];return n}); 
+ 			});
+ 		define("@babel/runtime/helpers/Objectvalues.js", function(require, module, exports){ 			
+Object.values||(Object.values=function(e){if(e!==Object(e))throw new TypeError("Object.values called on a non-object");var t,r=[];for(t in e)Object.prototype.hasOwnProperty.call(e,t)&&r.push(e[t]);return r}); 
+ 			});
+ 		define("@babel/runtime/helpers/arrayLikeToArray.js", function(require, module, exports){ 			
+function _arrayLikeToArray(r,a){(null==a||a>r.length)&&(a=r.length);for(var e=0,n=new Array(a);e<a;e++)n[e]=r[e];return n}module.exports=_arrayLikeToArray; 
+ 			});
+ 		define("@babel/runtime/helpers/createForOfIteratorHelper.js", function(require, module, exports){ 			
+var unsupportedIterableToArray=require("./unsupportedIterableToArray");function _createForOfIteratorHelper(r,e){var t="undefined"!=typeof Symbol&&r[Symbol.iterator]||r["@@iterator"];if(!t){if(Array.isArray(r)||(t=unsupportedIterableToArray(r))||e&&r&&"number"==typeof r.length){t&&(r=t);var n=0,o=function(){};return{s:o,n:function(){return n>=r.length?{done:!0}:{done:!1,value:r[n++]}},e:function(r){throw r},f:o}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,u=!0,i=!1;return{s:function(){t=t.call(r)},n:function(){var r=t.next();return u=r.done,r},e:function(r){i=!0,a=r},f:function(){try{u||null==t.return||t.return()}finally{if(i)throw a}}}}module.exports=_createForOfIteratorHelper; 
+ 			});
+ 		define("@babel/runtime/helpers/defineProperty.js", function(require, module, exports){ 			
+var toPropertyKey=require("./toPropertyKey");function _defineProperty(e,r,t){return(r=toPropertyKey(r))in e?Object.defineProperty(e,r,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[r]=t,e}mod

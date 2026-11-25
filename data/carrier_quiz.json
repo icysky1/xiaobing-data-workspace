@@ -1,0 +1,7921 @@
+{
+ "total": 417,
+ "note": "correctAnswers=选项前K个(K=空格数)",
+ "questions": [
+  {
+   "id": 230001,
+   "question": "刘备{0}顾茅庐，请诸葛{1}出山",
+   "blanks": 2,
+   "correctAnswers": [
+    "三",
+    "亮"
+   ],
+   "options": [
+    "三",
+    "亮",
+    "量",
+    "暗",
+    "靓",
+    "不亮",
+    "空明",
+    "孔子",
+    "仲达",
+    "懿",
+    "操"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230002,
+   "question": "西楚霸王，名叫：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "项羽"
+   ],
+   "options": [
+    "项羽",
+    "大禹",
+    "关羽",
+    "小雨",
+    "项少龙",
+    "佩奇",
+    "李元霸",
+    "达文西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230003,
+   "question": "秦始皇统一了{0}国",
+   "blanks": 1,
+   "correctAnswers": [
+    "六"
+   ],
+   "options": [
+    "六",
+    "三",
+    "五",
+    "美",
+    "德",
+    "法",
+    "韩",
+    "英",
+    "六十",
+    "十六",
+    "十五"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230004,
+   "question": "武松打虎，用的武器是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "拳头"
+   ],
+   "options": [
+    "拳头",
+    "飞刀",
+    "AK",
+    "加特林",
+    "板砖",
+    "越王剑",
+    "方天戟",
+    "情花毒"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230005,
+   "question": "孙悟空被五指山，压了{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "五百年"
+   ],
+   "options": [
+    "五百年",
+    "五十年",
+    "一千年",
+    "一万年",
+    "一亿年",
+    "五百天",
+    "五月天",
+    "三十天",
+    "五千年"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230006,
+   "question": "曹操的小名是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "阿瞒"
+   ],
+   "options": [
+    "阿瞒",
+    "孟德",
+    "孔明",
+    "子龙",
+    "奉孝",
+    "玄德",
+    "傲天",
+    "良辰",
+    "刘波"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230007,
+   "question": "唐朝大将，秦琼姓：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "秦"
+   ],
+   "options": [
+    "秦",
+    "泰",
+    "奉",
+    "奏",
+    "泰",
+    "奉",
+    "奏"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230008,
+   "question": "{0}是一名巾帼英雄",
+   "blanks": 1,
+   "correctAnswers": [
+    "秦良玉"
+   ],
+   "options": [
+    "秦良玉",
+    "李元霸",
+    "程咬金",
+    "夏侯惇",
+    "董卓",
+    "樊哙",
+    "张飞",
+    "尉迟恭"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230009,
+   "question": "送分题：1+1={0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "2"
+   ],
+   "options": [
+    "2",
+    "10"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230010,
+   "question": "李世民发动{0}之变，夺权成功",
+   "blanks": 1,
+   "correctAnswers": [
+    "玄武门"
+   ],
+   "options": [
+    "玄武门",
+    "朱雀门",
+    "白虎门",
+    "龙虎门",
+    "青龙门",
+    "精武门",
+    "金拱门"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230011,
+   "question": "送分题：《小兵有前途》这款游戏真{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "好玩"
+   ],
+   "options": [
+    "好玩"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230012,
+   "question": "纸上谈兵的主角是：赵{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "括"
+   ],
+   "options": [
+    "括",
+    "云",
+    "匡胤",
+    "州桥",
+    "公明",
+    "灵儿",
+    "谈兵"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230013,
+   "question": "七步成诗，才高八斗，说的是：曹{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "植"
+   ],
+   "options": [
+    "植",
+    "丕",
+    "殖",
+    "不值",
+    "不易",
+    "操",
+    "冲"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230014,
+   "question": "《说唐》中，李元霸在四明山之战，每秒击杀{0}人",
+   "blanks": 1,
+   "correctAnswers": [
+    "55"
+   ],
+   "options": [
+    "55",
+    "3",
+    "5",
+    "1",
+    "2",
+    "4",
+    "10"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230015,
+   "question": "《资治通鉴》中，{0}一个人着追数千人打",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘裕"
+   ],
+   "options": [
+    "刘裕",
+    "貂蝉",
+    "华佗",
+    "孙悟空",
+    "刘禅",
+    "林黛玉",
+    "刘备",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230016,
+   "question": "送分题：“小兵有{0}？”",
+   "blanks": 1,
+   "correctAnswers": [
+    "前途"
+   ],
+   "options": [
+    "前途",
+    "钱图",
+    "前凸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230017,
+   "question": "正史记载的百人斩猛将有：项羽、冉闵、夏鲁奇、{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杨再兴"
+   ],
+   "options": [
+    "杨再兴",
+    "杨玉环",
+    "吕布",
+    "武则天",
+    "小兵钱",
+    "鬼谷子",
+    "林黛玉"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230018,
+   "question": "古代四大美女包括：西施、貂蝉、杨玉环、{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "王昭君"
+   ],
+   "options": [
+    "王昭君",
+    "花木兰",
+    "苏妲己",
+    "赵飞燕",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230019,
+   "question": "以下是古代四大美男子的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "高长恭"
+   ],
+   "options": [
+    "高长恭",
+    "李元霸",
+    "程咬金",
+    "朱元璋",
+    "鳌拜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230020,
+   "question": "辅佐周武王伐纣的是：姜{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "子牙"
+   ],
+   "options": [
+    "子牙",
+    "子龙",
+    "维",
+    "伯约",
+    "小白",
+    "文"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230021,
+   "question": "越王勾践的宝剑叫：{0}剑",
+   "blanks": 1,
+   "correctAnswers": [
+    "勾践"
+   ],
+   "options": [
+    "勾践",
+    "热干",
+    "卧薪",
+    "大宝",
+    "倚天"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230022,
+   "question": "史记的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "司马迁"
+   ],
+   "options": [
+    "司马迁",
+    "司马懿",
+    "司马昭",
+    "司马炎",
+    "罗贯中",
+    "曹雪芹",
+    "施耐庵",
+    "司马光"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230023,
+   "question": "以下是医生的人为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "华佗"
+   ],
+   "options": [
+    "华佗",
+    "华雄",
+    "华安",
+    "华子",
+    "华强"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230024,
+   "question": "谁是大忠臣：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "诸葛亮"
+   ],
+   "options": [
+    "诸葛亮",
+    "司马懿",
+    "王莽",
+    "曹操",
+    "安禄山",
+    "朱全忠",
+    "鳌拜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230025,
+   "question": "发明“曌”字的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "武则天"
+   ],
+   "options": [
+    "武则天",
+    "朱元璋",
+    "李世民",
+    "乾隆",
+    "李清照"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230026,
+   "question": "十六国时代最著名的以少胜多的战役是：{0}之战",
+   "blanks": 1,
+   "correctAnswers": [
+    "淝水"
+   ],
+   "options": [
+    "淝水",
+    "临冬城",
+    "顶上",
+    "圣杯",
+    "王者",
+    "瓦坎达",
+    "诛仙",
+    "峡谷"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230027,
+   "question": "以下谁是“十三太保”之一：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李存孝"
+   ],
+   "options": [
+    "李存孝",
+    "李逍遥",
+    "李世民",
+    "小兵李",
+    "李广",
+    "李时珍"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230028,
+   "question": "百家姓第一名是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "赵"
+   ],
+   "options": [
+    "赵",
+    "钱",
+    "孙",
+    "李",
+    "张",
+    "王",
+    "周",
+    "吴",
+    "迈克尔",
+    "约翰"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230029,
+   "question": "汉初三杰包括：张良、韩信、{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "萧何"
+   ],
+   "options": [
+    "萧何",
+    "萧峰",
+    "慕容复",
+    "慕容恪",
+    "萧衍"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230030,
+   "question": "请背诵《二十四史》全文：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "过关"
+   ],
+   "options": [
+    "过关",
+    "不会",
+    "不会",
+    "不会",
+    "不会",
+    "不会",
+    "不会",
+    "不会",
+    "不会",
+    "不会",
+    "不会"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230031,
+   "question": "“王侯将相，宁有{0}乎？”",
+   "blanks": 1,
+   "correctAnswers": [
+    "种"
+   ],
+   "options": [
+    "种",
+    "财",
+    "命",
+    "知"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230032,
+   "question": "大禹治水，{0}过家门而不入",
+   "blanks": 1,
+   "correctAnswers": [
+    "三"
+   ],
+   "options": [
+    "三",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二",
+    "二"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230033,
+   "question": "\"小兵王\"在本游戏中是\"小兵\"还是\"兵王\"?{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "小兵"
+   ],
+   "options": [
+    "小兵",
+    "兵王"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230034,
+   "question": "历史上，“除三害”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "周处"
+   ],
+   "options": [
+    "周处",
+    "吕布",
+    "周瑜",
+    "桂林仔",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230035,
+   "question": "谁不是蜀汉五虎将之一：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "魏延"
+   ],
+   "options": [
+    "魏延",
+    "关羽",
+    "黄忠",
+    "张飞",
+    "赵云",
+    "马超"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230036,
+   "question": "朱元璋的原名叫：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "朱重八"
+   ],
+   "options": [
+    "朱重八",
+    "朱重九",
+    "朱傲天",
+    "张无忌",
+    "朱天赐",
+    "朱重五",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230037,
+   "question": "“千军万马避白袍”，说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "陈庆之"
+   ],
+   "options": [
+    "陈庆之",
+    "赵云",
+    "罗成",
+    "白起",
+    "白素贞",
+    "白居易"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230038,
+   "question": "平定安史之乱的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "郭子仪"
+   ],
+   "options": [
+    "郭子仪",
+    "郭靖",
+    "李世民",
+    "秦琼",
+    "小兵郭"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230039,
+   "question": "《小兵有前途》是一款{0}游戏",
+   "blanks": 1,
+   "correctAnswers": [
+    "跑商"
+   ],
+   "options": [
+    "跑商",
+    "恋爱",
+    "3A",
+    "动作",
+    "射击"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230040,
+   "question": "《虞美人》的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李煜"
+   ],
+   "options": [
+    "李煜",
+    "项羽",
+    "虞姬",
+    "曹操",
+    "李白",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230041,
+   "question": "赵匡胤在{0}兵变，黄袍加身",
+   "blanks": 1,
+   "correctAnswers": [
+    "陈桥"
+   ],
+   "options": [
+    "陈桥",
+    "卢沟桥",
+    "玄武门",
+    "山海关",
+    "孟婆桥",
+    "麦当劳"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230042,
+   "question": "谁和杨家将没有关系：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杨戬"
+   ],
+   "options": [
+    "杨戬",
+    "杨延昭",
+    "穆桂英",
+    "杨业",
+    "杨宗保"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230043,
+   "question": "南侠展昭被封为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "御猫"
+   ],
+   "options": [
+    "御猫",
+    "北侠",
+    "丞相",
+    "国师",
+    "御鼠",
+    "汤姆猫"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230044,
+   "question": "以下谁和其他人没有血缘关系：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "孙悟空"
+   ],
+   "options": [
+    "孙悟空",
+    "孙坚",
+    "孙权",
+    "孙策",
+    "孙尚香"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230045,
+   "question": "春秋五霸肯定不包括的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "嬴政"
+   ],
+   "options": [
+    "嬴政",
+    "姜小白",
+    "勾践",
+    "阖闾",
+    "重耳"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230046,
+   "question": "《史记》里刺杀秦始皇的刺客是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "荆轲"
+   ],
+   "options": [
+    "荆轲",
+    "无名",
+    "史密斯",
+    "阿卡丽",
+    "澜",
+    "李白"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230047,
+   "question": "神话中，女娲造的是{0}，补的是{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "人",
+    "天"
+   ],
+   "options": [
+    "人",
+    "天",
+    "孽",
+    "钱",
+    "纸",
+    "锅"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230048,
+   "question": "神话中，盘古开{0}辟{1}，创造世界",
+   "blanks": 2,
+   "correctAnswers": [
+    "天",
+    "地"
+   ],
+   "options": [
+    "天",
+    "地",
+    "荒",
+    "心",
+    "土",
+    "大"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230049,
+   "question": "《封神演义》中，姬昌有{0}个儿子",
+   "blanks": 1,
+   "correctAnswers": [
+    "100"
+   ],
+   "options": [
+    "100",
+    "10",
+    "1",
+    "3",
+    "0"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230050,
+   "question": "以下哪位是财神：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "赵公明"
+   ],
+   "options": [
+    "赵公明",
+    "李元霸",
+    "哪吒",
+    "白玉堂",
+    "和珅"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230051,
+   "question": "按朝代顺序填空：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "唐",
+    "宋",
+    "元"
+   ],
+   "options": [
+    "唐",
+    "宋",
+    "元"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230052,
+   "question": "按朝代顺序填空：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "夏",
+    "商",
+    "周"
+   ],
+   "options": [
+    "夏",
+    "商",
+    "周"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230053,
+   "question": "按朝代顺序填空：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "元",
+    "明",
+    "清"
+   ],
+   "options": [
+    "元",
+    "明",
+    "清"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230054,
+   "question": "按朝代顺序填空：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "秦",
+    "汉",
+    "晋"
+   ],
+   "options": [
+    "秦",
+    "汉",
+    "晋"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230055,
+   "question": "按朝代顺序填空：{0}、{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "西汉",
+    "东汉"
+   ],
+   "options": [
+    "西汉",
+    "东汉"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230056,
+   "question": "按朝代顺序填空：{0}、{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "北宋",
+    "南宋"
+   ],
+   "options": [
+    "北宋",
+    "南宋"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230057,
+   "question": "按朝代顺序填空：{0}、{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "十六国",
+    "南北朝"
+   ],
+   "options": [
+    "十六国",
+    "南北朝"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230058,
+   "question": "本游戏中“黄色势力”的名字是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山海"
+   ],
+   "options": [
+    "山海",
+    "流云",
+    "磐龙"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 0
+  },
+  {
+   "id": 230059,
+   "question": "本游戏中“红色势力”的名字是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "流云"
+   ],
+   "options": [
+    "流云",
+    "磐龙",
+    "山海"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 0
+  },
+  {
+   "id": 230060,
+   "question": "本游戏中“蓝色势力”的名字是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "磐龙"
+   ],
+   "options": [
+    "磐龙",
+    "山海",
+    "流云"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 0
+  },
+  {
+   "id": 230061,
+   "question": "“羽之神勇，千古无二”,说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "项羽"
+   ],
+   "options": [
+    "项羽",
+    "关羽",
+    "羽泉",
+    "张宇",
+    "李元霸",
+    "段子羽",
+    "林丹",
+    "羽毛球"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230062,
+   "question": "“但行好事，莫问前程”出自：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "冯道"
+   ],
+   "options": [
+    "冯道",
+    "李白",
+    "李煜",
+    "曹操",
+    "李元霸",
+    "雷锋"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230063,
+   "question": "“醉里挑灯看{0}，梦回吹角连{1}！”",
+   "blanks": 2,
+   "correctAnswers": [
+    "剑",
+    "营"
+   ],
+   "options": [
+    "剑",
+    "营",
+    "梦",
+    "宫",
+    "刀",
+    "光",
+    "箭",
+    "鹰",
+    "兵"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230064,
+   "question": "“{0}十功名尘与土,{1}千里路云和月”",
+   "blanks": 2,
+   "correctAnswers": [
+    "三",
+    "八"
+   ],
+   "options": [
+    "三",
+    "八",
+    "二",
+    "四",
+    "五",
+    "六",
+    "七",
+    "一"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230065,
+   "question": "成吉思汗被称为：“一代{0}”",
+   "blanks": 1,
+   "correctAnswers": [
+    "天骄"
+   ],
+   "options": [
+    "天骄",
+    "天王",
+    "大娇",
+    "阿胶",
+    "巨星",
+    "天子"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230066,
+   "question": "奴隶出身，后来成为皇帝的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "石勒"
+   ],
+   "options": [
+    "石勒",
+    "朱元璋",
+    "刘备",
+    "黄巢",
+    "宋江",
+    "赵匡胤"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230067,
+   "question": "传说昆阳之战，刘秀召唤了：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "陨石"
+   ],
+   "options": [
+    "陨石",
+    "神兽",
+    "杨戬",
+    "刑天",
+    "蚩尤",
+    "警察",
+    "神龙"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230068,
+   "question": "找出名字不一样的小兵：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "小兵冯"
+   ],
+   "options": [
+    "小兵冯",
+    "小兵马",
+    "小兵马",
+    "小兵马",
+    "小兵马",
+    "小兵马",
+    "小兵马",
+    "小兵马",
+    "小兵马",
+    "小兵马",
+    "小兵马"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230069,
+   "question": "以下哪位是数学家：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "祖冲之"
+   ],
+   "options": [
+    "祖冲之",
+    "祖国人",
+    "林冲之",
+    "林平之",
+    "陈庆之",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230070,
+   "question": "独孤信的女儿，隋朝开国皇后是：独孤{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "伽罗"
+   ],
+   "options": [
+    "伽罗",
+    "求败",
+    "咖喱",
+    "玉环",
+    "终老"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230071,
+   "question": "收复燕云十六州的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "徐达"
+   ],
+   "options": [
+    "徐达",
+    "柴荣",
+    "李靖",
+    "白起",
+    "赵匡胤",
+    "赵光义"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230072,
+   "question": "上帝的二儿子，耶稣的弟弟是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "洪秀全"
+   ],
+   "options": [
+    "洪秀全",
+    "黄巢",
+    "耶律齐",
+    "方腊",
+    "陈友谅",
+    "核头酥",
+    "椰奶"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230073,
+   "question": "提出“知行合一”的人是：王{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "阳明"
+   ],
+   "options": [
+    "阳明",
+    "重阳",
+    "安石",
+    "羲之",
+    "傲天",
+    "刘波"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230074,
+   "question": "李白的诗作：十步杀{0}人，{1}里不留行",
+   "blanks": 2,
+   "correctAnswers": [
+    "一",
+    "千"
+   ],
+   "options": [
+    "一",
+    "千",
+    "十",
+    "万",
+    "百",
+    "亿"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230075,
+   "question": "“封狼居胥”的将军是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "霍去病"
+   ],
+   "options": [
+    "霍去病",
+    "关羽",
+    "白起",
+    "常遇春",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230076,
+   "question": "号称“十全武功”的皇帝是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "乾隆"
+   ],
+   "options": [
+    "乾隆",
+    "李世民",
+    "刘彻",
+    "朱棣",
+    "刘邦",
+    "嬴政"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230077,
+   "question": "使出千古阳谋“金刀计”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "王猛"
+   ],
+   "options": [
+    "王猛",
+    "王萌",
+    "王蒙",
+    "王莽",
+    "王濛",
+    "王金刀"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230078,
+   "question": "正史中，阵前斩杀敌将官职最高的将军是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "黄忠"
+   ],
+   "options": [
+    "黄忠",
+    "李元霸",
+    "项羽",
+    "吕布",
+    "金将军",
+    "岳飞",
+    "常遇春"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230079,
+   "question": "隋朝的开国皇帝是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杨坚"
+   ],
+   "options": [
+    "杨坚",
+    "杨戬",
+    "姬昌",
+    "杨广",
+    "姬发",
+    "杨玉环"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230080,
+   "question": "商朝的开国皇帝是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "商汤"
+   ],
+   "options": [
+    "商汤",
+    "殷纣王",
+    "武丁",
+    "嬴政",
+    "姬发",
+    "姬昌",
+    "妇好"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230081,
+   "question": "西汉“云台二十八将”之首是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "邓禹"
+   ],
+   "options": [
+    "邓禹",
+    "冯异",
+    "吕布",
+    "韩信",
+    "李元霸",
+    "赵云",
+    "白起"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230082,
+   "question": "秦琼在凌烟阁二十四功臣的排名为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "24"
+   ],
+   "options": [
+    "24",
+    "1",
+    "3",
+    "5",
+    "7",
+    "10"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230083,
+   "question": "杨贵妃的名字叫：杨{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "玉环"
+   ],
+   "options": [
+    "玉环",
+    "王环",
+    "玉怀",
+    "王环",
+    "玉杯",
+    "元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230084,
+   "question": "《史记》记载，孔子的身高接近{0}米",
+   "blanks": 1,
+   "correctAnswers": [
+    "2"
+   ],
+   "options": [
+    "2",
+    "1.5",
+    "1.6",
+    "1.7",
+    "5",
+    "10"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230085,
+   "question": "以下哪位人物在正史中没有记载：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "皮卡丘"
+   ],
+   "options": [
+    "皮卡丘",
+    "王昭君",
+    "杨玉环",
+    "西施",
+    "甄姬",
+    "虞姬"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230086,
+   "question": "传说姜子牙{0}多岁，才出山辅佐周文王",
+   "blanks": 1,
+   "correctAnswers": [
+    "70"
+   ],
+   "options": [
+    "70",
+    "60",
+    "50",
+    "40",
+    "30",
+    "20",
+    "10",
+    "300"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230087,
+   "question": "“国士无双”，说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "韩信"
+   ],
+   "options": [
+    "韩信",
+    "关羽",
+    "秦琼",
+    "徐达",
+    "诸葛亮",
+    "吕布",
+    "项羽"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230088,
+   "question": "“闻鸡起舞”，说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "祖逖"
+   ],
+   "options": [
+    "祖逖",
+    "谢安",
+    "祖冲之",
+    "岳飞",
+    "张辽",
+    "谢玄",
+    "鸡"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230089,
+   "question": "“东山再起”，说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "谢安"
+   ],
+   "options": [
+    "谢安",
+    "谢玄",
+    "苻坚",
+    "刘备",
+    "刘邦",
+    "刘秀",
+    "山"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230090,
+   "question": "“气吞万里如虎”，说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘裕"
+   ],
+   "options": [
+    "刘裕",
+    "孙权",
+    "孙坚",
+    "武松",
+    "岳飞",
+    "吕布",
+    "虎"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230091,
+   "question": "“图穷匕见”，说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "荆轲"
+   ],
+   "options": [
+    "荆轲",
+    "童林",
+    "赵云",
+    "聂政",
+    "聂隐娘",
+    "专诸",
+    "图图"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230092,
+   "question": "“周公吐哺，天下归心”，周公是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "周公旦"
+   ],
+   "options": [
+    "周公旦",
+    "周瑜",
+    "周树人",
+    "周处",
+    "周杰伦",
+    "周亚夫"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230093,
+   "question": "“粉身碎骨浑不怕，要留清白在人间”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "于谦"
+   ],
+   "options": [
+    "于谦",
+    "李清照",
+    "李白",
+    "辛弃疾",
+    "刘备",
+    "曹操"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230094,
+   "question": "“人生自古谁无死，留取丹心照汗青”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "文天祥"
+   ],
+   "options": [
+    "文天祥",
+    "范仲淹",
+    "辛弃疾",
+    "李白",
+    "李清照",
+    "李煜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230095,
+   "question": "“苟利国家生死以，岂因祸福避趋之”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "林则徐"
+   ],
+   "options": [
+    "林则徐",
+    "文天祥",
+    "霍去病",
+    "辛弃疾",
+    "李清照",
+    "诸葛亮"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230096,
+   "question": "“勿以恶小而为之，勿以善小而不为”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘备"
+   ],
+   "options": [
+    "刘备",
+    "刘邦",
+    "刘秀",
+    "刘彻",
+    "小兵刘",
+    "刘浩存"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230097,
+   "question": "“满堂花醉三千客，一剑霜寒十四州”说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "钱镠"
+   ],
+   "options": [
+    "钱镠",
+    "荆轲",
+    "刘备",
+    "勾践",
+    "盖聂",
+    "阿青",
+    "李逍遥"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230098,
+   "question": "“封侯非我意，但愿海波平”的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "戚继光"
+   ],
+   "options": [
+    "戚继光",
+    "李元霸",
+    "岳飞",
+    "辛弃疾",
+    "李白",
+    "霍去病",
+    "李广"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230099,
+   "question": "“杀尽江南百万兵，腰间宝剑血犹腥”的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "朱元璋"
+   ],
+   "options": [
+    "朱元璋",
+    "曹操",
+    "宇文泰",
+    "项羽",
+    "黄巢",
+    "李自成",
+    "王莽"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230100,
+   "question": "“四十年来家国，三千里地山河”的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李煜"
+   ],
+   "options": [
+    "李煜",
+    "曹植",
+    "花蕊夫人",
+    "王昭君",
+    "蔡文姬",
+    "许褚",
+    "苏惠"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230101,
+   "question": "《赵氏孤儿》的主角是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "赵武"
+   ],
+   "options": [
+    "赵武",
+    "赵云",
+    "赵匡胤",
+    "赵光义",
+    "李元霸",
+    "赵姬",
+    "赵武灵王",
+    "赵公明",
+    "赵飞燕"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230102,
+   "question": "《三国志平话》中，寓意\"海角天涯无对\"，赵云的兵器是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "涯角枪"
+   ],
+   "options": [
+    "涯角枪",
+    "海角枪",
+    "龙胆枪",
+    "偃月刀",
+    "狙击枪",
+    "屠龙刀",
+    "手里剑"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230103,
+   "question": "“春风又绿江南岸，明月何时照我还”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "王安石"
+   ],
+   "options": [
+    "王安石",
+    "范仲淹",
+    "辛弃疾",
+    "李白",
+    "李清照",
+    "王莽"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230104,
+   "question": "“生当为人杰，死亦做鬼雄”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李清照"
+   ],
+   "options": [
+    "李清照",
+    "项羽",
+    "辛弃疾",
+    "李白",
+    "王安石",
+    "张居正"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230105,
+   "question": "“功盖三分国，名成八阵图”说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "诸葛亮"
+   ],
+   "options": [
+    "诸葛亮",
+    "陆逊",
+    "刘备",
+    "曹操",
+    "赵云",
+    "孙权",
+    "周瑜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230106,
+   "question": "“了却君王天下事，赢得生前身后名”的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "辛弃疾"
+   ],
+   "options": [
+    "辛弃疾",
+    "范仲淹",
+    "岳飞",
+    "李白",
+    "戚继光",
+    "文天祥"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230107,
+   "question": "形容命途多舛的诗句：“{0}易老，{1}难封”",
+   "blanks": 2,
+   "correctAnswers": [
+    "冯唐",
+    "李广"
+   ],
+   "options": [
+    "冯唐",
+    "李广",
+    "李靖",
+    "白起",
+    "吴起",
+    "周瑜",
+    "孙策",
+    "卫青"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230108,
+   "question": "“皇帝”这个称号是从{0}开始的",
+   "blanks": 1,
+   "correctAnswers": [
+    "秦始皇"
+   ],
+   "options": [
+    "秦始皇",
+    "汉武帝",
+    "刘邦",
+    "黄帝",
+    "唐太宗",
+    "夏启",
+    "大禹"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230109,
+   "question": "“状元”最早出现在{0}？",
+   "blanks": 1,
+   "correctAnswers": [
+    "唐朝"
+   ],
+   "options": [
+    "唐朝",
+    "宋朝",
+    "汉朝",
+    "明朝",
+    "清朝",
+    "周朝",
+    "隋朝"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230110,
+   "question": "“虎符”在古代的作用是{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "调兵"
+   ],
+   "options": [
+    "调兵",
+    "打虎",
+    "装x",
+    "吃饭",
+    "护身符",
+    "纳妾"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230111,
+   "question": "秦始皇一生立了{0}位皇后",
+   "blanks": 1,
+   "correctAnswers": [
+    "0"
+   ],
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "6",
+    "12",
+    "300"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230112,
+   "question": "正史中，斩华雄的真正之人是{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "孙坚"
+   ],
+   "options": [
+    "孙坚",
+    "关羽",
+    "华佗",
+    "赵云",
+    "吕布",
+    "孙策",
+    "华雄"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230113,
+   "question": "“长风破浪会有时，直挂云帆济沧海”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李白"
+   ],
+   "options": [
+    "李白",
+    "风清扬",
+    "辛弃疾",
+    "郑和",
+    "王安石",
+    "张居正",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230114,
+   "question": "“沉鱼落雁，闭月羞花”中的“沉鱼”是{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "西施"
+   ],
+   "options": [
+    "西施",
+    "杨玉环",
+    "王昭君",
+    "貂蝉",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230115,
+   "question": "“沉鱼落雁，闭月羞花”中的“落雁”是{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "王昭君"
+   ],
+   "options": [
+    "王昭君",
+    "杨玉环",
+    "貂蝉",
+    "西施",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230116,
+   "question": "“沉鱼落雁，闭月羞花”中的“闭月”是{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "貂蝉"
+   ],
+   "options": [
+    "貂蝉",
+    "杨玉环",
+    "王昭君",
+    "西施",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230117,
+   "question": "“沉鱼落雁，闭月羞花”中的“羞花”是{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杨玉环"
+   ],
+   "options": [
+    "杨玉环",
+    "貂蝉",
+    "王昭君",
+    "西施",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230118,
+   "question": "那一本书是“四大名著”之一：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "西游记"
+   ],
+   "options": [
+    "西游记",
+    "三国志",
+    "史记",
+    "葫芦娃",
+    "绿楼梦",
+    "东游记"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230119,
+   "question": "被称为“兵圣”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "孙武"
+   ],
+   "options": [
+    "孙武",
+    "项羽",
+    "孙膑",
+    "韩信",
+    "白起",
+    "吴起",
+    "卫青",
+    "霍去病",
+    "李靖",
+    "蒙恬"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230120,
+   "question": "被称为“兵仙”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "韩信"
+   ],
+   "options": [
+    "韩信",
+    "项羽",
+    "孙武",
+    "孙膑",
+    "白起",
+    "吴起",
+    "卫青",
+    "霍去病",
+    "李靖",
+    "蒙恬"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230121,
+   "question": "被称为“中华第一勇士”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "蒙恬"
+   ],
+   "options": [
+    "蒙恬",
+    "韩信",
+    "项羽",
+    "孙武",
+    "孙膑",
+    "白起",
+    "吴起",
+    "卫青",
+    "霍去病",
+    "李靖"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230122,
+   "question": "被称为“史圣”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "司马迁"
+   ],
+   "options": [
+    "司马迁",
+    "王安石",
+    "孔子",
+    "墨子",
+    "史文龙",
+    "张居正",
+    "老子"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230123,
+   "question": "“一枝红艳露凝香，云雨巫山枉断肠。”说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杨玉环"
+   ],
+   "options": [
+    "杨玉环",
+    "貂蝉",
+    "王昭君",
+    "西施",
+    "李清照",
+    "武则天",
+    "赵飞燕",
+    "苏妲己",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230124,
+   "question": "“明犯强汉者，虽远必诛”是谁说的：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "陈汤"
+   ],
+   "options": [
+    "陈汤",
+    "卫青",
+    "李牧",
+    "霍去病",
+    "李靖",
+    "李广",
+    "刘彻",
+    "马援"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230125,
+   "question": "被称为“科圣”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "张衡"
+   ],
+   "options": [
+    "张衡",
+    "王安石",
+    "孔子",
+    "墨子",
+    "司马迁",
+    "张居正",
+    "爱迪生"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230126,
+   "question": "因大量脱离时代的改革，被戏称“穿越者”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "王莽"
+   ],
+   "options": [
+    "王莽",
+    "刘秀",
+    "商鞅",
+    "吴起",
+    "王安石",
+    "张居正",
+    "李斯",
+    "嬴政"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230127,
+   "question": "“不入虎穴，焉得虎子”是谁说的：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "班超"
+   ],
+   "options": [
+    "班超",
+    "卫青",
+    "李牧",
+    "霍去病",
+    "李靖",
+    "李广",
+    "刘彻",
+    "马援"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230128,
+   "question": "光武帝刘秀曾说过“仕宦当作执金吾，娶妻当得{0}”",
+   "blanks": 1,
+   "correctAnswers": [
+    "阴丽华"
+   ],
+   "options": [
+    "阴丽华",
+    "李清照",
+    "杨玉环",
+    "李元霸",
+    "苏妲己",
+    "王昭君",
+    "雨师妾"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230129,
+   "question": "《三国演义》中，谁吃了自己的眼睛：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "夏侯惇"
+   ],
+   "options": [
+    "夏侯惇",
+    "夏侯渊",
+    "夏侯操",
+    "夏侯霸",
+    "夏侯眼",
+    "夏侯狠",
+    "夏侯淳"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230130,
+   "question": "成语“势如破竹”说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杜预"
+   ],
+   "options": [
+    "杜预",
+    "项羽",
+    "破竹",
+    "祖逖",
+    "王濬",
+    "谢玄",
+    "陈庆之"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230131,
+   "question": "正史里唯一记载 “手杀数人” 的才女是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "谢道韫"
+   ],
+   "options": [
+    "谢道韫",
+    "李清照",
+    "苏蕙",
+    "王昭君",
+    "杨玉环",
+    "穆桂英",
+    "花木兰"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230132,
+   "question": "被称为“兰陵王”的将军是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "高长恭"
+   ],
+   "options": [
+    "高长恭",
+    "李存孝",
+    "韩信",
+    "项羽",
+    "白起",
+    "吴起",
+    "卫青",
+    "花木兰",
+    "李靖"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230133,
+   "question": "史称“神武帝”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "高欢"
+   ],
+   "options": [
+    "高欢",
+    "宇文泰",
+    "嬴政",
+    "刘邦",
+    "刘彻",
+    "刘秀",
+    "李世民",
+    "赵匡胤",
+    "杨坚"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230134,
+   "question": "“万里赴戎机，关山度若飞”说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "花木兰"
+   ],
+   "options": [
+    "花木兰",
+    "穆桂英",
+    "邓婵玉",
+    "陶三春",
+    "梁红玉",
+    "秦良玉",
+    "樊梨花"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230135,
+   "question": "“四大巾帼”中“替父从军”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "花木兰"
+   ],
+   "options": [
+    "花木兰",
+    "穆桂英",
+    "樊梨花",
+    "梁红玉"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230136,
+   "question": "“四大巾帼”中“擂鼓战金山”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "梁红玉"
+   ],
+   "options": [
+    "梁红玉",
+    "穆桂英",
+    "樊梨花",
+    "花木兰"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230137,
+   "question": "“四大巾帼”中“大破天门阵”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "穆桂英"
+   ],
+   "options": [
+    "穆桂英",
+    "花木兰",
+    "樊梨花",
+    "梁红玉"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230138,
+   "question": "“四大巾帼”中获封“镇国一品夫人”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "樊梨花"
+   ],
+   "options": [
+    "樊梨花",
+    "穆桂英",
+    "花木兰",
+    "梁红玉"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230139,
+   "question": "传说死后成为阎罗王的隋朝名将是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "韩擒虎"
+   ],
+   "options": [
+    "韩擒虎",
+    "张须陀",
+    "杨素",
+    "贺若弼",
+    "史万岁",
+    "裴擒虎"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230140,
+   "question": "“三箭定天山”的名将是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "薛仁贵"
+   ],
+   "options": [
+    "薛仁贵",
+    "薛丁山",
+    "黄忠",
+    "李广",
+    "养由基",
+    "哲别",
+    "郭大侠"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230141,
+   "question": "“一人灭三国，皆生擒其主”的名将是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "苏定方"
+   ],
+   "options": [
+    "苏定方",
+    "尉迟恭",
+    "秦琼",
+    "高仙芝",
+    "徐世勣",
+    "郭子仪",
+    "李靖"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230142,
+   "question": "被称为“金枪老祖”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "夏鲁奇"
+   ],
+   "options": [
+    "夏鲁奇",
+    "项羽",
+    "罗成",
+    "王彦章",
+    "杨业",
+    "高思继",
+    "岳飞"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230143,
+   "question": "侍奉过10个君王的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "冯道"
+   ],
+   "options": [
+    "冯道",
+    "吕不韦",
+    "吕布",
+    "钱镠",
+    "石敬瑭",
+    "杨贵妃",
+    "武则天"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230144,
+   "question": "被称为“铁枪王”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "王彦章"
+   ],
+   "options": [
+    "王彦章",
+    "项羽",
+    "罗成",
+    "夏鲁奇",
+    "杨业",
+    "高思继",
+    "岳飞"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230145,
+   "question": "“驴车一夜两百里，不负大宋不负你”的“高粱河车神”是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "赵光义"
+   ],
+   "options": [
+    "赵光义",
+    "赵匡胤",
+    "辛弃疾",
+    "高思继",
+    "舒马赫",
+    "高怀德"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230146,
+   "question": "填空题：司马{0}砸{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "光",
+    "缸"
+   ],
+   "options": [
+    "光",
+    "缸",
+    "懿",
+    "昭",
+    "钢",
+    "肛",
+    "亮",
+    "公",
+    "关",
+    "锅",
+    "人"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230147,
+   "question": "被称为“武穆”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "岳飞"
+   ],
+   "options": [
+    "岳飞",
+    "岳云",
+    "关羽",
+    "姜子牙",
+    "韩信",
+    "霍去病",
+    "卫青"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230148,
+   "question": "《元史》记载，一生攻克城池700余座的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "郭侃"
+   ],
+   "options": [
+    "郭侃",
+    "托雷",
+    "速不台",
+    "忽必烈",
+    "木华黎",
+    "阿术",
+    "伯颜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230149,
+   "question": "主持编纂《永乐大典》的皇帝是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "朱棣"
+   ],
+   "options": [
+    "朱棣",
+    "朱元璋",
+    "朱允炆",
+    "朱由检",
+    "朱永乐",
+    "刘禅"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230150,
+   "question": "民间传说“前知五百年，后知五百载”的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘伯温"
+   ],
+   "options": [
+    "刘伯温",
+    "张居正",
+    "王阳明",
+    "李元霸",
+    "豆包",
+    "李自成"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230151,
+   "question": "奢香夫人是哪个朝代的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "明"
+   ],
+   "options": [
+    "明",
+    "宋",
+    "唐",
+    "秦",
+    "汉",
+    "夏",
+    "商",
+    "周"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230152,
+   "question": "抬棺出征，收复失地的清朝将领是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "左宗棠"
+   ],
+   "options": [
+    "左宗棠",
+    "林则徐",
+    "曾国藩",
+    "福康安",
+    "岳钟琪",
+    "鳌拜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230153,
+   "question": "领导“虎门销烟”的民族英雄是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "林则徐"
+   ],
+   "options": [
+    "林则徐",
+    "左宗棠",
+    "曾国藩",
+    "福康安",
+    "岳钟琪",
+    "鳌拜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230154,
+   "question": "鹿鼎公“韦爵爷”有多少位老婆：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "7"
+   ],
+   "options": [
+    "7",
+    "5",
+    "3",
+    "9",
+    "1",
+    "10",
+    "12",
+    "15",
+    "17",
+    "999"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230155,
+   "question": "“号称满洲第一巴图鲁”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "鳌拜"
+   ],
+   "options": [
+    "鳌拜",
+    "康熙",
+    "乾隆",
+    "雍正",
+    "岳钟琪",
+    "韦爵爷",
+    "甄嬛儿",
+    "敖丙",
+    "多隆"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230156,
+   "question": "被称为“闯王”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李自成"
+   ],
+   "options": [
+    "李自成",
+    "李世民",
+    "石达开",
+    "张士诚",
+    "张献忠",
+    "洪秀全",
+    "张角"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230157,
+   "question": "“生当为人杰，死亦做鬼雄”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李清照"
+   ],
+   "options": [
+    "李清照",
+    "项羽",
+    "辛弃疾",
+    "李白",
+    "王安石",
+    "张居正",
+    "方腊"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230158,
+   "question": "当过“明教教主”的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "方腊"
+   ],
+   "options": [
+    "方腊",
+    "宋江",
+    "张三丰",
+    "张角",
+    "王阳明",
+    "陈友谅",
+    "张献忠"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230159,
+   "question": "外号“及时雨”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "宋江"
+   ],
+   "options": [
+    "宋江",
+    "武松",
+    "方腊",
+    "张角",
+    "黄巢",
+    "杨妙真",
+    "唐赛儿"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230160,
+   "question": "提倡“兼爱非攻”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "墨子"
+   ],
+   "options": [
+    "墨子",
+    "老子",
+    "孔子",
+    "孙子",
+    "孟子",
+    "韩非子",
+    "黑子"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230161,
+   "question": "古代唯一以军礼下葬的公主是：平阳{0}公主",
+   "blanks": 1,
+   "correctAnswers": [
+    "昭"
+   ],
+   "options": [
+    "昭",
+    "大",
+    "女",
+    "狠",
+    "太",
+    "月",
+    "氏",
+    "丽",
+    "琴",
+    "奇",
+    "凤",
+    "樱"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230162,
+   "question": "我国唯一有身份证的神仙是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "妈祖"
+   ],
+   "options": [
+    "妈祖",
+    "雷公",
+    "雷母",
+    "盘古",
+    "孙悟空",
+    "女娲",
+    "嫦娥",
+    "哪吒"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230163,
+   "question": "“官渡之战”中失败的一方是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "袁绍"
+   ],
+   "options": [
+    "袁绍",
+    "曹操",
+    "刘备",
+    "孙权",
+    "袁术",
+    "董卓",
+    "吕布"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230164,
+   "question": "“夷陵之战”中失败的一方是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘备"
+   ],
+   "options": [
+    "刘备",
+    "曹操",
+    "袁绍",
+    "孙权",
+    "袁术",
+    "董卓",
+    "吕布"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230165,
+   "question": "《史记》中的“四大刺客”不包括的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李白"
+   ],
+   "options": [
+    "李白",
+    "专诸",
+    "聂政",
+    "豫让",
+    "荆轲"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230166,
+   "question": "《小兵有前途》中，没有登场的英雄是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "包拯"
+   ],
+   "options": [
+    "包拯",
+    "高欢",
+    "宇文泰",
+    "嬴政",
+    "刘邦",
+    "刘彻",
+    "刘秀",
+    "李世民",
+    "赵匡胤",
+    "杨坚"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230167,
+   "question": "选出一位武力最低的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "林黛玉"
+   ],
+   "options": [
+    "林黛玉",
+    "项羽",
+    "李元霸",
+    "孙悟空",
+    "哪吒",
+    "杨戬",
+    "吕布",
+    "关羽",
+    "赵云"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230168,
+   "question": "“项庄舞剑，意在沛公”，沛公是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘邦"
+   ],
+   "options": [
+    "刘邦",
+    "刘备",
+    "项羽",
+    "韩信",
+    "张良",
+    "沛公",
+    "刘秀",
+    "刘禅",
+    "刘大锤"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230169,
+   "question": "冷兵器时代，陆地疆域最大的帝王是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "蒙哥"
+   ],
+   "options": [
+    "蒙哥",
+    "李世民",
+    "嬴政",
+    "大禹",
+    "刘邦",
+    "朱元璋",
+    "忽必烈",
+    "康熙",
+    "乾隆",
+    "司马炎"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230170,
+   "question": "《宋史》中，岳飞背后的刺字为：{0}报国",
+   "blanks": 1,
+   "correctAnswers": [
+    "尽忠"
+   ],
+   "options": [
+    "尽忠",
+    "精忠",
+    "尽量",
+    "全心",
+    "敬忠",
+    "忠精",
+    "忠心"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230171,
+   "question": "唐玄宗的后宫超过：{0}人",
+   "blanks": 1,
+   "correctAnswers": [
+    "4万"
+   ],
+   "options": [
+    "4万",
+    "1万",
+    "5千",
+    "3千",
+    "2千",
+    "2万",
+    "8千"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230172,
+   "question": "梁山好汉共有：{0}人",
+   "blanks": 1,
+   "correctAnswers": [
+    "108"
+   ],
+   "options": [
+    "108",
+    "54",
+    "109",
+    "128",
+    "129",
+    "98",
+    "118",
+    "119",
+    "64",
+    "78",
+    "88",
+    "2亿"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230173,
+   "question": "《二十四史》中，共有多少部：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "3x8"
+   ],
+   "options": [
+    "3x8",
+    "3x7",
+    "2x9",
+    "4x7"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230174,
+   "question": "\"八王之乱\"中，共有几个王：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "八"
+   ],
+   "options": [
+    "八",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入",
+    "入"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230175,
+   "question": "东汉末年，张角号召“{0}天已死，{1}天当立”",
+   "blanks": 2,
+   "correctAnswers": [
+    "苍",
+    "黄"
+   ],
+   "options": [
+    "苍",
+    "黄",
+    "上",
+    "老",
+    "蓝",
+    "白",
+    "沧",
+    "皇",
+    "青",
+    "黑",
+    "绿",
+    "仓"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230176,
+   "question": "“白莲教”的首领是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "唐赛儿"
+   ],
+   "options": [
+    "唐赛儿",
+    "李秀莲",
+    "白居易",
+    "李白",
+    "白素贞",
+    "杨妙真",
+    "王仙芝"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230177,
+   "question": "“待到秋来九月八，我花开后百花杀”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "黄巢"
+   ],
+   "options": [
+    "黄巢",
+    "陈胜",
+    "项羽",
+    "辛弃疾",
+    "李白",
+    "洪秀全",
+    "蚩尤",
+    "朱温",
+    "李自成"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230178,
+   "question": "晋惠帝听到百姓没饭吃，说：“何不食{0}”",
+   "blanks": 1,
+   "correctAnswers": [
+    "肉糜"
+   ],
+   "options": [
+    "肉糜",
+    "汉堡",
+    "排骨",
+    "肉汤",
+    "火烧",
+    "卤煮",
+    "披萨",
+    "辣条",
+    "火锅"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230179,
+   "question": "古代皇帝称孤道寡中的“寡”意思是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "少德"
+   ],
+   "options": [
+    "少德",
+    "弱小",
+    "寂寞",
+    "丧偶",
+    "孤单",
+    "装x",
+    "贫穷"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230180,
+   "question": "最爱写诗的皇帝是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "乾隆"
+   ],
+   "options": [
+    "乾隆",
+    "刘邦",
+    "李世民",
+    "康熙",
+    "嬴政",
+    "朱元璋",
+    "赵匡胤"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230181,
+   "question": "“可怜天下父母心”的作者：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "慈禧"
+   ],
+   "options": [
+    "慈禧",
+    "李清照",
+    "王昭君",
+    "芈月",
+    "李白",
+    "苏蕙",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230182,
+   "question": "民间传说的两位门神是：秦琼和{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "尉迟恭"
+   ],
+   "options": [
+    "尉迟恭",
+    "关羽",
+    "呼延灼",
+    "项羽",
+    "蒋门神",
+    "张飞"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230183,
+   "question": "《史记》记载，项羽一个人在乌江击杀敌军{0}人",
+   "blanks": 1,
+   "correctAnswers": [
+    "数百"
+   ],
+   "options": [
+    "数百",
+    "数十",
+    "三十",
+    "二十",
+    "十",
+    "五",
+    "八十",
+    "五亿"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230184,
+   "question": "“三国”指的是：{0}，蜀，吴",
+   "blanks": 1,
+   "correctAnswers": [
+    "魏"
+   ],
+   "options": [
+    "魏",
+    "曹",
+    "晋",
+    "汉",
+    "赵",
+    "卫",
+    "秦",
+    "周",
+    "胃"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230185,
+   "question": "“十六国”包括哪十六个国家：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "过关"
+   ],
+   "options": [
+    "过关",
+    "不知道",
+    "不知道",
+    "不知道",
+    "不知道",
+    "不知道",
+    "不知道",
+    "不知道",
+    "不知道",
+    "不知道",
+    "不知道"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230186,
+   "question": "后羿和嫦娥的关系是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "夫妻"
+   ],
+   "options": [
+    "夫妻",
+    "兄妹",
+    "师徒",
+    "母子",
+    "父女",
+    "姐弟",
+    "仇敌"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230187,
+   "question": "圣女贞德是哪国人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "法国"
+   ],
+   "options": [
+    "法国",
+    "美国",
+    "日本",
+    "韩国",
+    "西班牙",
+    "英国",
+    "阿根廷"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230188,
+   "question": "号称第六天魔王的织田信长是哪国人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "日本"
+   ],
+   "options": [
+    "日本",
+    "美国",
+    "法国",
+    "韩国",
+    "西班牙",
+    "英国",
+    "葡萄牙"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230189,
+   "question": "号称狮心王的查理一世是哪国人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "英格兰"
+   ],
+   "options": [
+    "英格兰",
+    "美国",
+    "法国",
+    "韩国",
+    "西班牙",
+    "葡萄牙",
+    "阿根廷"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230190,
+   "question": "埃及艳后是哪国人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "埃及"
+   ],
+   "options": [
+    "埃及",
+    "唉及",
+    "挨及",
+    "埃吉",
+    "唉吉",
+    "爱及"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230191,
+   "question": "白起坑杀40万赵军的战役是：{0}之战",
+   "blanks": 1,
+   "correctAnswers": [
+    "长平"
+   ],
+   "options": [
+    "长平",
+    "赤壁",
+    "太平",
+    "长安",
+    "淝水",
+    "虎牢关",
+    "官渡",
+    "长沙"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230192,
+   "question": "《隋唐演义》中的“四猛八大锤”有谁：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李元霸"
+   ],
+   "options": [
+    "李元霸",
+    "秦琼",
+    "尉迟恭",
+    "李世民",
+    "李白",
+    "李靖",
+    "李师师"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230193,
+   "question": "隋炀帝杨广大规模征发劳役修建的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "大运河"
+   ],
+   "options": [
+    "大运河",
+    "阿房宫",
+    "长城",
+    "鹿台",
+    "铜雀台",
+    "颐和园"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230194,
+   "question": "项羽“破釜沉舟”发生在：{0}之战",
+   "blanks": 1,
+   "correctAnswers": [
+    "巨鹿"
+   ],
+   "options": [
+    "巨鹿",
+    "垓下",
+    "鸿门",
+    "彭城",
+    "函谷关",
+    "虎牢关",
+    "赤壁"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230195,
+   "question": "“杯酒释兵权”发生在谁执政时期：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "赵匡胤"
+   ],
+   "options": [
+    "赵匡胤",
+    "赵光义",
+    "刘邦",
+    "李世民",
+    "朱元璋",
+    "忽必烈",
+    "杯酒"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230196,
+   "question": "“独尊儒术”政策由谁推行：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "汉武帝"
+   ],
+   "options": [
+    "汉武帝",
+    "秦始皇",
+    "刘邦",
+    "刘秀",
+    "王莽",
+    "夏启",
+    "杨坚"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230197,
+   "question": "项羽自刎的地点是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "乌江"
+   ],
+   "options": [
+    "乌江",
+    "长江",
+    "黄河",
+    "赤壁",
+    "汉水",
+    "渭河"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230198,
+   "question": "曹操挟天子后定都哪里：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "许昌"
+   ],
+   "options": [
+    "许昌",
+    "洛阳",
+    "长安",
+    "邺城",
+    "襄阳",
+    "成都",
+    "建业"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230199,
+   "question": "刘备称帝后定都哪里：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "成都"
+   ],
+   "options": [
+    "成都",
+    "汉中",
+    "荆州",
+    "益州",
+    "襄阳",
+    "长安",
+    "巴郡"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230200,
+   "question": "玄奘西行取经的终点是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "天竺"
+   ],
+   "options": [
+    "天竺",
+    "西域",
+    "印度",
+    "吐蕃",
+    "波斯",
+    "楼兰",
+    "天堂"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230201,
+   "question": "郑和下西洋最远到达哪里：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "非洲"
+   ],
+   "options": [
+    "非洲",
+    "印度",
+    "东南亚",
+    "阿拉伯",
+    "波斯",
+    "冥王星",
+    "月球"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230202,
+   "question": "刘秀建立的朝代是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "东汉"
+   ],
+   "options": [
+    "东汉",
+    "西汉",
+    "蜀汉",
+    "后汉",
+    "南汉",
+    "北汉"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230203,
+   "question": "司马炎是谁的孙子：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "司马懿"
+   ],
+   "options": [
+    "司马懿",
+    "司马昭",
+    "司马师",
+    "司马伦",
+    "司马孚",
+    "大司马",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230204,
+   "question": "赵匡胤建立北宋时定都哪里：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "开封"
+   ],
+   "options": [
+    "开封",
+    "洛阳",
+    "长安",
+    "南京",
+    "杭州",
+    "成都",
+    "襄阳"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230205,
+   "question": "不属于“战国四大名将”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "乐毅"
+   ],
+   "options": [
+    "乐毅",
+    "王翦",
+    "李牧",
+    "廉颇",
+    "白起"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230206,
+   "question": "不属于古代“四大发明”之一的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "手游"
+   ],
+   "options": [
+    "手游",
+    "造纸",
+    "印刷",
+    "火药",
+    "指南针"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230207,
+   "question": "历史上唯一被灭十族的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "方孝孺"
+   ],
+   "options": [
+    "方孝孺",
+    "商鞅",
+    "韩信",
+    "李斯",
+    "蓝玉",
+    "李善长",
+    "董卓"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230208,
+   "question": "“天子守国门，君王死社稷”说的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "明朝"
+   ],
+   "options": [
+    "明朝",
+    "唐朝",
+    "北宋",
+    "南宋",
+    "西汉",
+    "东汉",
+    "蜀汉"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230209,
+   "question": "二十四史正统帝位里，从没出过姓{0}的开国皇帝",
+   "blanks": 1,
+   "correctAnswers": [
+    "张"
+   ],
+   "options": [
+    "张",
+    "刘",
+    "李",
+    "赵",
+    "曹",
+    "孙",
+    "朱",
+    "杨",
+    "司马",
+    "宇文"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230210,
+   "question": "《封神演义》中，最终谁没有被封神：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "哪吒"
+   ],
+   "options": [
+    "哪吒",
+    "黄天化",
+    "申公豹",
+    "闻仲",
+    "邓婵玉",
+    "赵公明",
+    "魔礼青"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230211,
+   "question": "诛仙剑阵、万仙阵、{0}阵，都出自《封神演义》",
+   "blanks": 1,
+   "correctAnswers": [
+    "十绝"
+   ],
+   "options": [
+    "十绝",
+    "八卦",
+    "却月",
+    "连环马",
+    "铁锁",
+    "天门",
+    "鸳鸯"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230212,
+   "question": "“六花阵”的发明者为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李靖"
+   ],
+   "options": [
+    "李靖",
+    "韩信",
+    "戚继光",
+    "诸葛亮",
+    "刘裕",
+    "徐达",
+    "李世民"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230213,
+   "question": "“鸳鸯阵”的发明者为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "戚继光"
+   ],
+   "options": [
+    "戚继光",
+    "韩信",
+    "李靖",
+    "诸葛亮",
+    "刘裕",
+    "徐达",
+    "李世民"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230214,
+   "question": "“却月阵”的发明者为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘裕"
+   ],
+   "options": [
+    "刘裕",
+    "韩信",
+    "李靖",
+    "诸葛亮",
+    "戚继光",
+    "徐达",
+    "李世民"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230215,
+   "question": "淝水之战是前秦获胜：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230216,
+   "question": "成吉思汗建立了元朝：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230217,
+   "question": "靖难之役是朱棣发动的：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230218,
+   "question": "唐朝在隋朝之前：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230219,
+   "question": "元朝在宋朝之后：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230220,
+   "question": "关羽、张飞、赵云，桃园三结义：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230221,
+   "question": "武则天建立了“周”：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230222,
+   "question": "明朝废除了丞相制度：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230223,
+   "question": "安史之乱发生在唐朝：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230224,
+   "question": "夏朝是中国历史上第一个世袭制朝代：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230225,
+   "question": "姜小白就是齐桓公：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230226,
+   "question": "刘备实行了焚书坑儒：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230227,
+   "question": "光武中兴是在刘邦统治时期：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230228,
+   "question": "华雄发明了 “麻沸散”：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230229,
+   "question": "司马炎结束了三国分裂局面：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230230,
+   "question": "王羲之被尊称为 “书圣”：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230231,
+   "question": "送分题：1+1=2：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230232,
+   "question": "科举制度正式诞生于隋朝：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230233,
+   "question": "北宋司马光主持编写了《资本通鉴》：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230234,
+   "question": "孔子编写了《论语》：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230235,
+   "question": "郑成功下西洋共进行了7次：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230236,
+   "question": "老子就是太上老君：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230237,
+   "question": "唐朝建立者是李世民：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230238,
+   "question": "南宋的建立者是赵构：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230239,
+   "question": "清朝建立者是努尔哈赤：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230240,
+   "question": "越王勾践卧薪尝胆，最终击败吴王孙权：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230241,
+   "question": "伏羲发明了八卦：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230242,
+   "question": "康熙是乾隆的爸爸：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230243,
+   "question": "按时间先后顺序填空：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "尧",
+    "舜",
+    "禹"
+   ],
+   "options": [
+    "尧",
+    "舜",
+    "禹"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230244,
+   "question": "“运筹帷幄”指的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "张良"
+   ],
+   "options": [
+    "张良",
+    "张飞",
+    "樊哙",
+    "李逵",
+    "程咬金",
+    "项羽",
+    "吕布",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230245,
+   "question": "霍去病和霍元甲是兄弟：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230246,
+   "question": "李世民自认是李广的后人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230247,
+   "question": "“云想衣裳花想容，春风拂槛露华浓”指的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杨玉环"
+   ],
+   "options": [
+    "杨玉环",
+    "西施",
+    "貂蝉",
+    "王昭君",
+    "甄嬛",
+    "芈月",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230248,
+   "question": "唯一凭战功封侯，被记载到正史将相列传里的巾帼英雄是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "秦良玉"
+   ],
+   "options": [
+    "秦良玉",
+    "花木兰",
+    "穆桂英",
+    "邓婵玉",
+    "陶三春",
+    "梁红玉",
+    "樊梨花"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230249,
+   "question": "高渐离是位乐师，同时也是位刺客：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230250,
+   "question": "“逐鹿之战”的交战双方是：黄帝和{0}{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "蚩",
+    "尤"
+   ],
+   "options": [
+    "蚩",
+    "尤",
+    "刑",
+    "天",
+    "神",
+    "农",
+    "女",
+    "娲",
+    "共",
+    "工",
+    "伏",
+    "羲"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230251,
+   "question": "“马超”在《小兵有前途》中的品质为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "优秀"
+   ],
+   "options": [
+    "优秀",
+    "普通",
+    "卓越",
+    "绝世",
+    "神话"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230252,
+   "question": "“陆逊”在《小兵有前途》中的品质为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "卓越"
+   ],
+   "options": [
+    "卓越",
+    "普通",
+    "优秀",
+    "绝世",
+    "神话"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230253,
+   "question": "“秦琼”在《小兵有前途》中的品质为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "卓越"
+   ],
+   "options": [
+    "卓越",
+    "普通",
+    "优秀",
+    "绝世",
+    "神话"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230254,
+   "question": "“穆桂英”在《小兵有前途》中的品质为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "卓越"
+   ],
+   "options": [
+    "卓越",
+    "普通",
+    "优秀",
+    "绝世",
+    "神话"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230255,
+   "question": "“文天祥”在《小兵有前途》中的品质为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "绝世"
+   ],
+   "options": [
+    "绝世",
+    "普通",
+    "卓越",
+    "优秀",
+    "神话"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230256,
+   "question": "“蔺相如”在《小兵有前途》中的品质为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "优秀"
+   ],
+   "options": [
+    "优秀",
+    "普通",
+    "卓越",
+    "绝世",
+    "神话"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230257,
+   "question": "“李广”在《小兵有前途》中的品质为：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "优秀"
+   ],
+   "options": [
+    "优秀",
+    "普通",
+    "卓越",
+    "绝世",
+    "神话"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230258,
+   "question": "根据“马德堡半球实验”，被戏称“气密性”不好的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "商鞅"
+   ],
+   "options": [
+    "商鞅",
+    "李斯",
+    "韩信",
+    "周瑜",
+    "高长恭",
+    "白起",
+    "马隆"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230259,
+   "question": "谁不是“西方四大军事统帅”之一：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "特朗普"
+   ],
+   "options": [
+    "特朗普",
+    "拿破仑",
+    "凯撒",
+    "汉尼拔"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230260,
+   "question": "被现代网络戏称英文名为Judy的皇帝是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "朱棣"
+   ],
+   "options": [
+    "朱棣",
+    "朱元璋",
+    "刘邦",
+    "刘备",
+    "刘彻",
+    "李世民",
+    "李渊"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230261,
+   "question": "被现代网络戏称英文名为Harry的名臣是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "海瑞"
+   ],
+   "options": [
+    "海瑞",
+    "包拯",
+    "张居正",
+    "文天祥",
+    "王安石",
+    "司马光"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230262,
+   "question": "创造性地给妻子设计了露出双腿的过膝短裙的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "王莽"
+   ],
+   "options": [
+    "王莽",
+    "曹操",
+    "周瑜",
+    "李白",
+    "张飞",
+    "吴起",
+    "商鞅",
+    "李斯"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230263,
+   "question": "因连杀六位皇帝，被戏称为“六位帝皇完”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "刘裕"
+   ],
+   "options": [
+    "刘裕",
+    "吕布",
+    "项羽",
+    "冉闵",
+    "杨贵妃",
+    "商汤",
+    "曹操"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230264,
+   "question": "地狱笑话：{0}知马力，{1}见人心",
+   "blanks": 2,
+   "correctAnswers": [
+    "商鞅",
+    "比干"
+   ],
+   "options": [
+    "商鞅",
+    "比干",
+    "李斯",
+    "韩信",
+    "张良",
+    "吴起",
+    "白起",
+    "吕布",
+    "项羽"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230265,
+   "question": "地狱歇后语：{0}看路易十六，一眼望不到头",
+   "blanks": 1,
+   "correctAnswers": [
+    "夏侯惇"
+   ],
+   "options": [
+    "夏侯惇",
+    "张角",
+    "张良",
+    "孔子",
+    "老子",
+    "张辽",
+    "许褚",
+    "司马懿"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230266,
+   "question": "“三英战吕布”发生在：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "虎牢关"
+   ],
+   "options": [
+    "虎牢关",
+    "虎牢大",
+    "狗牢关",
+    "龙牢关",
+    "马牢关",
+    "狮牢关"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230267,
+   "question": "找出名字里没有“动物”的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "韩世忠"
+   ],
+   "options": [
+    "韩世忠",
+    "韩擒虎",
+    "马超",
+    "羊祜",
+    "扁鹊",
+    "赵子龙",
+    "鳌拜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230268,
+   "question": "找出不是一家人的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "曹彬"
+   ],
+   "options": [
+    "曹彬",
+    "曹操",
+    "曹丕",
+    "曹植",
+    "夏侯惇",
+    "夏侯渊",
+    "曹彰"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230269,
+   "question": "亚瑟王是哪里的人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "外地的"
+   ],
+   "options": [
+    "外地的",
+    "山东的",
+    "河北的",
+    "东北的",
+    "四川的",
+    "山西的"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230270,
+   "question": "唐朝人物名字：{0}则天、李{1}民、安禄{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "武",
+    "世",
+    "山"
+   ],
+   "options": [
+    "武",
+    "世",
+    "山",
+    "五",
+    "市",
+    "杉",
+    "易",
+    "舞",
+    "室",
+    "珊",
+    "午"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230271,
+   "question": "隋朝人物名字：{0}擒虎、{1}万岁、{2}若弼",
+   "blanks": 3,
+   "correctAnswers": [
+    "韩",
+    "史",
+    "贺"
+   ],
+   "options": [
+    "韩",
+    "史",
+    "贺",
+    "寒",
+    "王",
+    "赵",
+    "何",
+    "氏",
+    "孙",
+    "张",
+    "李"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230272,
+   "question": "五代十国人物名字：{0}彦章、{1}存勖、{2}敬瑭",
+   "blanks": 3,
+   "correctAnswers": [
+    "王",
+    "李",
+    "石"
+   ],
+   "options": [
+    "王",
+    "李",
+    "石",
+    "钱",
+    "刘",
+    "赵",
+    "何",
+    "氏",
+    "孙",
+    "张",
+    "韩"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230273,
+   "question": "三国人物名字：{0}云长、{1}翼德、{2}公瑾",
+   "blanks": 3,
+   "correctAnswers": [
+    "关",
+    "张",
+    "周"
+   ],
+   "options": [
+    "关",
+    "张",
+    "周",
+    "钱",
+    "刘",
+    "赵",
+    "何",
+    "氏",
+    "孙",
+    "王",
+    "韩"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230274,
+   "question": "南北朝人物名字：独{0}信、宇{1}泰、高{2}恭",
+   "blanks": 3,
+   "correctAnswers": [
+    "孤",
+    "文",
+    "长"
+   ],
+   "options": [
+    "孤",
+    "文",
+    "长",
+    "爪",
+    "纹",
+    "常",
+    "娲",
+    "义",
+    "凌",
+    "河",
+    "玉"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230275,
+   "question": "西汉人物名字：{0}去病、周{1}夫、赵飞{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "霍",
+    "亚",
+    "燕"
+   ],
+   "options": [
+    "霍",
+    "亚",
+    "燕",
+    "陈",
+    "雅",
+    "妍",
+    "旭",
+    "鸟",
+    "昭",
+    "货",
+    "雀"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230276,
+   "question": "春秋人物名字：伍子{0}、鬼{1}子、{2}由基",
+   "blanks": 3,
+   "correctAnswers": [
+    "胥",
+    "谷",
+    "养"
+   ],
+   "options": [
+    "胥",
+    "谷",
+    "养",
+    "旭",
+    "骨",
+    "羊",
+    "兆",
+    "非",
+    "亮",
+    "子",
+    "乐"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230277,
+   "question": "周朝人物名字：姜子{0}、雷{1}子、土{2}孙",
+   "blanks": 3,
+   "correctAnswers": [
+    "牙",
+    "震",
+    "行"
+   ],
+   "options": [
+    "牙",
+    "震",
+    "行",
+    "雅",
+    "鬼",
+    "贞",
+    "悟",
+    "亮",
+    "虚",
+    "伟",
+    "飞"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230278,
+   "question": "神话人物名字：盘{0}、{1}娲、嫦{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "古",
+    "女",
+    "娥"
+   ],
+   "options": [
+    "古",
+    "女",
+    "娥",
+    "天",
+    "男",
+    "我",
+    "羲",
+    "蚩",
+    "刑",
+    "炎",
+    "胥"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230279,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "康熙",
+    "雍正",
+    "乾隆"
+   ],
+   "options": [
+    "康熙",
+    "雍正",
+    "乾隆"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230280,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "司马懿",
+    "司马昭",
+    "司马炎"
+   ],
+   "options": [
+    "司马懿",
+    "司马昭",
+    "司马炎"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230281,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "孙坚",
+    "孙策",
+    "孙权"
+   ],
+   "options": [
+    "孙坚",
+    "孙策",
+    "孙权"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230282,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "杨业",
+    "杨延昭",
+    "穆桂英"
+   ],
+   "options": [
+    "杨业",
+    "杨延昭",
+    "穆桂英"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230283,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "谢安",
+    "谢道韫",
+    "谢玄"
+   ],
+   "options": [
+    "谢安",
+    "谢道韫",
+    "谢玄"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230284,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "卫青",
+    "霍去病",
+    "霍光"
+   ],
+   "options": [
+    "卫青",
+    "霍去病",
+    "霍光"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230285,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "李信",
+    "李广",
+    "李世民"
+   ],
+   "options": [
+    "李信",
+    "李广",
+    "李世民"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230286,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "项燕",
+    "项梁",
+    "项羽"
+   ],
+   "options": [
+    "项燕",
+    "项梁",
+    "项羽"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230287,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "华胥氏",
+    "伏羲",
+    "女娲"
+   ],
+   "options": [
+    "华胥氏",
+    "伏羲",
+    "女娲"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230288,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "姬昌",
+    "姬发",
+    "雷震子"
+   ],
+   "options": [
+    "姬昌",
+    "姬发",
+    "雷震子"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230289,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "岳飞",
+    "岳云",
+    "岳钟琪"
+   ],
+   "options": [
+    "岳飞",
+    "岳云",
+    "岳钟琪"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230290,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "托雷",
+    "蒙哥",
+    "忽必烈"
+   ],
+   "options": [
+    "托雷",
+    "蒙哥",
+    "忽必烈"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230291,
+   "question": "按照辈分大小排序：{0}、{1}、{2}",
+   "blanks": 3,
+   "correctAnswers": [
+    "朱元璋",
+    "朱棣",
+    "朱由检"
+   ],
+   "options": [
+    "朱元璋",
+    "朱棣",
+    "朱由检"
+   ],
+   "faceScore": 6,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230292,
+   "question": "我国最早的诗歌总集是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "诗经"
+   ],
+   "options": [
+    "诗经",
+    "春秋",
+    "楚辞",
+    "神曲",
+    "道德经",
+    "山海经"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230293,
+   "question": "我国最早的编年体史书是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "春秋"
+   ],
+   "options": [
+    "春秋",
+    "诗经",
+    "史记",
+    "楚辞",
+    "道德经",
+    "山海经"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230294,
+   "question": "我国最早的神话集是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山海经"
+   ],
+   "options": [
+    "山海经",
+    "春秋",
+    "诗经",
+    "封神榜",
+    "楚辞",
+    "道德经",
+    "西游记"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230295,
+   "question": "《三国演义》的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "罗贯中"
+   ],
+   "options": [
+    "罗贯中",
+    "吴承恩",
+    "曹雪芹",
+    "施耐庵",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230296,
+   "question": "西游记》的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "吴承恩"
+   ],
+   "options": [
+    "吴承恩",
+    "罗贯中",
+    "曹雪芹",
+    "施耐庵",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230297,
+   "question": "《水浒传》的作者是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "施耐庵"
+   ],
+   "options": [
+    "施耐庵",
+    "吴承恩",
+    "罗贯中",
+    "曹雪芹",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230298,
+   "question": "“天人合一”是谁的思想主张：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "庄子"
+   ],
+   "options": [
+    "庄子",
+    "老子",
+    "孟子",
+    "孔子",
+    "孙子",
+    "鬼谷子",
+    "龙傲天",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230299,
+   "question": "“黔首”是秦朝对老百姓的称呼：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230300,
+   "question": "“乞骸骨”指官员年老自行退休：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230301,
+   "question": "“殿试”是指{0}亲自主持的考试",
+   "blanks": 1,
+   "correctAnswers": [
+    "皇帝"
+   ],
+   "options": [
+    "皇帝",
+    "皇后",
+    "丞相",
+    "国师",
+    "战神",
+    "武神",
+    "特朗普"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230302,
+   "question": "明朝锦衣卫标配的武器叫：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "绣春刀"
+   ],
+   "options": [
+    "绣春刀",
+    "鸳鸯刀",
+    "屠龙刀",
+    "倚天剑",
+    "飞鱼刀",
+    "日轮刀",
+    "碧血剑"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230303,
+   "question": "我国最早的农民起义领导者是：陈{0}、吴{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "胜",
+    "广"
+   ],
+   "options": [
+    "胜",
+    "广",
+    "真",
+    "败",
+    "厂",
+    "光",
+    "佳",
+    "用",
+    "起",
+    "盛"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230304,
+   "question": "历史上第一位亡国之君是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "夏桀"
+   ],
+   "options": [
+    "夏桀",
+    "殷纣王",
+    "董卓",
+    "刘禅",
+    "商汤",
+    "周幽王",
+    "汉献帝"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230305,
+   "question": "涮羊肉最早起源于元朝：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230306,
+   "question": "象棋上的分界线叫：楚河{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "汉界"
+   ],
+   "options": [
+    "汉界",
+    "秦界",
+    "唐界",
+    "汉水",
+    "明水",
+    "宋界",
+    "秦川"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230307,
+   "question": "西王母住在：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "昆仑山"
+   ],
+   "options": [
+    "昆仑山",
+    "泰山",
+    "山西",
+    "天堂",
+    "西山",
+    "西安",
+    "西班牙"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230308,
+   "question": "夸父最后终于追上了太阳：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230309,
+   "question": "“丘八”是古代对{0}的贬义隐语",
+   "blanks": 1,
+   "correctAnswers": [
+    "小兵"
+   ],
+   "options": [
+    "小兵",
+    "商人",
+    "五品官",
+    "八品官",
+    "丘处机",
+    "猪八戒"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230310,
+   "question": "我国古代单日阵亡最高的战役是：{0}之战",
+   "blanks": 1,
+   "correctAnswers": [
+    "香积寺"
+   ],
+   "options": [
+    "香积寺",
+    "赤壁",
+    "淝水",
+    "官渡",
+    "虎牢关",
+    "巨鹿",
+    "长平",
+    "峡谷"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230311,
+   "question": "按朝代填人：（三国）{0}、（秦）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "张飞",
+    "蒙恬"
+   ],
+   "options": [
+    "张飞",
+    "蒙恬",
+    "韩信",
+    "陈胜",
+    "朱温",
+    "陈友谅",
+    "柴荣",
+    "郭威",
+    "郭子仪"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230312,
+   "question": "按朝代填人：（唐）{0}、（周）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "李靖",
+    "姬发"
+   ],
+   "options": [
+    "李靖",
+    "姬发",
+    "韩信",
+    "萧何",
+    "岳飞",
+    "朱元璋",
+    "杨坚",
+    "独孤信",
+    "大禹"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230313,
+   "question": "按朝代填人：（南宋）{0}、（东汉）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "岳云",
+    "刘秀"
+   ],
+   "options": [
+    "岳云",
+    "刘秀",
+    "刘邦",
+    "岳钟琪",
+    "鳌拜",
+    "蔺相如",
+    "田单",
+    "柴荣",
+    "鬼谷子"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230314,
+   "question": "按朝代填人：（北宋）{0}、（晋）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "王安石",
+    "谢安"
+   ],
+   "options": [
+    "王安石",
+    "谢安",
+    "李靖",
+    "薛仁贵",
+    "萧衍",
+    "李元霸",
+    "杨素",
+    "苻坚",
+    "慕容垂"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230315,
+   "question": "按朝代填人：（清）{0}、（元）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "左宗棠",
+    "哲别"
+   ],
+   "options": [
+    "左宗棠",
+    "哲别",
+    "韩信",
+    "赵云",
+    "李广",
+    "赵飞燕",
+    "柴荣",
+    "吕布",
+    "周亚夫"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230316,
+   "question": "按朝代填人：（明）{0}、（南北朝）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "徐达",
+    "高欢"
+   ],
+   "options": [
+    "徐达",
+    "高欢",
+    "岳飞",
+    "高宠",
+    "鬼谷子",
+    "林则徐",
+    "刘备",
+    "张角",
+    "石达开"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230317,
+   "question": "按朝代填人：（商）{0}、（十六国）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "恶来",
+    "刘渊"
+   ],
+   "options": [
+    "恶来",
+    "刘渊",
+    "韩信",
+    "陈胜",
+    "朱温",
+    "陈友谅",
+    "柴荣",
+    "郭威",
+    "郭子仪"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230318,
+   "question": "按朝代填人：（西汉）{0}、（五代十国）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "萧何",
+    "李存勖"
+   ],
+   "options": [
+    "萧何",
+    "李存勖",
+    "张角",
+    "陈胜",
+    "赵构",
+    "忽必烈",
+    "阿术",
+    "张飞",
+    "樊梨花"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230319,
+   "question": "按朝代填人：（春秋）{0}、（侠客）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "管仲",
+    "童林"
+   ],
+   "options": [
+    "管仲",
+    "童林",
+    "韩信",
+    "陈胜",
+    "朱温",
+    "陈友谅",
+    "柴荣",
+    "王翦",
+    "霍去病"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230320,
+   "question": "按朝代填人：（战国）{0}、（外族）{1}",
+   "blanks": 2,
+   "correctAnswers": [
+    "孙膑",
+    "李舜臣"
+   ],
+   "options": [
+    "孙膑",
+    "李舜臣",
+    "朱熹",
+    "陈胜",
+    "朱棣",
+    "诸葛亮",
+    "柴荣",
+    "冯道",
+    "张须陀"
+   ],
+   "faceScore": 4,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230321,
+   "question": "《西游记》中沙僧的原名是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "没原名"
+   ],
+   "options": [
+    "没原名",
+    "沙悟净",
+    "沙和尚",
+    "沙溢",
+    "沙宝亮",
+    "莎莎",
+    "丽莎",
+    "娜塔莎"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230322,
+   "question": "你是否赞成给本游戏的策划涨工资：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "赞成"
+   ],
+   "options": [
+    "赞成",
+    "别点",
+    "别点",
+    "别点",
+    "别点",
+    "别点",
+    "别点"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230323,
+   "question": "孔子的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山东"
+   ],
+   "options": [
+    "山东",
+    "河北",
+    "河南",
+    "陕西",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230324,
+   "question": "诸葛亮的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山东"
+   ],
+   "options": [
+    "山东",
+    "河北",
+    "河南",
+    "陕西",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230325,
+   "question": "张良的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "河南"
+   ],
+   "options": [
+    "河南",
+    "河北",
+    "山东",
+    "陕西",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230326,
+   "question": "岳飞的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "河南"
+   ],
+   "options": [
+    "河南",
+    "河北",
+    "山东",
+    "陕西",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230327,
+   "question": "李世民的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "甘肃"
+   ],
+   "options": [
+    "甘肃",
+    "河北",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230328,
+   "question": "白起的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "陕西"
+   ],
+   "options": [
+    "陕西",
+    "河北",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230329,
+   "question": "张飞的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "河北"
+   ],
+   "options": [
+    "河北",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230330,
+   "question": "赵云的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "河北"
+   ],
+   "options": [
+    "河北",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230331,
+   "question": "曹操的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "安徽"
+   ],
+   "options": [
+    "安徽",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230332,
+   "question": "朱元璋的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "安徽"
+   ],
+   "options": [
+    "安徽",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230333,
+   "question": "刘邦的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "江苏"
+   ],
+   "options": [
+    "江苏",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230334,
+   "question": "项羽的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "江苏"
+   ],
+   "options": [
+    "江苏",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230335,
+   "question": "关羽的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山西"
+   ],
+   "options": [
+    "山西",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230336,
+   "question": "霍去病的籍贯是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山西"
+   ],
+   "options": [
+    "山西",
+    "陕西",
+    "山东",
+    "河南",
+    "陕西"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230337,
+   "question": "杨坚和独孤伽罗的关系是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "夫妻"
+   ],
+   "options": [
+    "夫妻",
+    "兄妹",
+    "师徒",
+    "母子",
+    "父女",
+    "姐弟",
+    "仇敌"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230338,
+   "question": "柴荣和郭威的关系是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "父子"
+   ],
+   "options": [
+    "父子",
+    "兄弟",
+    "师徒",
+    "敌人",
+    "哥们"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230339,
+   "question": "高欢和宇文泰的关系是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "敌人"
+   ],
+   "options": [
+    "敌人",
+    "兄弟",
+    "师徒",
+    "父子",
+    "哥们"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230340,
+   "question": "李元霸和李世民的关系是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "兄弟"
+   ],
+   "options": [
+    "兄弟",
+    "敌人",
+    "师徒",
+    "父子",
+    "哥们"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230341,
+   "question": "曹操和夏侯惇的关系是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "兄弟"
+   ],
+   "options": [
+    "兄弟",
+    "敌人",
+    "师徒",
+    "父子",
+    "哥们"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230342,
+   "question": "韩信和韩非的关系是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "没关系"
+   ],
+   "options": [
+    "没关系",
+    "敌人",
+    "师徒",
+    "父子",
+    "兄弟"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230343,
+   "question": "“汉武帝”是刘备：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230344,
+   "question": "刘渊是刘备的孙子：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230345,
+   "question": "李靖和隋朝大将韩擒虎是亲戚：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230346,
+   "question": "岳飞的后代岳钟琪在清朝当官：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230347,
+   "question": "忽必烈是成吉思汗的孙子：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230348,
+   "question": "项籍就是项羽：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230349,
+   "question": "姜子牙也叫吕尚：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230350,
+   "question": "黄飞虎和黄飞鸿是一个人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230351,
+   "question": "司马懿是司马迁的后代：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230352,
+   "question": "正史中貂蝉是被关羽斩杀的：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230353,
+   "question": "黄巢科举中过状元：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230354,
+   "question": "孟姜女哭{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "长城"
+   ],
+   "options": [
+    "长城",
+    "长江",
+    "山海关",
+    "赤壁",
+    "故宫"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230355,
+   "question": "精卫{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "填海"
+   ],
+   "options": [
+    "填海",
+    "移山",
+    "治水",
+    "闹海",
+    "舞剑"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230356,
+   "question": "哪吒{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "闹海"
+   ],
+   "options": [
+    "闹海",
+    "补天",
+    "治水",
+    "填海",
+    "造人"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230357,
+   "question": "太公{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "钓鱼"
+   ],
+   "options": [
+    "钓鱼",
+    "补天",
+    "治水",
+    "填海",
+    "造人"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230358,
+   "question": "卧薪{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "尝胆"
+   ],
+   "options": [
+    "尝胆",
+    "生火",
+    "填胆",
+    "尝冰",
+    "哭长城"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230359,
+   "question": "三顾{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "茅庐"
+   ],
+   "options": [
+    "茅庐",
+    "草庐",
+    "茅房",
+    "茅屋",
+    "火芦"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230360,
+   "question": "约法{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "三章"
+   ],
+   "options": [
+    "三章",
+    "四章",
+    "二章",
+    "五章",
+    "六章"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230361,
+   "question": "{0}归赵",
+   "blanks": 1,
+   "correctAnswers": [
+    "完璧"
+   ],
+   "options": [
+    "完璧",
+    "嬴政",
+    "廉颇",
+    "负荆",
+    "秦王"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230362,
+   "question": "暗渡{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "陈仓"
+   ],
+   "options": [
+    "陈仓",
+    "陈胜",
+    "吴广",
+    "粮仓",
+    "明争"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230363,
+   "question": "{0}赴会",
+   "blanks": 1,
+   "correctAnswers": [
+    "单刀"
+   ],
+   "options": [
+    "单刀",
+    "双刀",
+    "双枪",
+    "砍刀",
+    "屠龙刀"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230364,
+   "question": "霸王{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "别姬"
+   ],
+   "options": [
+    "别姬",
+    "荼姬",
+    "茶几",
+    "别过",
+    "舞姬"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230365,
+   "question": "谁是大奸臣：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "董卓"
+   ],
+   "options": [
+    "董卓",
+    "诸葛亮",
+    "岳飞",
+    "比干",
+    "文天祥",
+    "于谦"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230366,
+   "question": "谁是美男子：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "高长恭"
+   ],
+   "options": [
+    "高长恭",
+    "许褚",
+    "李逵",
+    "程咬金",
+    "雷震子",
+    "土行孙"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230367,
+   "question": "谁是天文学家：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "郭守敬"
+   ],
+   "options": [
+    "郭守敬",
+    "诸葛亮",
+    "刘秀",
+    "王莽",
+    "武则天",
+    "刑天"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230368,
+   "question": "谁是数学家：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "祖冲之"
+   ],
+   "options": [
+    "祖冲之",
+    "司马迁",
+    "王羲之",
+    "华佗",
+    "李元霸",
+    "韩信"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230369,
+   "question": "“夸父逐日”出自：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山海经"
+   ],
+   "options": [
+    "山海经",
+    "金刚经",
+    "道德经",
+    "诗经"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230370,
+   "question": "妈祖的本名是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "林默"
+   ],
+   "options": [
+    "林默",
+    "林黛玉",
+    "林妈",
+    "林青霞",
+    "祖冲之"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230371,
+   "question": "朱元璋在哪里登基：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "南京"
+   ],
+   "options": [
+    "南京",
+    "北京",
+    "开封",
+    "吉林",
+    "东京",
+    "华盛顿"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230372,
+   "question": "一甲子是多少年：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "60"
+   ],
+   "options": [
+    "60",
+    "40",
+    "30",
+    "20",
+    "10",
+    "5"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230373,
+   "question": "我国“道德文化鼻祖”是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "舜"
+   ],
+   "options": [
+    "舜",
+    "董卓",
+    "王莽",
+    "朱温",
+    "司马懿",
+    "吕布"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230374,
+   "question": "天下第一奇山是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "黄山"
+   ],
+   "options": [
+    "黄山",
+    "泰山",
+    "北山",
+    "南山",
+    "庐山"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230375,
+   "question": "关羽喜欢读的书是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "春秋"
+   ],
+   "options": [
+    "春秋",
+    "史记",
+    "三国志",
+    "水浒传",
+    "红楼梦"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230376,
+   "question": "万里长城第一关是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "山海关"
+   ],
+   "options": [
+    "山海关",
+    "雁门关",
+    "虎牢关",
+    "海山关",
+    "嘉峪关"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230377,
+   "question": "“衣冠禽兽”最初指的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "文武官"
+   ],
+   "options": [
+    "文武官",
+    "狮子",
+    "海王",
+    "老百姓",
+    "渣男",
+    "渣女"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230378,
+   "question": "“滥竽充数”出自：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "韩非子"
+   ],
+   "options": [
+    "韩非子",
+    "诗经",
+    "水浒传",
+    "红楼梦",
+    "封神榜"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230379,
+   "question": "被誉为“科圣”的人是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "张衡"
+   ],
+   "options": [
+    "张衡",
+    "张角",
+    "李元霸",
+    "张飞",
+    "吕布",
+    "爱迪生"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230380,
+   "question": "被誉为明朝开国第一功臣的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "徐达"
+   ],
+   "options": [
+    "徐达",
+    "常遇春",
+    "刘伯温",
+    "关羽",
+    "王翦",
+    "李靖"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230381,
+   "question": "“老马识途”的主人公是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "管仲"
+   ],
+   "options": [
+    "管仲",
+    "马超",
+    "马隆",
+    "曹操",
+    "姜子牙",
+    "马继业"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230382,
+   "question": "“诗圣”是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "杜甫"
+   ],
+   "options": [
+    "杜甫",
+    "李白",
+    "李清照",
+    "乾隆",
+    "李元霸"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230383,
+   "question": "导致夏朝灭亡的是：{0}之战",
+   "blanks": 1,
+   "correctAnswers": [
+    "鸣条"
+   ],
+   "options": [
+    "鸣条",
+    "赤壁",
+    "灭夏",
+    "逐鹿",
+    "牧野"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230384,
+   "question": "导致商朝灭亡的是：{0}之战",
+   "blanks": 1,
+   "correctAnswers": [
+    "牧野"
+   ],
+   "options": [
+    "牧野",
+    "鸣条",
+    "赤壁",
+    "灭夏",
+    "逐鹿"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230385,
+   "question": "曹刿提出一鼓作气的战役是：{0}之战",
+   "blanks": 1,
+   "correctAnswers": [
+    "长勺"
+   ],
+   "options": [
+    "长勺",
+    "牧野",
+    "鸣条",
+    "灭夏",
+    "逐鹿"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230386,
+   "question": "发动“玄武门之变”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "李世民"
+   ],
+   "options": [
+    "李世民",
+    "朱元璋",
+    "李元霸",
+    "司马懿",
+    "武松",
+    "林黛玉"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230387,
+   "question": "发动“安史之乱”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "安禄山"
+   ],
+   "options": [
+    "安禄山",
+    "李世民",
+    "郭子仪",
+    "杨玉环",
+    "司马炎",
+    "武则天"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230388,
+   "question": "我国最早的纸币是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "交子"
+   ],
+   "options": [
+    "交子",
+    "包子",
+    "宝子",
+    "娇子",
+    "币子",
+    "钱子"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230389,
+   "question": "{0}攻入北京，明朝灭亡",
+   "blanks": 1,
+   "correctAnswers": [
+    "李自成"
+   ],
+   "options": [
+    "李自成",
+    "徐达",
+    "鳌拜",
+    "李世民",
+    "朱元璋",
+    "黄巢"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230390,
+   "question": "建立“太平天国”的是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "洪秀全"
+   ],
+   "options": [
+    "洪秀全",
+    "洪金宝",
+    "洪秀金",
+    "洪秀荃",
+    "共秀全"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230391,
+   "question": "刘邦原名：刘{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "季"
+   ],
+   "options": [
+    "季",
+    "德华",
+    "亦菲",
+    "备",
+    "玄德",
+    "秀",
+    "彻"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230392,
+   "question": "“学富五车”实际字数约现代几本书：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "2"
+   ],
+   "options": [
+    "2",
+    "10",
+    "100",
+    "500",
+    "5",
+    "55"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230393,
+   "question": "李存勖的“勖”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "xù"
+   ],
+   "options": [
+    "xù",
+    "mào",
+    "shù"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230394,
+   "question": "李光弼的“弼”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "bì"
+   ],
+   "options": [
+    "bì",
+    "bǎi",
+    "zhōu"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230395,
+   "question": "钱镠的“镠”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "liú"
+   ],
+   "options": [
+    "liú",
+    "liào",
+    "miù"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230396,
+   "question": "赵匡胤的“胤”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "yìn"
+   ],
+   "options": [
+    "yìn",
+    "rǎn",
+    "yìng"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230397,
+   "question": "朱熹的“熹”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "xī"
+   ],
+   "options": [
+    "xī",
+    "xǐ",
+    "xì"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230398,
+   "question": "冉闵的“冉”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "rǎn"
+   ],
+   "options": [
+    "rǎn",
+    "nǎn",
+    "ràng"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230399,
+   "question": "谢道韫的“韫”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "yùn"
+   ],
+   "options": [
+    "yùn",
+    "wēn",
+    "yǐn"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230400,
+   "question": "甄姬的“甄”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "zhēn"
+   ],
+   "options": [
+    "zhēn",
+    "jiān",
+    "qín"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230401,
+   "question": "樊哙的“哙”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "kuài"
+   ],
+   "options": [
+    "kuài",
+    "huì",
+    "guì"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230402,
+   "question": "王翦的“翦”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "jiǎn"
+   ],
+   "options": [
+    "jiǎn",
+    "qián",
+    "yǔ"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230403,
+   "question": "芈月的“芈”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "mǐ"
+   ],
+   "options": [
+    "mǐ",
+    "bēi",
+    "mǐn"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230404,
+   "question": "范蠡的“蠡”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "lǐ"
+   ],
+   "options": [
+    "lǐ",
+    "luó",
+    "zhōng"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230405,
+   "question": "褒姒的“姒”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "sì"
+   ],
+   "options": [
+    "sì",
+    "pǐ",
+    "bì"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230406,
+   "question": "伏羲的“羲”读音是：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "xī"
+   ],
+   "options": [
+    "xī",
+    "yì",
+    "xīe"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230407,
+   "question": "哪吒的性别是男：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230408,
+   "question": "周公旦姓姬：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230409,
+   "question": "姜小白就是齐桓公：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230410,
+   "question": "芈月是楚国人：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230411,
+   "question": "韩信被称为“兵仙”：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "对"
+   ],
+   "options": [
+    "对",
+    "错"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230412,
+   "question": "康熙姓康：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230413,
+   "question": "张良的哥哥叫张优：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230414,
+   "question": "李元霸手无缚鸡之力：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230415,
+   "question": "李清照和李白是亲戚：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230416,
+   "question": "刘禅被称为千古一帝：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  },
+  {
+   "id": 230417,
+   "question": "“将相和”说的是蔺相如和张飞：{0}",
+   "blanks": 1,
+   "correctAnswers": [
+    "错"
+   ],
+   "options": [
+    "错",
+    "对"
+   ],
+   "faceScore": 2,
+   "reduceTime": 2,
+   "weight": 100
+  }
+ ]
+}

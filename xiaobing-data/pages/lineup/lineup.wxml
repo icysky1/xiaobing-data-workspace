@@ -1,0 +1,412 @@
+<view class="card">
+  <!-- 我方 / 敌方 切换 -->
+  <view class="side-tabs">
+    <view class="side-tab ours {{side === 'ours' ? 'on' : ''}}" bindtap="switchSide" data-s="ours">🛡️ 我方阵容</view>
+    <view class="side-tab enemy {{side === 'enemy' ? 'on' : ''}}" bindtap="switchSide" data-s="enemy">⚔️ 敌方阵容</view>
+  </view>
+  <view class="head-row">
+    <view class="lab" style="flex:1">
+      {{side === 'ours' ? '我方' : '敌方'}}阵容 · 众生平等：全员 1 级基础值，只拼羁绊 / 阵营 / 阵容技能 / 技能 / 神兽
+    </view>
+    <view class="era-btn" bindtap="toggleCmpOverlay">🏷️ 阵营加成</view>
+  </view>
+
+  <!-- 布阵图：三排各 6 格，已上阵可拖动互换 -->
+  <view class="board">
+    <view class="cols">
+      <block wx:for="{{cols}}" wx:for-item="col" wx:key="key">
+        <view class="col">
+          <view class="col-head c-{{col.key}}">{{col.label}}</view>
+          <block wx:for="{{board}}" wx:key="idx" wx:for-item="s">
+            <block wx:if="{{s.col === col.key}}">
+              <view
+                class="cell {{picking && picking.slotIdx === s.idx ? 'active' : ''}} {{drag && drag.over === s.idx ? 'drop' : ''}} {{drag && drag.from === s.idx ? 'lift' : ''}}"
+                bindtap="cellTap"
+                data-idx="{{s.idx}}"
+                bind:touchstart="cellTouchStart"
+                catch:touchmove="cellTouchMove"
+                bind:touchend="cellTouchEnd"
+                bind:touchcancel="cellTouchEnd"
+              >
+                <block wx:if="{{s.unit}}">
+                  <view class="tile" style="border-color:{{s.unit.qcolor}}">
+                    <view class="slot-no">{{s.no}}号位</view>
+                    <view class="tile-top" style="background:{{s.unit.qcolor}}">
+                      {{s.unit.kind === 'pet' ? '神兽·1级' : '英雄·1级'}}
+                    </view>
+                    <view class="tile-name" style="color:{{s.unit.qcolor}}">{{s.unit.kind === 'pet' ? '🐉' : ''}}{{s.unit.name}}</view>
+                    <view class="tile-stat">
+                      武{{s.unit.forceMin}}-{{s.unit.forceMax}} 智{{s.unit.iqMin}}-{{s.unit.iqMax}}
+                      <block wx:if="{{s.unit.kind === 'pet'}}">（含继承）</block>
+                    </view>
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="cell-empty">＋</view>
+                  <view class="cell-hint">{{picking && picking.slotIdx === s.idx ? '选将中…' : '点选'}}</view>
+                </block>
+              </view>
+            </block>
+          </block>
+          <view class="col-formula">{{col.formula}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="mid-line">— 敌 军 方 向 在 上 ——</view>
+  </view>
+  <view class="dim tip-line">👆 按住已上阵的英雄/神兽拖到另一格即可互换位置；轻点已上阵单位可移除</view>
+
+  <view wx:if="{{picking}}" class="pool-switch">
+    <view class="ps {{pool === 'hero' ? 'on' : ''}}" bindtap="switchPool" data-p="hero">⚔️ 英雄</view>
+    <view class="ps {{pool === 'pet' ? 'on' : ''}}" bindtap="switchPool" data-p="pet">🐉 神兽</view>
+    <text class="dim" style="margin-left:auto;align-self:center">
+      {{pool === 'hero' ? '按时代选将（已按该排1级面板排序）' : '神兽全场唯一，可放任意格'}}
+    </text>
+  </view>
+  <scroll-view wx:if="{{picking && pool === 'hero'}}" scroll-x class="era-tabs">
+    <view
+      wx:for="{{poolTabs}}"
+      wx:key="*this"
+      class="era-tab {{curTab === index ? 'on' : ''}}"
+      bindtap="pickEra"
+      data-idx="{{index}}"
+    >{{item}}</view>
+  </scroll-view>
+  <scroll-view wx:if="{{picking && pool === 'pet'}}" scroll-x class="era-tabs">
+    <view
+      wx:for="{{petTabs}}"
+      wx:key="*this"
+      class="era-tab {{curTab === index ? 'on' : ''}}"
+      bindtap="pickEra"
+      data-idx="{{index}}"
+    >{{item}}</view>
+  </scroll-view>
+  <view class="search-bar" style="padding: 12rpx 0 0">
+    <input placeholder="{{picking ? (pool === 'pet' ? '搜神兽名' : '输入英雄名/称号搜索') : '点击布阵图上的空位开始排阵'}}" bindinput="onInput" bindblur="onBlur" value="{{keyword}}" focus="{{focusKw}}" />
+    <text wx:if="{{keyword}}" class="clear-x" bindtap="clearKeyword">×</text>
+  </view>
+  <view class="pool-grid">
+    <view
+      wx:for="{{poolList}}"
+      wx:key="id"
+      class="pool-chip"
+      style="border-color:{{item.qcolor}}"
+      bindtap="assign"
+      data-id="{{item.id}}"
+    >
+      <view class="chip-badge" style="background:{{item.qcolor}}">{{item.kind === 'pet' ? '兽' : ''}}</view>
+      <text class="chip-name" style="color:{{item.qcolor}}">{{item.name}}</text>
+    </view>
+  </view>
+  <view wx:if="{{picking && !poolList.length}}" class="dim" style="text-align:center;padding:16rpx 0">该分类下没有可上阵的单位</view>
+</view>
+
+<!-- 一键生成克制阵容 -->
+<view wx:if="{{side === 'ours'}}" class="card code-card">
+  <view class="lab">⚡ 一键生成克制阵容 · 依据敌方当前布阵自动配 16 英雄 + 神兽</view>
+  <!-- 神兽：一次只上一只，等级决定技能档位 -->
+  <view class="pet-pick">
+    <view class="pet-pick-head {{petPick.open ? 'on' : ''}}" bindtap="togglePetPick">
+      <text class="pet-pick-lab">🐾 神兽</text>
+      <text class="pet-pick-cnt"><text style="color:{{petPick.qcolor}}">{{petPick.cntLabel}}</text> {{petPick.open ? '▲ 收起' : '▼ 点此换兽'}}</text>
+    </view>
+    <view class="pet-lv">
+      <text class="pet-lv-lab">我方神兽等级</text>
+      <view class="pet-chips">
+        <view wx:for="{{petLvPresets}}" wx:key="*this" class="pet-chip {{petPick.lv === item ? 'on' : ''}}" bindtap="pickPetLv" data-v="{{item}}">{{item}}</view>
+      </view>
+      <input
+        class="pet-lv-input"
+        type="number"
+        value="{{petPick.lv}}"
+        placeholder="1~110"
+        bindinput="onPetLvTyping"
+        bindblur="onPetLvInput"
+        bindconfirm="onPetLvInput"
+      />
+    </view>
+    <view class="pet-lv">
+      <text class="pet-lv-lab">敌方神兽等级</text>
+      <view class="pet-chips">
+        <view wx:for="{{petLvPresets}}" wx:key="*this" class="pet-chip {{petLvEnemy === item ? 'on' : ''}}" bindtap="pickPetLvEnemy" data-v="{{item}}">{{item}}</view>
+      </view>
+      <input
+        class="pet-lv-input"
+        type="number"
+        value="{{petLvEnemy}}"
+        placeholder="1~110"
+        bindinput="onPetLvEnemyTyping"
+        bindblur="onPetLvEnemyInput"
+        bindconfirm="onPetLvEnemyInput"
+      />
+    </view>
+    <view class="pet-pick-sel">技能档位（按 Lv{{petPick.lv}} 生效）：{{petPick.tierLabel}}</view>
+  </view>
+  <view class="gen-row">
+    <view class="code-btn main gen-btn {{genRunning ? 'busy' : ''}}" bindtap="generateCounter">{{genRunning ? '搜索中…' : '⚡ 生成克制阵容'}}</view>
+    <view wx:if="{{genBanned.names.length}}" class="gen-switch" bindtap="clearBanned">✕ 清空屏蔽({{genBanned.names.length}})</view>
+  </view>
+  <view wx:if="{{petPick.open}}" class="pet-pick-body">
+    <view class="pet-pick-tip dim">👆 点一下选一只（同时只上一只）。神兽升级只涨技能档、不涨自身战力，所以等级只影响技能；我方/敌方神兽等级分开设置（默认都 110）</view>
+    <view class="pet-chips">
+      <view
+        wx:for="{{petPick.items}}"
+        wx:key="id"
+        class="pet-chip {{item.id === petPick.id ? 'on' : ''}}"
+        bindtap="petToggle"
+        data-id="{{item.id}}"
+      >
+        <text style="color:{{item.qcolor}}">{{item.id === petPick.id ? '✓ ' : ''}}{{item.name}}</text>
+      </view>
+    </view>
+    <view wx:if="{{petPick.tiers.length}}" class="pet-tier">
+      <view wx:for="{{petPick.tiers}}" wx:key="name" class="pet-tier-line">
+        <text class="pet-tier-n">{{item.name}}</text>
+        <text class="pet-tier-tag">当前 {{item.label}}（Lv{{item.need}} 解锁）</text>
+        <view class="dim">{{item.text}}</view>
+      </view>
+    </view>
+    <view class="pet-pick-acts">
+      <text class="pet-act" bindtap="togglePetPick">收起 ▲</text>
+    </view>
+  </view>
+  <view wx:if="{{genProgress}}" class="code-tip">{{genProgress}}</view>
+  <view wx:if="{{genTip}}" class="code-tip">{{genTip}}<text class="gen-undo" bindtap="undoGenerate"> ↩ 撤销本次生成</text></view>
+  <!-- 屏蔽没有的英雄：点选后重新生成，逐步逼近自己卡池能打赢的组合 -->
+  <view class="ban-pick">
+    <view class="pet-pick-head {{genBanned.open ? 'on' : ''}}" bindtap="toggleBanPanel">
+      <text class="pet-pick-lab">🚫 屏蔽英雄</text>
+      <text class="pet-pick-cnt">{{genBanned.chips.length ? (genBanned.names.length ? '已屏蔽 ' + genBanned.names.length + ' 名 · 点击标记/重试' : '阵容里有你没有的？点此标记') : '生成后可在此屏蔽没有的英雄' }} {{genBanned.open ? '▲' : '▼'}}</text>
+    </view>
+    <view wx:if="{{genBanned.names.length}}" class="pet-pick-sel">已屏蔽：{{genBanned.label}}</view>
+    <view wx:if="{{genBanned.open && genBanned.chips.length}}" class="pet-pick-body">
+      <view class="pet-pick-tip dim">👆 按「卡」屏蔽：点自己没有的那张（如黄金甲·精卫）标 ✗；同名的基础版/进化版互不影响；换敌方阵容后屏蔽自动清空</view>
+      <view class="pet-chips">
+        <view
+          wx:for="{{genBanned.chips}}"
+          wx:key="name"
+          class="pet-chip {{item.banned ? 'off' : ''}}"
+          bindtap="toggleBanChip"
+          data-name="{{item.name}}"
+        >{{item.banned ? '✗ ' : ''}}{{item.name}}</view>
+      </view>
+      <view class="pet-pick-acts">
+        <text class="pet-act" bindtap="banAndRegen">🚫 屏蔽标记者并重新生成</text>
+        <text class="pet-act" bindtap="clearBanned">清空屏蔽</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 实战推演：按实战流程 Monte Carlo -->
+<view class="card code-card">
+  <view class="lab">🎲 实战推演 · 被动 → 号位技能 → 阵容技能 → 军师技 → 单挑 → 比拼</view>
+  <view class="bs-sub">官方「众生平等」规则：所有英雄 1 级基础数值；羁绊、阵营、阵容、技能及神兽效果正常生效；科技、英雄星级、神器等养成不生效；兵书阵营克制仅在普通称王战计入，众生平等不计入 —— 本模拟器口径与此一致</view>
+  <view class="bs-sims">
+    <text class="bs-sims-lab">推演场次</text>
+    <view class="pet-chips">
+      <view
+        wx:for="{{battleSimPresets}}"
+        wx:key="*this"
+        class="pet-chip {{battleSims === item ? 'on' : ''}}"
+        bindtap="pickBattleSims"
+        data-v="{{item}}"
+      >{{item}}</view>
+    </view>
+    <input
+      class="bs-sims-input"
+      type="number"
+      value="{{battleSims}}"
+      placeholder="自定义"
+      disabled="{{battleRunning}}"
+      bindinput="onBattleSimsTyping"
+      bindblur="onBattleSimsInput"
+      bindconfirm="onBattleSimsInput"
+    />
+  </view>
+  <view class="bs-sims">
+    <text class="bs-sims-lab">敌方王座加成</text>
+    <view class="pet-chips">
+      <view class="pet-chip {{throneAdd === 0 ? 'on' : ''}}" bindtap="pickThrone" data-v="0">无</view>
+      <view class="pet-chip {{throneAdd === 20 ? 'on' : ''}}" bindtap="pickThrone" data-v="20">20%·势力</view>
+      <view class="pet-chip {{throneAdd === 12 ? 'on' : ''}}" bindtap="pickThrone" data-v="12">12%·反推</view>
+    </view>
+    <input
+      class="bs-sims-input"
+      type="number"
+      value="{{throneAdd}}"
+      placeholder="0~100"
+      disabled="{{battleRunning}}"
+      bindinput="onThroneTyping"
+      bindblur="onThroneInput"
+      bindconfirm="onThroneInput"
+    />
+    <view class="bs-sub">势力加成（持有王座一方防守 +20%）已默认计入终局胜负判定；只叠加在守方总战力上，不改变三排战力、先手与秒杀判定。打非王座对手可手动填 0。</view>
+    <text class="dim" style="font-size:20rpx;">想还原 314458 实测口径可填 12（实战反推值 1842/15383≈12%）</text>
+  </view>
+  <view class="gen-row">
+    <view class="code-btn main gen-btn {{battleRunning ? 'busy' : ''}}" bindtap="runBattleSim">{{battleRunning ? '推演中…' : '🎲 开战推演（' + battleSims + ' 场）'}}</view>
+  </view>
+  <view wx:if="{{battleProgress}}" class="code-tip">{{battleProgress}}</view>
+  <view wx:if="{{battleLxLabel}}" class="code-tip">⚡ {{battleLxLabel}}</view>
+  <block wx:if="{{battleRes}}">
+    <view class="bs-head">
+      <view class="bs-win">我方胜率 {{battleRes.winPct}}%</view>
+      <view class="bs-sub">敌方 {{battleRes.losePct}}%{{battleRes.drawPct ? ' · 平局 ' + battleRes.drawPct + '%' : ''}} · 共 {{battleRes.n}} 场</view>
+    </view>
+    <view wx:if="{{battleRes.instantKill}}" class="bs-instant">⚡ 秒杀判定：{{battleRes.instantKill === 'ours' ? '我方' : '敌方'}}基础战力（不含技能、含羁绊）达到对方 2 倍，实战将直接秒杀结算</view>
+    <view class="bs-sub">先手：{{battleRes.firstLabel}}（基础战力高者先手，平手攻方先）{{battleRes.throneLabel}}<block wx:if="{{battleRes.soloRate}}"> · 单挑触发 {{battleRes.soloRate}}%（我方单挑赢 {{battleRes.soloOursWinRate}}%）</block></view>
+    <view class="bs-bar">
+      <view class="bs-bar-o" style="width:{{battleRes.winPct}}%"></view>
+    </view>
+    <view class="bs-sub">流程：阵营/羁绊被动 → 号位 1→18 交替出手（低号位先动 → 控制能压住还没出手的人）→ 阵容技能（先手方先全放）→ 军师技 → 50% 前排单挑（败者武力-50%）→ 比终局战力。本场平均压掉对方 {{battleRes.avgSilencedEnemy}} 人的技能、被压 {{battleRes.avgSilencedOurs}} 人</view>
+    <view class="bs-row" wx:for="{{battleRes.lines}}" wx:key="k">
+      <text class="bs-k" style="color:{{item.c}}">{{item.k}}</text>
+      <text class="bs-v">{{item.v}}</text>
+      <text class="bs-r">{{item.r}}</text>
+    </view>
+  </block>
+</view>
+
+<!-- 我方阵容码生成 -->
+<view wx:if="{{side === 'ours'}}" class="card code-card">
+  <view class="lab">🔑 我方阵容码 · 复制到游戏一键复刻站位</view>
+  <view wx:if="{{myCode}}" class="code-out">
+    <text class="code-str" selectable="{{true}}" user-select="{{true}}">{{myCode}}</text>
+  </view>
+  <view wx:if="{{!myCode}}" class="code-empty dim">上方布阵后自动生成（支持 16 英雄 + 1 神兽）</view>
+  <view class="code-actions">
+    <view class="code-btn main" bindtap="copyMyCode">📋 复制阵容码</view>
+    <view class="code-btn" bindtap="refreshMyCode">↻ 重新生成</view>
+  </view>
+  <view wx:if="{{myCodeTip}}" class="code-tip">{{myCodeTip}}</view>
+</view>
+
+<!-- 敌方阵容码导入 -->
+<view wx:if="{{side === 'enemy'}}" class="card code-card">
+  <view class="lab">📋 游戏阵容码导入 · 粘贴后自动解析并摆满敌方 18 格</view>
+  <view class="code-row">
+    <input class="code-input" placeholder="粘贴 Z3 开头的阵容码" placeholder-class="code-ph" value="{{codeText}}" bindinput="onCodeInput" confirm-type="done" bindconfirm="importCode" />
+    <view class="code-btn main" bindtap="importCode">导入</view>
+  </view>
+  <view class="code-actions">
+    <view class="code-btn" bindtap="pasteCode">📋 从剪贴板粘贴</view>
+    <view class="code-btn ghost" bindtap="clearCode">清空</view>
+  </view>
+  <view wx:if="{{codeTip}}" class="code-tip">{{codeTip}}</view>
+  <view class="code-hint dim">阵容码只含站位与英雄，不含等级/星级/装备；众生平等下等级本就拉平，导入后可直接对比。阵内神兽自动放到对应号位。</view>
+</view>
+
+<!-- 双方对比 -->
+<view wx:if="{{compare.has}}" class="card cmp">
+  <view class="lab green">⚖️ 众生平等 · 战力对比（区间为英雄 1 级武智波动，已含主战/防守 +100%）</view>
+  <view class="cmp-total">
+    <view class="cmp-side">
+      <view class="cmp-name">🛡️ 我方</view>
+      <view class="cmp-power" style="color:{{compare.kind === 'ours' ? '#c85f50' : '#7d8a6a'}}">
+        {{compare.ours.total.min}}<text class="cmp-tilde">~</text>{{compare.ours.total.max}}
+      </view>
+      <view class="cmp-rows">前{{compare.ours.front.min}}-{{compare.ours.front.max}} / 中{{compare.ours.mid.min}}-{{compare.ours.mid.max}} / 后{{compare.ours.back.min}}-{{compare.ours.back.max}}</view>
+    </view>
+    <view class="cmp-mid">
+      <view class="cmp-verdict">{{compare.verdict}}</view>
+    </view>
+    <view class="cmp-side">
+      <view class="cmp-name">⚔️ 敌方</view>
+      <view class="cmp-power" style="color:{{compare.kind === 'enemy' ? '#c85f50' : '#7d8a6a'}}">
+        {{compare.enemy.total.min}}<text class="cmp-tilde">~</text>{{compare.enemy.total.max}}
+      </view>
+      <view class="cmp-rows">前{{compare.enemy.front.min}}-{{compare.enemy.front.max}} / 中{{compare.enemy.mid.min}}-{{compare.enemy.mid.max}} / 后{{compare.enemy.back.min}}-{{compare.enemy.back.max}}</view>
+    </view>
+  </view>
+  <view class="cmp-bars">
+    <view class="cmp-bar-row" wx:for="{{compare.rows}}" wx:key="label" wx:for-item="rr">
+      <text class="cmp-bar-lab">{{rr.label}}</text>
+      <view class="cmp-bar-wrap">
+        <view class="cmp-bar ours" style="width:{{rr.oPct}}%"></view>
+        <view class="cmp-bar enemy" style="width:{{rr.ePct}}%"></view>
+      </view>
+      <text class="cmp-bar-val">{{rr.oMin}}-{{rr.oMax}} : {{rr.eMin}}-{{rr.eMax}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 当前侧明细 -->
+<block wx:if="{{detail}}">
+  <view class="card">
+    <view class="lab green">✅ {{side === 'ours' ? '我方' : '敌方'}}羁绊（{{detail.fetters.length}}）</view>
+    <view wx:for="{{detail.fetters}}" wx:key="name" class="f-line">
+      <text class="f-name">{{item.name}}</text>
+      <text class="dim" wx:if="{{item.members}}">（{{item.members}}）</text>
+      <text class="dim">：{{item.effect}}</text>
+    </view>
+    <view wx:if="{{!detail.fetters.length}}" class="dim">暂无</view>
+  </view>
+  <view class="card">
+    <view class="lab orange">📊 增益与技能（已计入战力）</view>
+    <view wx:if="{{detail.eraPeakMerge}}" class="b-line dim">⚡ {{detail.eraPeakMerge}}</view>
+    <view wx:if="{{detail.eraBuffs.length}}" class="sect">阵营效果</view>
+    <view wx:for="{{detail.eraBuffs}}" wx:key="*this" class="b-line">✦ {{item}}</view>
+    <view wx:if="{{detail.eraSkills.length}}" class="sect">阵容技能（时代技能）</view>
+    <view wx:for="{{detail.eraSkills}}" wx:key="*this" class="b-line">✦ {{item}}</view>
+    <view wx:if="{{detail.skillLabels.length}}" class="sect">英雄技能</view>
+    <view wx:for="{{detail.skillLabels}}" wx:key="*this" class="b-line">✦ {{item}}</view>
+    <view wx:if="{{detail.petSkillTiers.length}}" class="sect">神兽技能（{{detail.petName}} 按 Lv{{detail.petLv}} 取档）</view>
+    <view wx:for="{{detail.petSkillTiers}}" wx:key="name" class="b-line dim">{{item.name}} {{item.label}} · Lv{{item.need}} 解锁：{{item.text}}</view>
+    <view wx:for="{{detail.petLabels}}" wx:key="*this" class="b-line">✦ {{item}}</view>
+    <view wx:if="{{!detail.eraBuffs.length && !detail.eraSkills.length && !detail.skillLabels.length && !detail.petLabels.length}}" class="dim">暂无已量化的增益</view>
+  </view>
+  <view wx:if="{{detail.scheme && detail.scheme.has}}" class="card">
+    <view class="lab orange">🧙 军师技 · Lv{{detail.scheme.lv}}「{{detail.scheme.name}}」（已计入战力）</view>
+    <view class="b-line">✦ {{detail.scheme.desc}}</view>
+    <view class="b-line dim">判定：后排智力 {{detail.scheme.ownBack}} vs {{detail.scheme.oppBack}}（比值 {{detail.scheme.ratio}}‰）<block wx:if="{{detail.scheme.addPct}}">，效果调整 {{detail.scheme.addPct > 0 ? '+' : ''}}{{detail.scheme.addPct}}%</block></view>
+  </view>
+  <view wx:elif="{{detail.scheme}}" class="card">
+    <view class="dim">🧙 军师技：{{detail.scheme.label}}后排智力 {{detail.scheme.ownBack}} vs {{detail.scheme.oppBack}}，后排智力更强的一方才发动军师技</view>
+  </view>
+  <view wx:if="{{detail.pinTags.length}}" class="card">
+    <view class="lab">📌 端点钉选（必定取最大/最小值 · 已按压缩后的区间计入）</view>
+    <view wx:for="{{detail.pinTags}}" wx:key="*this" class="b-line">✦ {{item}}</view>
+  </view>
+  <view wx:if="{{detail.ctrlTags.length}}" class="card">
+    <view class="lab">🛡️ 控制与免疫（技能无效 · 负面免疫 · 负面减免 · 已计入）</view>
+    <view wx:for="{{detail.ctrlTags}}" wx:key="*this" class="b-line">✦ {{item}}</view>
+  </view>
+  <view wx:if="{{detail.enemyDebuffs.length}}" class="card">
+    <view class="lab red">⚠️ 对方对我方的减益（已计入战力）</view>
+    <view wx:for="{{detail.enemyDebuffs}}" wx:key="*this" class="b-line">✦ {{item}}</view>
+  </view>
+  <view wx:if="{{detail.unq.length}}" class="card">
+    <view class="dim">未量化（无明确作用域的叙述类文案，未计入战力，共{{detail.unq.length}}条）</view>
+    <view wx:for="{{detail.unq}}" wx:key="*this" class="b-line dim">· {{item}}</view>
+  </view>
+</block>
+
+<!-- 拖动浮层 -->
+<view wx:if="{{drag}}" class="drag-ghost" style="left:{{drag.x}}px;top:{{drag.y}}px">
+  <view class="ghost-tile" style="border-color:{{drag.qcolor}}">
+    <view class="ghost-name" style="color:{{drag.qcolor}}">{{drag.name}}</view>
+  </view>
+</view>
+<!-- 阵营加成悬浮面板（仿游戏内弹窗） -->
+<view wx:if="{{cmpOverlay}}" class="ov-mask" catchtap="toggleCmpOverlay" catchtouchmove="noop">
+  <view class="ov-panel" catchtap="noop">
+    <view class="ov-head">⚖️ 双方阵营加成</view>
+    <view class="ov-side" wx:for="{{['ours', 'enemy']}}" wx:key="*this" wx:for-item="sk">
+      <view class="ov-side-name {{sk === 'ours' ? 'c-ours' : 'c-enemy'}}">
+        {{sk === 'ours' ? '🛡️ 我方' : '⚔️ 敌方'}}（全体加成合计 +{{compare[sk].detail.totalBuffPct}}%）
+      </view>
+      <view class="ov-sec">阵营效果</view>
+      <view class="ov-line ov-gold">全体上阵英雄 —— 武力+{{compare[sk].detail.totalBuffPct}}% 智力+{{compare[sk].detail.totalBuffPct}}%</view>
+      <view wx:for="{{compare[sk].detail.eraLines}}" wx:key="era" class="ov-line">
+        {{item.era}} 英雄x{{item.n}}{{item.note}} —— 提加成{{item.pct}}%
+      </view>
+      <view wx:if="{{!compare[sk].detail.eraLines.length}}" class="ov-line ov-dim">无（相同阵营不足3人）</view>
+      <view class="ov-sec">阵营技能</view>
+      <view wx:for="{{compare[sk].detail.eraSkillObjs}}" wx:key="label" class="ov-line ov-gold">{{item.label}}：{{item.desc}}</view>
+      <view wx:if="{{!compare[sk].detail.eraSkillObjs.length}}" class="ov-line ov-dim">无（相同阵营不足3/6/10人）</view>
+    </view>
+    <view class="ov-tip">提示：最少3名、最多10名相同阵营英雄，可激活全体战力加成；相同阵营英雄3/6/10名，可触发阵营技能。点击空白处关闭</view>
+  </view>
+</view>
+<ad-banner />

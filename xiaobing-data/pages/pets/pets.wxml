@@ -1,0 +1,42 @@
+<view class="card">
+  <view class="head-row">🐉 神兽图鉴（{{list.length}}）</view>
+
+  <view class="filter-lab">站位</view>
+  <scroll-view scroll-x class="era-tabs" enhanced show-scrollbar="{{false}}">
+    <view
+      wx:for="{{posTabs}}"
+      wx:key="*this"
+      class="era-tab {{curPos === index ? 'on' : ''}}"
+      bindtap="pickPos"
+      data-idx="{{index}}"
+    >{{item}}</view>
+  </scroll-view>
+
+  <view class="filter-lab">品质</view>
+  <scroll-view scroll-x class="era-tabs" enhanced show-scrollbar="{{false}}">
+    <view
+      wx:for="{{qiTabs}}"
+      wx:key="*this"
+      class="era-tab {{curQi === index ? 'on' : ''}}"
+      bindtap="pickQi"
+      data-idx="{{index}}"
+    >{{item}}</view>
+  </scroll-view>
+
+  <view class="pool-grid">
+    <view
+      wx:for="{{list}}"
+      wx:key="id"
+      class="pool-chip"
+      style="border-color:{{item.qcolor}}"
+      bindtap="open"
+      data-id="{{item.id}}"
+    >
+      <view class="chip-badge" style="background:{{item.qcolor}}">{{item.qi}}</view>
+      <text class="chip-name" style="color:{{item.qcolor}}">{{item.name}}</text>
+    </view>
+  </view>
+  <view wx:if="{{!list.length}}" class="dim empty">该筛选条件下没有神兽</view>
+</view>
+
+<ad-banner />

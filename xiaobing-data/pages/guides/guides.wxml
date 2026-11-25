@@ -1,0 +1,19 @@
+<view
+  wx:for="{{list}}"
+  wx:key="id"
+  class="card g-item"
+  bindtap="open"
+  data-id="{{item.id}}"
+>
+  <view class="g-title">
+    <text wx:if="{{item.pinned}}" class="g-pin">置顶</text>{{item.title}}
+  </view>
+  <view class="dim g-summary">{{item.summary}}</view>
+  <view class="g-foot">
+    <text class="g-more">阅读全文 ›</text>
+  </view>
+</view>
+<view wx:if="{{!loading && !list.length}}" class="card">
+  <view class="dim">攻略整理中，敬请期待</view>
+</view>
+<ad-banner />

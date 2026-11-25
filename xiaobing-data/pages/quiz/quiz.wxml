@@ -1,0 +1,58 @@
+<view class="sec-title">🔎 题库检索</view>
+<view class="card">
+  <view class="search-bar" style="padding: 0">
+    <input placeholder="搜题面或答案关键词" bindinput="onInput" bindblur="onBlur" value="{{keyword}}" focus="{{focusKw}}" />
+    <text wx:if="{{keyword}}" class="clear-x" bindtap="clearKeyword">×</text>
+  </view>
+  <view class="quiz-tip">
+    <view>💡 抽车夫记得提前打开，万一让你答题呢！</view>
+    <view class="tip-sub">⌨️ 可以使用输入法的语音输入提高输入速度</view>
+  </view>
+  <view wx:if="{{searched && !results.length}}" class="dim">没有匹配的题目</view>
+  <view wx:if="{{searched && results.length}}" class="dim hit-line">命中 {{hitCount}} 题</view>
+  <view wx:for="{{results}}" wx:key="id" class="q-item">
+    <view class="q-text">
+      <block wx:for="{{item.parts}}" wx:for-item="p" wx:for-index="pi" wx:key="*this">
+        <text>{{p}}</text>
+        <text wx:if="{{pi < item.blanks}}" class="blank">（{{item.correct[pi]}}）</text>
+      </block>
+    </view>
+    <view class="dim">颜值 +{{item.face}}</view>
+  </view>
+</view>
+
+<view class="sec-title">🎲 随机练习</view>
+<view class="card">
+  <block wx:if="{{current}}">
+    <view class="q-text big">
+      <block wx:for="{{current.parts}}" wx:for-item="p" wx:for-index="pi" wx:key="*this">
+        <text>{{p}}</text>
+        <text
+          wx:if="{{pi < current.blanks}}"
+          class="blank {{revealed && picked[pi] !== current.correct[pi] ? 'blank-wrong' : ''}}"
+        >（{{revealed ? (picked[pi] || '？') : (picked[pi] || '？')}}）</text>
+      </block>
+    </view>
+    <view class="opts">
+      <view
+        wx:for="{{current.options}}"
+        wx:for-item="opt"
+        wx:key="*this"
+        class="opt {{picked.indexOf(opt) >= 0 && !revealed ? 'opt-picked' : ''}} {{revealed && current.correct.indexOf(opt) >= 0 ? 'opt-right' : ''}} {{revealed && picked.indexOf(opt) >= 0 && current.correct.indexOf(opt) < 0 ? 'opt-wrong' : ''}}"
+        bindtap="pickOpt"
+        data-opt="{{opt}}"
+      >{{opt}}</view>
+    </view>
+    <view wx:if="{{revealed}}" class="answer">
+      <view wx:if="{{picked.length === current.blanks && picked[0] === current.correct[0] && (current.blanks < 2 || picked[1] === current.correct[1])}}" class="right-msg">✅ 答对了！</view>
+      <view wx:else class="wrong-msg">❌ 正确答案：{{current.correct[0]}}{{current.blanks > 1 ? ' / ' + current.correct[1] : ''}}</view>
+    </view>
+    <view class="btns">
+      <view wx:if="{{!revealed}}" class="btn btn-plain" bindtap="reveal">直接看答案</view>
+      <view wx:if="{{revealed}}" class="btn" bindtap="next">下一题</view>
+    </view>
+  </block>
+  <view wx:if="{{!current}}" class="btn" bindtap="startRandom">{{started ? '再来一轮' : '开始随机练习'}}</view>
+</view>
+
+<ad-banner />

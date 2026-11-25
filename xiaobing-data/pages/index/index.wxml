@@ -1,0 +1,36 @@
+<view class="head">
+  <view class="head-banner">
+    <view class="head-emblem">兵</view>
+    <view>
+      <view class="head-title">小兵集中营</view>
+      <view class="head-sub">小兵攻略——阵容 · 神兽 · 科技 · 挖宝 · 车夫题库</view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{notices.length}}" class="card notice">
+  <view class="notice-label">📢 军情公告</view>
+  <view wx:for="{{notices}}" wx:key="id" class="notice-item">
+    <text class="notice-title">{{item.title}}</text>
+    <text class="dim">{{item.content}}</text>
+  </view>
+</view>
+
+<view wx:if="{{!settingsReady}}" class="card dim" style="text-align:center">正在加载…</view>
+<view wx:else class="grid">
+  <view wx:for="{{modules}}" wx:key="title" class="card mod" bindtap="go" data-url="{{item.url}}">
+    <text class="mod-icon">{{item.icon}}</text>
+    <view class="mod-body">
+      <view class="mod-title">{{item.title}}</view>
+    </view>
+    <text class="mod-arrow">›</text>
+  </view>
+</view>
+
+<ad-banner />
+<view
+  class="foot dim"
+  bindtouchstart="adminPressStart"
+  bindtouchend="adminPressEnd"
+  bindtouchcancel="adminPressEnd"
+>数据由游戏玩家 提供整理 · 仅供查询参考 · 交流用工具 · 如有错误 · 欢迎指正</view>

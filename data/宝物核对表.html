@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>挖宝图鉴 · 特殊宝物核对表</title>
+<style>
+  :root {
+    --bg:#f7f8fa; --card:#ffffff; --line:#e6e8ee; --text:#1f2430; --muted:#6b7280;
+    --accent:#c0392b; --accent-soft:#fdecea; --blue:#2f6feb; --chip:#f2f4f8;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    font-size:14px; line-height:1.6; }
+  .wrap { max-width:1080px; margin:0 auto; padding:28px 20px 90px; }
+  h1 { font-size:22px; margin:0 0 6px; letter-spacing:.5px; }
+  .sub { color:var(--muted); margin:0 0 18px; }
+  .tips { background:#fff; border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:8px; padding:12px 16px; margin-bottom:22px; color:#424b5c; }
+  .tips b { color:var(--accent); }
+  .scene { background:var(--card); border:1px solid var(--line); border-radius:10px;
+    margin-bottom:18px; overflow:hidden; }
+  .sh { display:flex; justify-content:space-between; align-items:center; gap:12px;
+    padding:12px 16px; background:#fbfcfe; border-bottom:1px solid var(--line); }
+  .st { display:flex; align-items:baseline; gap:10px; }
+  .st h2 { font-size:16px; margin:0; }
+  .cnt { color:var(--muted); font-size:12px; }
+  .picked { font-size:12px; color:var(--muted); background:var(--chip);
+    border-radius:20px; padding:4px 12px; white-space:nowrap; }
+  .picked.on { background:var(--accent-soft); color:var(--accent); font-weight:600; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { padding:8px 12px; border-bottom:1px solid #f0f2f6; text-align:left; }
+  th { font-size:12px; font-weight:600; color:var(--muted); background:#fff; }
+  tbody tr:last-child td { border-bottom:none; }
+  tr.item:hover { background:#fafbfd; }
+  tr.item.inferred { background:#fffdf9; }
+  tr.item.checked { background:var(--accent-soft); }
+  .chk { width:52px; text-align:center; }
+  input[type=checkbox] { width:16px; height:16px; accent-color:var(--accent); cursor:pointer; }
+  .nm { font-weight:600; }
+  .tag { display:inline-block; margin-left:8px; font-size:11px; font-weight:500;
+    color:#8a6d3b; background:#fdf3e2; border-radius:4px; padding:0 6px; }
+  .tp { color:#4b5563; }
+  .gr { color:var(--muted); font-variant-numeric:tabular-nums; }
+  .gp { color:var(--muted); }
+  .q { display:inline-block; padding:1px 8px; border-radius:20px; font-size:12px; font-weight:600; }
+  .q0, .q1 { background:#f1f2f4; color:#6b7280; }
+  .q2 { background:#e8f6ee; color:#1f7a4d; }
+  .q3 { background:#e9f0fd; color:#2456b3; }
+  .q4 { background:#f2eafd; color:#6b3fa0; }
+  .q5 { background:#fdeaea; color:#b02a1f; }
+  .appendix { margin-top:26px; }
+  .appendix h3 { font-size:15px; margin:0 0 8px; }
+  .appendix table { background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .bar { position:fixed; left:0; right:0; bottom:0; background:rgba(255,255,255,.96);
+    border-top:1px solid var(--line); backdrop-filter:blur(8px); }
+  .bar .in { max-width:1080px; margin:0 auto; padding:10px 20px; display:flex;
+    align-items:center; gap:12px; }
+  .bar .sum { flex:1; font-size:13px; color:var(--muted); }
+  .bar .sum b { color:var(--accent); }
+  button { font:inherit; font-size:13px; padding:7px 14px; border-radius:8px; cursor:pointer;
+    border:1px solid var(--line); background:#fff; color:var(--text); }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  button:hover { filter:brightness(.97); }
+  .mask { position:fixed; inset:0; background:rgba(20,24,34,.45); display:none;
+    align-items:center; justify-content:center; padding:20px; z-index:50; }
+  .mask.show { display:flex; }
+  .dlg { background:#fff; border-radius:12px; width:min(680px,100%); max-height:86vh;
+    display:flex; flex-direction:column; padding:18px 18px 14px; box-shadow:0 18px 50px rgba(0,0,0,.2); }
+  .dh { font-size:16px; font-weight:700; margin-bottom:4px; }
+  .dhint { font-size:12px; color:var(--muted); margin-bottom:10px; }
+  #dlgText { flex:1; min-height:260px; width:100%; resize:vertical; font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:12px; line-height:1.7; padding:12px; border:1px solid var(--line); border-radius:8px;
+    background:#fbfcfe; color:var(--text); }
+  .df { display:flex; justify-content:flex-end; gap:10px; margin-top:12px; }
+  @media (max-width:640px) {
+    .gp, th:nth-child(6) { display:none; }
+    th, td { padding:8px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>挖宝图鉴 · 特殊宝物核对表</h1>
+  <p class="sub">共 7 个场景 · 96 件宝物（不含收藏品）</p>
+
+  <div class="tips">
+    <b>怎么用：</b>每个场景只有 <b>1 件</b> 宝物需要特殊细锤——在每个场景里勾出那一件即可（同场景内只能勾一个）。
+    带「推测」标签的是我按「该场景唯一 q5 极品」规律预填的结果，如果不对，直接改勾并告诉我。
+    全部确认后点右下角「导出结果」，把结果贴给我。
+  </div>
+
+<section class="scene" data-scene="0">
+  <header class="sh">
+    <div class="st"><h2>1. 荒沙古城</h2><span class="cnt">6 组 / 13 件</span></div>
+    <div class="picked" id="picked0">未选择</div>
+  </header>
+  <table>
+    <thead><tr><th class="chk">特殊</th><th>宝物名称</th><th>类型</th><th>品质</th><th>品相分区间</th><th>所属分组</th></tr></thead>
+    <tbody>
+<tr class="item" data-scene="0" data-name="风蚀陶水罐" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">风蚀陶水罐</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">6~24</td>
+      <td class="gp">荒沙秘密</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="逐日金叶" data-type="奇珍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">逐日金叶</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">16~64</td>
+      <td class="gp">荒沙秘密</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="失落城门拓片" data-type="书画" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">失落城门拓片</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">5~20</td>
+      <td class="gp">荒沙秘密</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="月泉珊瑚珠串" data-type="奇珍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">月泉珊瑚珠串</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">129~516</td>
+      <td class="gp">月泉祭祀</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="砂海神祇壁画残片" data-type="书画" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">砂海神祇壁画残片</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">135~540</td>
+      <td class="gp">月泉祭祀</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="《月泉祭仪残篇》" data-type="典籍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《月泉祭仪残篇》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">78~312</td>
+      <td class="gp">月泉祭祀</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="驼铃铜灯" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">驼铃铜灯</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">17~68</td>
+      <td class="gp">商路灯火</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="商旅驼队图卷" data-type="书画" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">商旅驼队图卷</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">119~476</td>
+      <td class="gp">商路灯火</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="星砂琉璃瓶" data-type="器物" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">星砂琉璃瓶</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">106~424</td>
+      <td class="gp">星砂异宝</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="不落日轮" data-type="奇珍" data-quality="5">
+      <td class="chk"><input type="checkbox" checked aria-label="标记为特殊宝物"></td>
+      <td class="nm">不落日轮</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">283~1132</td>
+      <td class="gp">星砂异宝</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="沙王青玉印" data-type="奇珍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">沙王青玉印</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">82~328</td>
+      <td class="gp">沙王封城</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="《赤阳封城秘典》" data-type="典籍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《赤阳封城秘典》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">90~360</td>
+      <td class="gp">沙王封城</td>
+    </tr>
+<tr class="item" data-scene="0" data-name="荒沙城邦税录" data-type="典籍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">荒沙城邦税录</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">52~208</td>
+      <td class="gp">城邦税赋</td>
+    </tr>
+    </tbody>
+  </table>
+</section><section class="scene" data-scene="1">
+  <header class="sh">
+    <div class="st"><h2>2. 青铜祭坛</h2><span class="cnt">5 组 / 14 件</span></div>
+    <div class="picked" id="picked1">未选择</div>
+  </header>
+  <table>
+    <thead><tr><th class="chk">特殊</th><th>宝物名称</th><th>类型</th><th>品质</th><th>品相分区间</th><th>所属分组</th></tr></thead>
+    <tbody>
+<tr class="item" data-scene="1" data-name="祭火陶盏" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">祭火陶盏</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">8~32</td>
+      <td class="gp">祭火初燃</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="祭司骨签" data-type="奇珍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">祭司骨签</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">30~120</td>
+      <td class="gp">祭火初燃</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="铜铃祷文残片" data-type="书画" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">铜铃祷文残片</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">30~120</td>
+      <td class="gp">祭火初燃</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="饕餮纹铜爵" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">饕餮纹铜爵</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">42~168</td>
+      <td class="gp">供物礼制</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="四方镇坛符图" data-type="书画" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">四方镇坛符图</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">43~172</td>
+      <td class="gp">供物礼制</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="《祭坛供物簿》" data-type="典籍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《祭坛供物簿》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">13~52</td>
+      <td class="gp">供物礼制</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="三足兽面香炉" data-type="器物" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">三足兽面香炉</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">118~472</td>
+      <td class="gp">墨玉镇坛</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="血沁玉璧" data-type="奇珍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">血沁玉璧</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">122~488</td>
+      <td class="gp">墨玉镇坛</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="《青铜祝祷篇》" data-type="典籍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《青铜祝祷篇》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">106~424</td>
+      <td class="gp">墨玉镇坛</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="九纹祭天鼎" data-type="器物" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">九纹祭天鼎</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">132~528</td>
+      <td class="gp">天象祭天</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="雷纹祖灵面具" data-type="奇珍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">雷纹祖灵面具</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">141~564</td>
+      <td class="gp">天象祭天</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="天象祭祀长卷" data-type="书画" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">天象祭祀长卷</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">136~544</td>
+      <td class="gp">天象祭天</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="苍穹祭神图" data-type="书画" data-quality="5">
+      <td class="chk"><input type="checkbox" checked aria-label="标记为特殊宝物"></td>
+      <td class="nm">苍穹祭神图</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">276~1104</td>
+      <td class="gp">万灵敬神</td>
+    </tr>
+<tr class="item" data-scene="1" data-name="《万牲献祭秘录》" data-type="典籍" data-quality="5">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《万牲献祭秘录》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">189~756</td>
+      <td class="gp">万灵敬神</td>
+    </tr>
+    </tbody>
+  </table>
+</section><section class="scene" data-scene="2">
+  <header class="sh">
+    <div class="st"><h2>3. 云岭古墓</h2><span class="cnt">5 组 / 14 件</span></div>
+    <div class="picked" id="picked2">未选择</div>
+  </header>
+  <table>
+    <thead><tr><th class="chk">特殊</th><th>宝物名称</th><th>类型</th><th>品质</th><th>品相分区间</th><th>所属分组</th></tr></thead>
+    <tbody>
+<tr class="item" data-scene="2" data-name="墓道引魂灯" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">墓道引魂灯</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">37~148</td>
+      <td class="gp">灵引魂</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="云纹陪葬玉扣" data-type="奇珍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">云纹陪葬玉扣</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">41~164</td>
+      <td class="gp">灵引魂</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="守墓人残札" data-type="书画" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">守墓人残札</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">37~148</td>
+      <td class="gp">灵引魂</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="双鱼衔环铜镜" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">双鱼衔环铜镜</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">46~184</td>
+      <td class="gp">归旧仪</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="归葬山水帛画" data-type="书画" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">归葬山水帛画</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">82~328</td>
+      <td class="gp">归旧仪</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="《云岭墓志录》" data-type="典籍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《云岭墓志录》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">73~292</td>
+      <td class="gp">归旧仪</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="玄甲镇墓俑" data-type="器物" data-quality="3">
+      <td class="chk"><input type="checkbox" checked aria-label="标记为特殊宝物"></td>
+      <td class="nm">玄甲镇墓俑</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">121~484</td>
+      <td class="gp">镇煞之灵</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="镇棺朱砂印" data-type="奇珍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">镇棺朱砂印</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">125~500</td>
+      <td class="gp">镇煞之灵</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="《幽宫避煞诀》" data-type="典籍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《幽宫避煞诀》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">126~504</td>
+      <td class="gp">镇煞之灵</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="云岭龙纹棺钉" data-type="器物" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">云岭龙纹棺钉</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">133~532</td>
+      <td class="gp">百灵夜行</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="天游尸解玉蝉" data-type="奇珍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">天游尸解玉蝉</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">142~568</td>
+      <td class="gp">百灵夜行</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="百鬼送葬图" data-type="书画" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">百鬼送葬图</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">179~716</td>
+      <td class="gp">百灵夜行</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="山河镇墓玄机图" data-type="书画" data-quality="5">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">山河镇墓玄机图</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">295~1180</td>
+      <td class="gp">王陵玄机</td>
+    </tr>
+<tr class="item" data-scene="2" data-name="《云岭王陵秘典》" data-type="典籍" data-quality="5">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《云岭王陵秘典》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">214~856</td>
+      <td class="gp">王陵玄机</td>
+    </tr>
+    </tbody>
+  </table>
+</section><section class="scene" data-scene="3">
+  <header class="sh">
+    <div class="st"><h2>4. 江南旧窑</h2><span class="cnt">5 组 / 14 件</span></div>
+    <div class="picked" id="picked3">未选择</div>
+  </header>
+  <table>
+    <thead><tr><th class="chk">特殊</th><th>宝物名称</th><th>类型</th><th>品质</th><th>品相分区间</th><th>所属分组</th></tr></thead>
+    <tbody>
+<tr class="item" data-scene="3" data-name="青釉莲瓣洗" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">青釉莲瓣洗</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">45~180</td>
+      <td class="gp">莲洗窑火</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="窑火铜灯" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">窑火铜灯</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">52~208</td>
+      <td class="gp">莲洗窑火</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="《雨巷窑烟图》" data-type="书画" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《雨巷窑烟图》</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">66~264</td>
+      <td class="gp">莲洗窑火</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="冰裂纹梅瓶" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">冰裂纹梅瓶</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">58~232</td>
+      <td class="gp">冰裂秘色</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="秘色兽耳炉" data-type="器物" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">秘色兽耳炉</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">126~504</td>
+      <td class="gp">冰裂秘色</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="《秘色开片图谱》" data-type="书画" data-quality="3">
+      <td class="chk"><input type="checkbox" checked aria-label="标记为特殊宝物"></td>
+      <td class="nm">《秘色开片图谱》</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">119~476</td>
+      <td class="gp">冰裂秘色</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="窑藏玛瑙珠" data-type="奇珍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">窑藏玛瑙珠</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">50~200</td>
+      <td class="gp">窑藏灵材</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="釉泪琉璃砂" data-type="奇珍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">釉泪琉璃砂</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">94~376</td>
+      <td class="gp">窑藏灵材</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="龙窑火精石" data-type="奇珍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">龙窑火精石</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">113~452</td>
+      <td class="gp">窑藏灵材</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="千年窑心" data-type="奇珍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">千年窑心</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">150~600</td>
+      <td class="gp">窑心天青</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="旧窑烧造簿" data-type="典籍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">旧窑烧造簿</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">70~280</td>
+      <td class="gp">窑心天青</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="《天青贡瓷录》" data-type="典籍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《天青贡瓷录》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">135~540</td>
+      <td class="gp">窑心天青</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="窑神祈火符" data-type="书画" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">窑神祈火符</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">82~328</td>
+      <td class="gp">万象窑经</td>
+    </tr>
+<tr class="item" data-scene="3" data-name="《万象窑经》" data-type="典籍" data-quality="5">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《万象窑经》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">241~964</td>
+      <td class="gp">万象窑经</td>
+    </tr>
+    </tbody>
+  </table>
+</section><section class="scene" data-scene="4">
+  <header class="sh">
+    <div class="st"><h2>5. 皇城遗址</h2><span class="cnt">5 组 / 15 件</span></div>
+    <div class="picked" id="picked4">未选择</div>
+  </header>
+  <table>
+    <thead><tr><th class="chk">特殊</th><th>宝物名称</th><th>类型</th><th>品质</th><th>品相分区间</th><th>所属分组</th></tr></thead>
+    <tbody>
+<tr class="item" data-scene="4" data-name="鎏金兽首铜灯" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">鎏金兽首铜灯</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">59~236</td>
+      <td class="gp">宫灯旧砖</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="残纹宫砖砚" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">残纹宫砖砚</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">69~276</td>
+      <td class="gp">宫灯旧砖</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="《宫阙残雪图》" data-type="书画" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《宫阙残雪图》</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">89~356</td>
+      <td class="gp">宫灯旧砖</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="宫门铜铺首" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">宫门铜铺首</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">79~316</td>
+      <td class="gp">宫门龙钩</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="蟠龙玉带钩" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">蟠龙玉带钩</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">105~420</td>
+      <td class="gp">宫门龙钩</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="内廷值守牌帖" data-type="书画" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">内廷值守牌帖</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">108~432</td>
+      <td class="gp">宫门龙钩</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="鎏金凤纹香炉" data-type="器物" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">鎏金凤纹香炉</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">271~1084</td>
+      <td class="gp">凤炉金瓦</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="宫墙琉璃残片" data-type="奇珍" data-quality="1">
+      <td class="chk"><input type="checkbox" checked aria-label="标记为特殊宝物"></td>
+      <td class="nm">宫墙琉璃残片</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">98~392</td>
+      <td class="gp">凤炉金瓦</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="金瓦灵砂" data-type="奇珍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">金瓦灵砂</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">129~516</td>
+      <td class="gp">凤炉金瓦</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="御苑雨花石" data-type="奇珍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">御苑雨花石</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">104~416</td>
+      <td class="gp">帝都地脉</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="丹陛朱砂晶" data-type="奇珍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">丹陛朱砂晶</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">114~456</td>
+      <td class="gp">帝都地脉</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="皇城地脉玉髓" data-type="奇珍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">皇城地脉玉髓</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">244~976</td>
+      <td class="gp">帝都地脉</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="《万国来朝图》" data-type="书画" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《万国来朝图》</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">120~480</td>
+      <td class="gp">万国皇城</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="《皇城营造录》" data-type="典籍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《皇城营造录》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">62~248</td>
+      <td class="gp">万国皇城</td>
+    </tr>
+<tr class="item" data-scene="4" data-name="《帝都堪舆秘册》" data-type="典籍" data-quality="5">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《帝都堪舆秘册》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">284~1136</td>
+      <td class="gp">万国皇城</td>
+    </tr>
+    </tbody>
+  </table>
+</section><section class="scene" data-scene="5">
+  <header class="sh">
+    <div class="st"><h2>6. 海底沉船</h2><span class="cnt">5 组 / 13 件</span></div>
+    <div class="picked" id="picked5">未选择</div>
+  </header>
+  <table>
+    <thead><tr><th class="chk">特殊</th><th>宝物名称</th><th>类型</th><th>品质</th><th>品相分区间</th><th>所属分组</th></tr></thead>
+    <tbody>
+<tr class="item" data-scene="5" data-name="盐蚀铜罗盘" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">盐蚀铜罗盘</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">80~320</td>
+      <td class="gp">沉渊遗梦</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="夜潮珍珠耳坠" data-type="奇珍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">夜潮珍珠耳坠</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">125~500</td>
+      <td class="gp">沉渊遗梦</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="沉渊鲛珠" data-type="奇珍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">沉渊鲛珠</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">135~540</td>
+      <td class="gp">碧海沉妆</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="龙骨侧舷彩绘残片" data-type="书画" data-quality="3">
+      <td class="chk"><input type="checkbox" checked aria-label="标记为特殊宝物"></td>
+      <td class="nm">龙骨侧舷彩绘残片</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">135~540</td>
+      <td class="gp">碧海沉妆</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="船长金锚坠" data-type="奇珍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">船长金锚坠</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">300~1200</td>
+      <td class="gp">幽舶余音</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="潮声海图残页" data-type="书画" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">潮声海图残页</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">125~500</td>
+      <td class="gp">幽舶余音</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="《沉船货册残卷》" data-type="典籍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《沉船货册残卷》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">86~344</td>
+      <td class="gp">幽舶余音</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="龙骨钉匣" data-type="器物" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">龙骨钉匣</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">300~1200</td>
+      <td class="gp">霸海沉玺</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="无名海祭图卷" data-type="书画" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">无名海祭图卷</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">245~980</td>
+      <td class="gp">霸海沉玺</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="《南洋针路抄本》" data-type="典籍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《南洋针路抄本》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">138~552</td>
+      <td class="gp">霸海沉玺</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="压舱青瓷碗" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">压舱青瓷碗</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">120~480</td>
+      <td class="gp">深海迷航</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="不没星灯" data-type="奇珍" data-quality="5">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">不没星灯</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">375~1500</td>
+      <td class="gp">深海迷航</td>
+    </tr>
+<tr class="item" data-scene="5" data-name="《深渊航忌》" data-type="典籍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《深渊航忌》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">195~780</td>
+      <td class="gp">深海迷航</td>
+    </tr>
+    </tbody>
+  </table>
+</section><section class="scene" data-scene="6">
+  <header class="sh">
+    <div class="st"><h2>7. 边塞烽燧</h2><span class="cnt">5 组 / 13 件</span></div>
+    <div class="picked" id="picked6">未选择</div>
+  </header>
+  <table>
+    <thead><tr><th class="chk">特殊</th><th>宝物名称</th><th>类型</th><th>品质</th><th>品相分区间</th><th>所属分组</th></tr></thead>
+    <tbody>
+<tr class="item" data-scene="6" data-name="戍卒铁盏" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">戍卒铁盏</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">—</td>
+      <td class="gp">戍夜余温</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="《塞上更漏册》" data-type="典籍" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《塞上更漏册》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">—</td>
+      <td class="gp">戍夜余温</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="戍楼望月拓片" data-type="书画" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">戍楼望月拓片</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">—</td>
+      <td class="gp">关山残影</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="沙场归骑壁画残块" data-type="书画" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">沙场归骑壁画残块</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">—</td>
+      <td class="gp">关山残影</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="关山令箭" data-type="奇珍" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">关山令箭</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">—</td>
+      <td class="gp">镇边军令</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="寒烽玉燧牌" data-type="奇珍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">寒烽玉燧牌</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">—</td>
+      <td class="gp">镇边军令</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="镇边虎符半枚" data-type="奇珍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">镇边虎符半枚</td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">—</td>
+      <td class="gp">镇边军令</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="夜巡铜铎" data-type="器物" data-quality="2">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">夜巡铜铎</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q2">q2 绿</span></td>
+      <td class="gr">—</td>
+      <td class="gp">边关警备</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="夜警烽火图" data-type="书画" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">夜警烽火图</td>
+      <td class="tp">书画</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">—</td>
+      <td class="gp">边关警备</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="《西关兵籍残档》" data-type="典籍" data-quality="4">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《西关兵籍残档》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q4">q4 紫</span></td>
+      <td class="gr">—</td>
+      <td class="gp">边关警备</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="狼烟陶罐" data-type="器物" data-quality="1">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">狼烟陶罐</td>
+      <td class="tp">器物</td>
+      <td class="ql"><span class="q q1">q1 白</span></td>
+      <td class="gr">—</td>
+      <td class="gp">狼烟不熄</td>
+    </tr>
+<tr class="item inferred" data-scene="6" data-name="不熄烽心" data-type="奇珍" data-quality="5">
+      <td class="chk"><input type="checkbox" checked aria-label="标记为特殊宝物"></td>
+      <td class="nm">不熄烽心<span class="tag">推测</span></td>
+      <td class="tp">奇珍</td>
+      <td class="ql"><span class="q q5">q5 红</span></td>
+      <td class="gr">—</td>
+      <td class="gp">狼烟不熄</td>
+    </tr>
+<tr class="item" data-scene="6" data-name="《狼烟条例抄》" data-type="典籍" data-quality="3">
+      <td class="chk"><input type="checkbox"  aria-label="标记为特殊宝物"></td>
+      <td class="nm">《狼烟条例抄》</td>
+      <td class="tp">典籍</td>
+      <td class="ql"><span class="q q3">q3 蓝</span></td>
+      <td class="gr">—</td>
+      <td class="gp">狼烟不熄</td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
+  <div class="appendix">
+    <h3>附：收藏品图鉴（5 组，不在场景内，仅供对照）</h3>
+    <table>
+      <thead><tr><th>宝物名称</th><th>所属分组</th><th>品质</th></tr></thead>
+      <tbody>
+<tr><td>小头兵模型</td><td>小兵模型</td><td><span class="q q5">q5</span></td></tr><tr><td>大头兵模型</td><td>小兵模型</td><td><span class="q q5">q5</span></td></tr><tr><td>黄金断剑</td><td>次元谜团</td><td><span class="q q5">q5</span></td></tr><tr><td>《小兵崛起之路》</td><td>最强小兵</td><td><span class="q q5">q5</span></td></tr><tr><td>破损的盾牌</td><td>最强小兵</td><td><span class="q q5">q5</span></td></tr><tr><td>翡翠包子</td><td>城根宝物</td><td><span class="q q5">q5</span></td></tr><tr><td>白银兵符</td><td>城根宝物</td><td><span class="q q5">q5</span></td></tr><tr><td>纯金铜币</td><td>城根宝物</td><td><span class="q q5">q5</span></td></tr><tr><td>灵动白羽</td><td>羽化登仙</td><td><span class="q q5">q5</span></td></tr><tr><td>赤红红羽</td><td>羽化登仙</td><td><span class="q q5">q5</span></td></tr><tr><td>闪耀金羽</td><td>羽化登仙</td><td><span class="q q5">q5</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="bar"><div class="in">
+  <div class="sum" id="sum">已确认 0 / 7 个场景</div>
+  <button id="clear">清空</button>
+  <button class="primary" id="export">导出结果</button>
+</div></div>
+
+<script>
+const SCENES = ["荒沙古城", "青铜祭坛", "云岭古墓", "江南旧窑", "皇城遗址", "海底沉船", "边塞烽燧"];
+const state = {};
+
+function refresh() {
+  document.querySelectorAll('section.scene').forEach(sec => {
+    const idx = sec.dataset.scene;
+    const sel = sec.querySelector('input[type=checkbox]:checked');
+    const box = document.getElementById('picked' + idx);
+    sec.querySelectorAll('tr.item').forEach(tr => {
+      tr.classList.toggle('checked', tr.querySelector('input').checked);
+    });
+    if (sel) {
+      const tr = sel.closest('tr');
+      box.textContent = '特殊宝物：' + tr.dataset.name;
+      box.classList.add('on');
+      state[idx] = { scene: SCENES[idx], item: tr.dataset.name, type: tr.dataset.type, quality: +tr.dataset.quality };
+    } else {
+      box.textContent = '未选择';
+      box.classList.remove('on');
+      delete state[idx];
+    }
+  });
+  document.getElementById('sum').innerHTML = '已确认 <b>' + Object.keys(state).length + '</b> / ' + SCENES.length + ' 个场景';
+}
+
+document.addEventListener('change', e => {
+  if (e.target.matches('tr.item input[type=checkbox]')) {
+    if (e.target.checked) {
+      const sec = e.target.closest('section.scene');
+      sec.querySelectorAll('tr.item input').forEach(i => { if (i !== e.target) i.checked = false; });
+    }
+    refresh();
+    saveLocal();
+  }
+});
+
+document.getElementById('clear').onclick = () => {
+  document.querySelectorAll('tr.item input').forEach(i => i.checked = false);
+  refresh();
+  saveLocal();
+};
+
+// ---- 本地暂存，刷新页面也不丢 ----
+function saveLocal() {
+  try {
+    const list = SCENES.map((_, i) => state[i] ? state[i].item : null);
+    localStorage.setItem('digChecklistV1', JSON.stringify(list));
+  } catch (err) {}
+}
+function loadLocal() {
+  try {
+    const raw = localStorage.getItem('digChecklistV1');
+    if (!raw) return;
+    const list = JSON.parse(raw);
+    document.querySelectorAll('section.scene').forEach(sec => {
+      const want = list[+sec.dataset.scene];
+      if (!want) return;
+      sec.querySelectorAll('tr.item').forEach(tr => {
+        const box = tr.querySelector('input');
+        if (box) box.checked = (tr.dataset.name === want);
+      });
+    });
+  } catch (err) {}
+}
+
+// ---- 导出：弹窗展示文本，绝不依赖剪贴板权限 ----
+function fallbackCopy(text) {
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    return true;
+  } catch (err) { return false; }
+}
+
+function showResult(text) {
+  const mask = document.getElementById('dlgMask');
+  const box = document.getElementById('dlgText');
+  box.value = text;
+  mask.classList.add('show');
+  box.focus();
+  box.select();
+  let ok = false;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      document.getElementById('dlgHint').textContent = '✅ 已自动复制到剪贴板，直接粘贴给我即可';
+    }).catch(() => {
+      ok = fallbackCopy(text);
+      document.getElementById('dlgHint').textContent = ok ? '✅ 已复制到剪贴板，直接粘贴给我' : '请手动全选复制下面的内容';
+    });
+  } else {
+    ok = fallbackCopy(text);
+    document.getElementById('dlgHint').textContent = ok ? '✅ 已复制到剪贴板，直接粘贴给我' : '请手动全选复制下面的内容';
+  }
+}
+
+document.getElementById('dlgClose').onclick = () => document.getElementById('dlgMask').classList.remove('show');
+document.getElementById('dlgMask').onclick = (e) => {
+  if (e.target.id === 'dlgMask') e.target.classList.remove('show');
+};
+document.getElementById('dlgCopy').onclick = () => {
+  const text = document.getElementById('dlgText').value;
+  const ok = fallbackCopy(text);
+  document.getElementById('dlgHint').textContent = ok ? '✅ 已复制' : '复制失败，请手动全选后按 Ctrl+C';
+};
+
+document.getElementById('export').onclick = () => {
+  try {
+    refresh();
+    const list = SCENES.map((_, i) => state[i] ? state[i] : { scene: SCENES[i], item: null });
+    const filled = list.filter(x => x.item);
+    let text = '挖宝特殊宝物核对结果：\n';
+    list.forEach((x, i) => {
+      text += (i + 1) + '. ' + x.scene + ' → ' + (x.item ? x.item + '（' + (x.type || '') + ' / q' + (x.quality || '') + '）' : '（未勾选）') + '\n';
+    });
+    if (filled.length < SCENES.length) text += '\n注意：还有 ' + (SCENES.length - filled.length) + ' 个场景未勾选\n';
+    text += '\n---JSON---\n' + JSON.stringify(list, null, 2);
+    showResult(text);
+  } catch (err) {
+    alert('导出出错：' + err.message);
+  }
+};
+
+loadLocal();
+refresh();
+</script>
+
+<div class="mask" id="dlgMask">
+  <div class="dlg">
+    <div class="dh">核对结果（可直接复制粘贴给我）</div>
+    <div class="dhint" id="dlgHint">请手动全选复制下面的内容</div>
+    <textarea id="dlgText" readonly></textarea>
+    <div class="df">
+      <button id="dlgCopy">再复制一次</button>
+      <button class="primary" id="dlgClose">关闭</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

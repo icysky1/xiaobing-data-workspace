@@ -1,0 +1,39 @@
+<view wx:if="{{d}}" class="detail">
+  <view class="hero-card" style="background:{{d.qcolor}}">
+    <view class="hc-name">{{d.name}}</view>
+    <view class="hc-sub">{{d.title}} · {{d.era}}</view>
+  </view>
+
+  <view class="card">
+    <view class="kv"><text class="k">初始武力</text><text class="v">{{d.force}}</text></view>
+    <view class="kv"><text class="k">初始智力</text><text class="v">{{d.iq}}</text></view>
+    <view wx:if="{{d.evolveName || d.evolveFromName}}" class="kv">
+      <text class="k">进化形态</text>
+      <text class="v" wx:if="{{d.evolveName}}">可进化为 {{d.evolveName}}</text>
+      <text class="v" wx:if="{{d.evolveFromName}}">{{d.evolveFromName}} 的进化形态</text>
+    </view>
+    <view wx:if="{{d.explain}}" class="kv col">
+      <text class="k">英雄志</text>
+      <text class="v dim">{{d.explain}}</text>
+    </view>
+    <view wx:if="{{d.skill && d.skill.name}}" class="kv col">
+      <text class="k">技能【{{d.skill.name}}】</text>
+      <text class="v dim pre">{{d.skill.desc}}</text>
+    </view>
+    <view wx:if="{{d.eraDesc || d.eraNote}}" class="kv col">
+      <text class="k">阵营效果</text>
+      <text wx:if="{{d.eraDesc}}" class="v">{{d.eraDesc}}</text>
+      <text wx:if="{{d.eraNote}}" class="v dim">{{d.eraNote}}</text>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{d.fetters.length}}">
+    <view class="sec-label">🔗 羁绊（{{d.fetters.length}}）</view>
+    <view wx:for="{{d.fetters}}" wx:key="id" class="f-line">
+      <text class="f-name">{{item.name}}</text>
+      <text class="dim" wx:if="{{item.members}}">（{{item.members}}）</text>
+      <text class="dim">：{{item.effect}}</text>
+    </view>
+  </view>
+</view>
+<ad-banner />

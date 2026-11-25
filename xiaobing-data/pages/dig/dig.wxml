@@ -1,0 +1,164 @@
+<!-- 顶层：装备 / 图鉴 / 属性 / 藏宝阁 / 场景 -->
+<view class="top-tabs">
+  <view
+    wx:for="{{tops}}"
+    wx:key="*this"
+    class="top-tab {{top === index ? 'on' : ''}}"
+    bindtap="pickTop"
+    data-idx="{{index}}"
+  >{{item}}</view>
+</view>
+
+<!-- ============ 装备 ============ -->
+<block wx:if="{{top === 0}}">
+  <view class="tabs">
+    <view wx:for="{{equips}}" wx:key="name" class="tab {{cur === index ? 'on' : ''}}" bindtap="pick" data-idx="{{index}}">{{item.name}}</view>
+  </view>
+
+  <view class="card">
+    <view class="lab">💡 建议升级顺序：探铲 ≈ 细刷 > 手套 > 镜片</view>
+    <view class="dim">· 探铲（精细）：成长翻倍式，防的是高品相宝物破损，最贵的损失靠它兜底</view>
+    <view class="dim">· 细刷（专注）：直接降低碎片概率，两者决定每次挖宝的有效产出率</view>
+    <view class="dim">· 手套（现宝＋易手）：现宝提高品相分，品质上去品相才高；易手提高出售宝物获得的银币，卖宝回本靠它</view>
+    <view class="dim">· 镜片（高效）：细锤加成收益最小，最后升</view>
+  </view>
+
+  <view class="card">
+    <view class="lab">基础属性</view>
+    <view wx:for="{{equips[cur].baseEffect}}" wx:key="n" class="dim">
+      {{item.n}}：+{{item.v}}（每级再 +{{item.per}}）
+    </view>
+  </view>
+
+  <view class="tabs sub">
+    <view wx:for="{{equips[cur].levels}}" wx:key="quality" wx:for-item="lv" class="tab {{curQ === index ? 'on' : ''}}" bindtap="pickQ" data-q="{{index}}">品质{{lv.quality}}</view>
+  </view>
+
+  <view class="card">
+    <view class="dim">品质{{equips[cur].levels[curQ].quality}} 满级 {{equips[cur].levels[curQ].maxLevel}} 级 · 单级消耗 = 升到该级的银币 · 属性为升到该级后的数值</view>
+    <view class="thead row hd">
+      <text class="c-lv">升级</text><text class="c-cost">银币</text><text class="c-cum">累计</text>
+      <text wx:for="{{equips[cur].baseEffect}}" wx:key="n" wx:for-item="be" class="c-attr">{{be.n}}</text>
+    </view>
+    <view wx:for="{{equips[cur].levels[curQ].rows}}" wx:key="*this" wx:for-item="r" class="row">
+      <text class="c-lv">{{r[0] - 1}}→{{r[0]}}</text>
+      <text class="c-cost num">{{r[1]}}</text>
+      <text class="c-cum num dim">{{r[2]}}</text>
+      <text wx:for="{{equips[cur].baseEffect}}" wx:for-index="bi" wx:key="*this" wx:for-item="be" class="c-attr num attr">{{r[3 + bi]}}</text>
+    </view>
+  </view>
+</block>
+
+<!-- ============ 图鉴 ============ -->
+<block wx:if="{{top === 1}}">
+  <scroll-view scroll-x class="tabs scene-tabs">
+    <view
+      wx:for="{{scenes}}"
+      wx:key="name"
+      class="tab {{curScene === index ? 'on' : ''}}"
+      bindtap="pickScene"
+      data-idx="{{index}}"
+    >{{item.name}}</view>
+    <view
+      class="tab {{curScene === scenes.length ? 'on' : ''}}"
+      bindtap="pickScene"
+      data-idx="{{scenes.length}}"
+    >收藏品</view>
+  </scroll-view>
+
+  <!-- 收藏品 -->
+  <block wx:if="{{curScene === scenes.length}}">
+    <view class="card">
+      <view class="lab">🎩 收藏品图鉴</view>
+      <view class="dim">{{collectionNote}}</view>
+    </view>
+    <view class="card collections" wx:for="{{collections}}" wx:for-item="col" wx:key="name">
+      <view class="lab">{{col.name}}</view>
+      <view class="col-bonus" wx:if="{{col.bonus}}">集齐加成：{{col.bonus}}</view>
+      <view class="thead row hd">
+        <text class="col-name">名称</text><text class="col-loc">场景</text><text class="col-dig">每锤进度</text><text class="col-est">预计锤数</text>
+      </view>
+      <view wx:for="{{col.items}}" wx:for-item="it" wx:key="name" class="row">
+        <text class="col-name">{{it.name}}</text>
+        <text class="col-loc">{{it.location}}</text>
+        <text class="col-dig num">{{it.digRange}}</text>
+        <text class="col-est num">{{it.est}}</text>
+      </view>
+      <view wx:if="{{col.groupId === 1000}}" class="dim co-foot">* 大头兵模型首锤曾出现 +1.05% 的大幅进度，若属常态会明显快于估算</view>
+    </view>
+  </block>
+
+  <!-- 场景图鉴 -->
+  <block wx:else>
+  <view class="card">
+    <view wx:if="{{scenes[curScene].special}}" class="lab">🌟 特殊宝物：<text class="hot">{{scenes[curScene].special}}</text>（场景内除特殊宝物需专用细锤，其余全部普通细锤）</view>
+    <block wx:for="{{scenes[curScene].groups}}" wx:for-item="g" wx:key="name">
+      <view class="g-name">{{g.name}}</view>
+      <view wx:for="{{g.items}}" wx:for-item="it" wx:key="name" class="it {{it.special ? 'sp' : ''}}">
+        <text class="row1">
+          <text wx:if="{{it.special}}">★</text>{{it.name}}
+        </text>
+        <text class="tag it-type" style="background:{{it.qcolor}}">{{it.type}}</text>
+        <text class="dim it-grade">品相 {{it.grade}}</text>
+        <text class="dim hot it-hammer">{{it.special && it.hammer ? it.hammer : ''}}</text>
+      </view>
+    </block>
+  </view>
+  </block>
+</block>
+
+<!-- ============ 属性 ============ -->
+<block wx:if="{{top === 2}}">
+  <view class="card">
+    <view class="lab">全部属性池（权重：普通 80 / 精通 20 / 唯一 ★ 1）</view>
+    <view wx:for="{{effects}}" wx:key="name" class="f-line">
+      <text class="{{item.special ? 'f-name' : ''}}">{{item.special ? '★ ' : ''}}{{item.name}}</text>
+      <text class="dim">：{{item.des}}</text>
+    </view>
+  </view>
+</block>
+
+<!-- ============ 藏宝阁 ============ -->
+<block wx:if="{{top === 3}}">
+  <view class="card">
+    <view class="dim">藏宝阁升级＝依次购买指定次数，全部买完后还需等待倒计时才升到下一级；格子＝藏宝阁内可同时放置的各类型宝物上限。</view>
+  </view>
+  <view class="card">
+    <view wx:for="{{boxLevels}}" wx:key="level" class="bx">
+      <view class="bx-head">
+        <text class="bx-lv">{{item.level}}级{{item.max ? '（满级）' : ' → ' + item.next + '级'}}</text>
+        <text class="dim">格子：{{item.slots}}</text>
+      </view>
+      <view class="dim">升级消耗：{{item.orders}}次 · 每次 {{item.per}}</view>
+      <view class="dim">累计：{{item.total}}<text wx:if="{{!item.max}}"> · 买完后等待 {{item.time}}</text></view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="lab">🏛️ 货币来源</view>
+    <view wx:for="{{currencies}}" wx:key="name" class="f-line">
+      <text class="f-name">{{item.name}}</text>
+      <text class="dim">：{{item.desc}}</text>
+    </view>
+  </view>
+</block>
+
+<!-- ============ 场景 ============ -->
+<block wx:if="{{top === 4}}">
+  <view class="card">
+    <view class="dim">场景按顺序解锁：需先解锁上一场景，并完成该场景的解锁任务（全部达成后解锁）。</view>
+  </view>
+  <view class="card">
+    <view wx:for="{{sceneUnlocks}}" wx:key="id" class="bx">
+      <view class="bx-head">
+        <text class="bx-lv">{{item.order}}. {{item.name}}</text>
+        <text wx:if="{{!item.open}}" class="tag lock">暂未开放</text>
+      </view>
+      <block wx:if="{{item.open}}">
+        <view wx:for="{{item.conds}}" wx:for-item="c" wx:key="*this" class="dim">· {{c}}</view>
+        <view wx:if="{{!item.conds.length}}" class="dim">· 无解锁条件</view>
+      </block>
+    </view>
+  </view>
+</block>
+
+<ad-banner />

@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/quiz/quiz",
+    "pages/heroes/heroes",
+    "pages/herodetail/herodetail",
+    "pages/lineup/lineup",
+    "pages/pets/pets",
+    "pages/petdetail/petdetail",
+    "pages/toolbox/toolbox",
+    "pages/guides/guides",
+    "pages/feedback/feedback",
+    "pages/guide/guide",
+    "pages/tech/tech",
+    "pages/dig/dig",
+    "pages/admin/admin"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#5f8d7c",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小兵集中营",
+    "backgroundColor": "#f7f3e4"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}

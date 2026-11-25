@@ -1,0 +1,108 @@
+<view wx:if="{{msg}}" class="msg">{{msg}}</view>
+
+<view class="card">
+  <view class="lab">👤 账号</view>
+  <block wx:if="{{user}}">
+    <view class="dim">已登录（微信）</view>
+    <view class="btn btn-plain" style="margin-top:16rpx" bindtap="logout">退出登录</view>
+  </block>
+  <block wx:else>
+    <view class="dim">登录后可管理公告与攻略</view>
+    <view class="btn" style="margin-top:16rpx" bindtap="login">微信一键登录</view>
+  </block>
+</view>
+
+<block wx:if="{{user}}">
+  <block wx:if="{{isAdmin}}">
+    <view class="card">
+      <view class="lab">🎛️ 显示管理</view>
+      <view class="dim">控制首页模块与广告位的显示</view>
+      <view class="dim mode-tip">显示＝所有人可见；仅管理员＝只有管理员账号能看到，可用于上线前调试；隐藏＝所有人都看不到</view>
+      <view wx:for="{{moduleSwitches}}" wx:key="title" class="sw-row">
+        <text>{{item.title}}</text>
+        <picker mode="selector" range="{{modeLabels}}" value="{{item.mode}}" data-idx="{{index}}" bindchange="onModuleMode">
+          <view class="mode-pick mode-{{item.mode}}">{{modeLabels[item.mode]}}</view>
+        </picker>
+      </view>
+      <view class="sw-row">
+        <text>广告位</text>
+        <switch checked="{{showAds}}" bindchange="toggleAds" color="#5f8d7c" />
+      </view>
+      <view class="btn" style="margin-top:16rpx" bindtap="saveSettings">保存显示设置</view>
+    </view>
+    <view class="card">
+      <view class="lab">🔑 修改管理口令</view>
+      <view class="dim">至少 6 位；修改后下次进后台使用新口令，主人码只在首次绑定用</view>
+      <input class="inp" password="{{true}}" placeholder="新口令" value="{{newPass}}" bindinput="onNewPass" />
+      <input class="inp" password="{{true}}" placeholder="再输一次" value="{{newPass2}}" bindinput="onNewPass2" />
+      <view class="btn" bindtap="changePass">保存新口令</view>
+    </view>
+    <view class="card">
+      <view class="lab">📢 发布公告</view>
+      <input class="inp" placeholder="标题" value="{{title}}" bindinput="onTitle" />
+      <textarea class="ta" placeholder="内容" value="{{content}}" bindinput="onContent" maxlength="500"></textarea>
+      <view class="btn" bindtap="publish">发布</view>
+    </view>
+    <view class="card">
+      <view class="lab">现有公告（点条目删除自己的）</view>
+      <view wx:for="{{notices}}" wx:key="id" class="n-item" bindtap="del" data-id="{{item.id}}">
+        <text class="n-title">{{item.title}}</text>
+        <text class="dim">{{item.content}}</text>
+      </view>
+      <view wx:if="{{!notices.length}}" class="dim">暂无公告</view>
+    </view>
+    <view class="card">
+      <view class="lab">📖 攻略管理{{gEditingId ? '（编辑中）' : ''}}</view>
+      <input class="inp" placeholder="攻略名称" value="{{gTitle}}" bindinput="onGTitle" />
+      <textarea
+        class="ta g-ta"
+        placeholder="攻略内容。格式：# 开头是小节标题，- 开头是要点，普通行为段落"
+        value="{{gContent}}"
+        bindinput="onGContent"
+        maxlength="-1"
+        auto-height
+      ></textarea>
+      <view class="g-form-row">
+        <view class="g-pin-cell">
+          <switch checked="{{gPinned}}" bindchange="onGPinned" />
+          <text>置顶</text>
+        </view>
+        <view class="g-sort-cell">
+          <text class="dim">排序（数值越大越靠前）</text>
+          <input class="g-sort-inp" type="number" value="{{gSort}}" bindinput="onGSort" />
+        </view>
+      </view>
+      <view class="btn" bindtap="publishGuide">{{gEditingId ? '保存修改' : '发布攻略'}}</view>
+      <view class="row-btns">
+        <view wx:for="{{builtinGuideTitles}}" wx:key="*this" class="btn btn-plain g-builtin" bindtap="loadBuiltinGuide" data-idx="{{index}}">载入：{{item}}</view>
+      </view>
+      <view wx:if="{{gEditingId}}" class="btn btn-plain" style="margin-top:12rpx" bindtap="cancelGuideEdit">取消编辑</view>
+      <view class="dim" style="margin-top:14rpx">现有攻略（点名称编辑；置顶后前端排最前；排序数值越大越靠前）</view>
+      <view wx:for="{{guides}}" wx:key="id" class="n-item g-manage">
+        <view class="g-line1">
+          <text class="n-title" bindtap="editGuide" data-id="{{item.id}}">{{item.pinned ? '【置顶】' : ''}}{{item.title}}</text>
+          <text class="g-pin-btn {{item.pinned ? 'on' : ''}}" bindtap="togglePin" data-id="{{item.id}}">{{item.pinned ? '取消置顶' : '置顶'}}</text>
+          <text class="g-del" bindtap="delGuide" data-id="{{item.id}}">删除</text>
+        </view>
+        <view class="g-line2">
+          <text class="dim">排序</text>
+          <input class="g-sort-inp" type="number" value="{{sortInputs[item.id] !== undefined ? sortInputs[item.id] : item.sort}}" bindinput="onSortInput" data-id="{{item.id}}" />
+          <text class="g-sort-save" bindtap="saveSort" data-id="{{item.id}}">保存排序</text>
+        </view>
+      </view>
+      <view wx:if="{{!guides.length}}" class="dim">还没有云端攻略，前端会先展示内置攻略</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="card">
+      <view class="lab">🔑 管理员入口（仅主人）</view>
+      <view class="dim" wx:if="{{ownerState === 'other'}}">本后台已绑定主人账号，其他账号无法管理</view>
+      <view class="dim" wx:elif="{{ownerState === 'unbound'}}">首次使用：请输入主人码绑定主人账号，绑定后仅该微信可管理</view>
+      <view class="dim" wx:else>输入管理口令解锁</view>
+      <input class="inp" placeholder="{{ownerState === 'unbound' ? '输入主人码' : '输入管理口令'}}" password value="{{passInput}}" bindinput="onPass" />
+      <view class="btn" bindtap="unlock">{{ownerState === 'unbound' ? '绑定主人并解锁' : '解锁管理功能'}}</view>
+    </view>
+  </block>
+</block>
+
+<ad-banner />

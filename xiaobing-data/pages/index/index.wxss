@@ -1,0 +1,42 @@
+.head {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(232, 162, 61, 0.25) 0, transparent 40%),
+    linear-gradient(180deg, #527e6e, #5f8d7c 75%, #6fae8f);
+  padding: 44rpx 32rpx 36rpx;
+  color: #fdf9ec;
+  border-bottom: 4rpx solid #e3c98f;
+}
+.head-banner { display: flex; align-items: center; gap: 24rpx; }
+.head-emblem {
+  width: 108rpx;
+  height: 108rpx;
+  border: 3rpx solid #e3c98f;
+  border-radius: 16rpx;
+  background: linear-gradient(160deg, #4e7a68, #5f8d7c);
+  color: #fdf9ec;
+  font-size: 60rpx;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 12rpx rgba(0, 0, 0, 0.4), 0 4rpx 10rpx rgba(0, 0, 0, 0.3);
+}
+.head-title { font-size: 46rpx; font-weight: 700; letter-spacing: 8rpx; }
+.head-sub { font-size: 22rpx; opacity: 0.8; margin-top: 8rpx; letter-spacing: 2rpx; }
+.notice { border-left: 10rpx solid #e3c98f; }
+.notice-label { font-weight: 700; margin-bottom: 10rpx; color: #4e7a68; letter-spacing: 4rpx; }
+.notice-item { display: flex; flex-direction: column; margin-top: 10rpx; }
+.notice-title { font-weight: 600; }
+.grid { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 12rpx; }
+.mod {
+  width: 45%;
+  margin: 12rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.mod-icon { font-size: 44rpx; margin-right: 16rpx; }
+.mod-body { flex: 1; }
+.mod-title { font-weight: 700; letter-spacing: 2rpx; }
+.mod-arrow { color: #e3c98f; font-size: 36rpx; font-weight: 700; }
+.foot { text-align: center; padding: 24rpx; }

@@ -1,0 +1,161 @@
+<view class="tabs">
+  <view
+    wx:for="{{tabs}}"
+    wx:key="*this"
+    class="tab {{tab === index ? 'on' : ''}}"
+    bindtap="pickTab"
+    data-idx="{{index}}"
+  >{{item}}</view>
+</view>
+
+<!-- ============ 羁绊反查 ============ -->
+<block wx:if="{{tab === 0}}">
+  <view class="card">
+    <view class="lab">① 添加英雄（已选 {{mine.length}}/16）</view>
+    <view class="search-bar" style="padding: 0">
+      <input placeholder="搜英雄名或称号" bindinput="onSearchF" value="{{kwF}}" />
+    </view>
+    <view class="era-tabs">
+      <view
+        wx:for="{{eras}}"
+        wx:key="*this"
+        class="era-tab {{curEra === index ? 'on' : ''}}"
+        bindtap="pickEra"
+        data-idx="{{index}}"
+      >{{item}}</view>
+    </view>
+    <view class="chips">
+      <view
+        wx:for="{{fHits}}"
+        wx:key="id"
+        class="chip"
+        style="border-color:{{item.qcolor}}"
+        bindtap="addHero"
+        data-name="{{item.name}}"
+      >
+        <text class="chip-q" style="background:{{item.qcolor}}">{{item.quality}}</text>
+        <text class="chip-n">{{item.name}}</text>
+      </view>
+    </view>
+    <view wx:if="{{!fHits.length}}" class="dim" style="padding:20rpx 0">这个朝代下没有可选英雄了，换个朝代或搜名字。</view>
+    <view wx:if="{{fTrunc}}" class="dim note">同名太多，只列前 60 位，用搜索或换朝代更准。</view>
+  </view>
+
+  <view class="card" wx:if="{{mine.length}}">
+    <view class="lab">② 我的阵容<text class="clear-all" bindtap="clearMine">清空</text></view>
+    <view class="chips">
+      <view wx:for="{{mine}}" wx:key="name" class="mine-chip" bindtap="delHero" data-name="{{item.name}}">
+        <text>{{item.name}}</text>
+        <text class="mine-x">×</text>
+      </view>
+    </view>
+    <view class="dim note">点英雄名可移出；进化版（飞仙·/戏魂·/黄金甲·）按基础名参与羁绊。</view>
+  </view>
+
+  <block wx:if="{{mine.length}}">
+    <view class="card">
+      <view class="lab">✅ 已激活羁绊（{{actCount}}）</view>
+      <view wx:for="{{act}}" wx:key="k" class="f-line">
+        <view class="f-top">
+          <text class="f-name">{{item.name}}</text>
+          <text class="f-eff">{{item.effect}}</text>
+        </view>
+        <view class="f-sub dim">{{item.owner}} {{item.who}}</view>
+      </view>
+      <view wx:if="{{!actCount}}" class="dim">这几位暂时凑不出羁绊，往下看差谁。</view>
+    </view>
+
+    <view class="card">
+      <view class="lab">🔶 只差 1 人就能开（{{nearCount}}）</view>
+      <view wx:for="{{near}}" wx:key="k" class="f-line">
+        <view class="f-top">
+          <text class="f-name">{{item.name}}</text>
+          <text class="need">缺 {{item.missing}}</text>
+        </view>
+        <view class="f-sub dim">{{item.owner}} {{item.who}} · {{item.effect}}</view>
+      </view>
+      <view wx:if="{{!nearCount}}" class="dim">没有“差一人”的羁绊，阵容已比较完整。</view>
+    </view>
+  </block>
+
+  <view class="card" wx:else>
+    <view class="dim">先从上面点选几位英雄，这里会自动列出能激活的羁绊和只差一人的羁绊。</view>
+  </view>
+</block>
+
+<!-- ============ 活动日历 ============ -->
+<block wx:if="{{tab === 1}}">
+  <view class="card">
+    <view class="lab">📅 本周活动（今天 {{calToday}}）</view>
+    <view class="cal-hero" style="background:{{calBg}};color:{{calFg}}">
+      <view class="cal-name">{{calName}}</view>
+      <view class="cal-range">{{calRange}}</view>
+      <view class="cal-desc">{{calDesc}} · {{calDay}}</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="lab">🗓️ 接下来几周</view>
+    <view wx:for="{{calWeeks}}" wx:key="k" class="cal-row {{item.cur ? 'cur' : ''}}">
+      <view class="cal-dot" style="background:{{item.fg}}"></view>
+      <view class="cal-mid">
+        <text class="cal-n" style="color:{{item.fg}}">{{item.name}}</text>
+        <text class="cal-d dim">{{item.desc}}</text>
+      </view>
+      <text class="cal-r dim">{{item.range}}</text>
+      <text wx:if="{{item.cur}}" class="cal-tag">本周</text>
+    </view>
+    <view class="dim note">轮换规律：神兽周 → 挖宝周 → 招募周，每 7 天一换、21 天一个循环。活动具体内容以游戏内实际开启为准。</view>
+  </view>
+</block>
+
+<!-- ============ 结义文案 ============ -->
+<block wx:if="{{tab === 2}}">
+  <view class="card">
+    <view class="lab">📋 一键生成结义文案</view>
+    <view class="dim note">填好信息 → 点复制 → 粘贴到游戏私聊或群里。文案只在你手机本地生成，不会上传，也不会出现在这里给别人看。</view>
+
+    <view class="f-row">
+      <text class="f-k">区服</text>
+      <input class="f-v" type="number" placeholder="如 128" value="{{server}}" bindinput="onField" data-k="server" />
+    </view>
+    <view class="f-row">
+      <text class="f-k">角色名</text>
+      <input class="f-v" placeholder="如 燕云十八骑" value="{{name}}" bindinput="onField" data-k="name" />
+    </view>
+    <view class="f-row">
+      <text class="f-k">战力</text>
+      <input class="f-v" type="number" placeholder="如 860000" value="{{power}}" bindinput="onField" data-k="power" />
+    </view>
+    <view class="f-row">
+      <text class="f-k">常在线</text>
+      <input class="f-v" placeholder="如 中午、晚 8 点后" value="{{online}}" bindinput="onField" data-k="online" />
+    </view>
+    <view class="f-row">
+      <text class="f-k">补充</text>
+      <input class="f-v" placeholder="选填，如：缺 2 人打竞技场" value="{{extra}}" bindinput="onField" data-k="extra" />
+    </view>
+
+    <view class="dim tag-lab">招募要求（可多选）</view>
+    <view class="tags">
+      <view
+        wx:for="{{tags}}"
+        wx:key="k"
+        class="tag-chip {{item.on ? 'on' : ''}}"
+        bindtap="toggleTag"
+        data-idx="{{index}}"
+      >{{item.k}}</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="lab">👀 文案预览</view>
+    <view class="preview">
+      <text user-select="{{true}}" selectable="{{true}}">{{preview}}</text>
+    </view>
+    <view wx:if="{{copyTip}}" class="copy-tip">长按上方文案，拖选全部后点「复制」即可。</view>
+    <view class="copy-btn" bindtap="copy">复制文案</view>
+  </view>
+</block>
+
+<ad-banner />

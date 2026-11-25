@@ -1,0 +1,30 @@
+<view class="tabs">
+  <view
+    wx:for="{{branches}}"
+    wx:key="key"
+    class="tab {{current === index ? 'on' : ''}}"
+    bindtap="pick"
+    data-idx="{{index}}"
+  >{{item.name}}({{item.count}})</view>
+</view>
+<ad-banner />
+<view class="dim hint">{{branches[current].desc}}</view>
+<view class="search-bar">
+  <input placeholder="搜科技名或效果，如：大仓库 / 武力" bindinput="onInput" bindblur="onBlur" value="{{query}}" focus="{{focusKw}}" />
+  <text wx:if="{{query}}" class="clear-x" bindtap="clearQuery">×</text>
+</view>
+<view class="dim hint">名称 · 效果 · 铜钱 · 材料 · 用时 · 解锁条件</view>
+<scroll-view scroll-y class="list">
+  <view wx:for="{{shown}}" wx:key="k" wx:for-item="e" class="card t-item">
+    <view class="row">
+      <text class="t-name">{{e.n}}</text>
+      <text class="t-eff">{{e.e}}</text>
+    </view>
+    <view class="dim">
+      铜钱 {{e.c}}{{e.i ? ' · ' + e.i : ''}} · {{e.t}}分钟{{e.u ? ' · ' + e.u : ''}}
+    </view>
+  </view>
+  <view wx:if="{{!shown.length}}" class="dim empty">没有匹配的科技，换个关键词试试</view>
+  <view wx:if="{{hasMore}}" class="btn more-btn" bindtap="loadMore">加载更多（已显示 {{shown.length}}/{{total}}）</view>
+  <view wx:elif="{{total}}" class="dim more-btn">共 {{total}} 条，已全部显示</view>
+</scroll-view>

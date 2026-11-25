@@ -1,0 +1,727 @@
+{
+ "currencies": {
+  "银币": "提升藏宝阁等级/订单消耗；出售宝物获得",
+  "夜明珠": "突破藏宝阁等级(高等级订单需要)；唯一来源=挖到「黑邃玉石」(id200002, q5奇珍, 每颗给2夜明珠, 全场景通用诱饵宝物, 固定奖励不受品相影响)。按规律用石髓细锤(书画难觅)提高奇珍类出现率",
+  "珍珠": "提升寻宝具等级；挖宝订单获得 + 灵玉细锤每次挖宝直接给珍珠 + 挖到「灵白玉石」(id200001, q5奇珍)给6珍珠",
+  "洛阳铲": "每次挖宝消耗10个；随时间恢复，上限2500"
+ },
+ "globalConfig": {
+  "orderMaxCount": 3,
+  "dailyOrderReset": 3,
+  "digCostHammer": 1
+ },
+ "levels": [
+  {
+   "level": 1,
+   "orderSlots": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 300
+    },
+    {
+     "item": "银币",
+     "num": 300
+    },
+    {
+     "item": "银币",
+     "num": 300
+    },
+    {
+     "item": "银币",
+     "num": 300
+    },
+    {
+     "item": "银币",
+     "num": 300
+    }
+   ],
+   "orderTimeSec": 14400
+  },
+  {
+   "level": 2,
+   "orderSlots": [
+    2,
+    1,
+    1,
+    1
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 1800
+    },
+    {
+     "item": "银币",
+     "num": 1800
+    },
+    {
+     "item": "银币",
+     "num": 1800
+    },
+    {
+     "item": "银币",
+     "num": 1800
+    },
+    {
+     "item": "银币",
+     "num": 1800
+    }
+   ],
+   "orderTimeSec": 86400
+  },
+  {
+   "level": 3,
+   "orderSlots": [
+    2,
+    2,
+    1,
+    1
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 10000
+    },
+    {
+     "item": "银币",
+     "num": 10000
+    },
+    {
+     "item": "银币",
+     "num": 10000
+    },
+    {
+     "item": "银币",
+     "num": 10000
+    },
+    {
+     "item": "银币",
+     "num": 10000
+    }
+   ],
+   "orderTimeSec": 259200
+  },
+  {
+   "level": 4,
+   "orderSlots": [
+    2,
+    2,
+    2,
+    1
+   ],
+   "nextLevelOrders": 3,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 45000
+    },
+    {
+     "item": "银币",
+     "num": 45000
+    },
+    {
+     "item": "银币",
+     "num": 45000
+    },
+    {
+     "item": "银币",
+     "num": 45000
+    },
+    {
+     "item": "银币",
+     "num": 45000
+    },
+    {
+     "item": "银币",
+     "num": 45000
+    }
+   ],
+   "orderTimeSec": 518400
+  },
+  {
+   "level": 5,
+   "orderSlots": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "nextLevelOrders": 7,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 120000
+    },
+    {
+     "item": "银币",
+     "num": 120000
+    },
+    {
+     "item": "银币",
+     "num": 120000
+    },
+    {
+     "item": "银币",
+     "num": 120000
+    },
+    {
+     "item": "银币",
+     "num": 120000
+    },
+    {
+     "item": "银币",
+     "num": 120000
+    },
+    {
+     "item": "银币",
+     "num": 120000
+    }
+   ],
+   "orderTimeSec": 777600
+  },
+  {
+   "level": 6,
+   "orderSlots": [
+    3,
+    2,
+    2,
+    2
+   ],
+   "nextLevelOrders": 4,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 270000
+    },
+    {
+     "item": "银币",
+     "num": 270000
+    },
+    {
+     "item": "银币",
+     "num": 270000
+    },
+    {
+     "item": "银币",
+     "num": 270000
+    },
+    {
+     "item": "银币",
+     "num": 270000
+    },
+    {
+     "item": "银币",
+     "num": 270000
+    },
+    {
+     "item": "银币",
+     "num": 270000
+    },
+    {
+     "item": "银币",
+     "num": 270000
+    }
+   ],
+   "orderTimeSec": 1166400
+  },
+  {
+   "level": 7,
+   "orderSlots": [
+    3,
+    3,
+    2,
+    2
+   ],
+   "nextLevelOrders": 4,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 500000
+    },
+    {
+     "item": "银币",
+     "num": 500000
+    },
+    {
+     "item": "银币",
+     "num": 500000
+    },
+    {
+     "item": "银币",
+     "num": 500000
+    },
+    {
+     "item": "银币",
+     "num": 500000
+    },
+    {
+     "item": "银币",
+     "num": 500000
+    },
+    {
+     "item": "银币",
+     "num": 500000
+    },
+    {
+     "item": "银币",
+     "num": 500000
+    }
+   ],
+   "orderTimeSec": 1399680
+  },
+  {
+   "level": 8,
+   "orderSlots": [
+    3,
+    3,
+    3,
+    2
+   ],
+   "nextLevelOrders": 4,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 800000
+    },
+    {
+     "item": "银币",
+     "num": 800000
+    },
+    {
+     "item": "银币",
+     "num": 800000
+    },
+    {
+     "item": "银币",
+     "num": 800000
+    },
+    {
+     "item": "银币",
+     "num": 800000
+    },
+    {
+     "item": "银币",
+     "num": 800000
+    },
+    {
+     "item": "银币",
+     "num": 800000
+    },
+    {
+     "item": "银币",
+     "num": 800000
+    }
+   ],
+   "orderTimeSec": 1679616
+  },
+  {
+   "level": 9,
+   "orderSlots": [
+    3,
+    3,
+    3,
+    3
+   ],
+   "nextLevelOrders": 4,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 1200000
+    },
+    {
+     "item": "银币",
+     "num": 1200000
+    },
+    {
+     "item": "银币",
+     "num": 1200000
+    },
+    {
+     "item": "银币",
+     "num": 1200000
+    },
+    {
+     "item": "银币",
+     "num": 1200000
+    },
+    {
+     "item": "银币",
+     "num": 1200000
+    },
+    {
+     "item": "银币",
+     "num": 1200000
+    },
+    {
+     "item": "银币",
+     "num": 1200000
+    }
+   ],
+   "orderTimeSec": 2519424
+  },
+  {
+   "level": 10,
+   "orderSlots": [
+    4,
+    3,
+    3,
+    3
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 2400000
+    },
+    {
+     "item": "夜明珠",
+     "num": 168
+    },
+    {
+     "item": "银币",
+     "num": 2400000
+    },
+    {
+     "item": "夜明珠",
+     "num": 168
+    },
+    {
+     "item": "银币",
+     "num": 2400000
+    },
+    {
+     "item": "夜明珠",
+     "num": 168
+    },
+    {
+     "item": "银币",
+     "num": 2400000
+    },
+    {
+     "item": "夜明珠",
+     "num": 168
+    },
+    {
+     "item": "银币",
+     "num": 2400000
+    },
+    {
+     "item": "夜明珠",
+     "num": 168
+    }
+   ],
+   "orderTimeSec": 3779136
+  },
+  {
+   "level": 11,
+   "orderSlots": [
+    4,
+    4,
+    3,
+    3
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 3200000
+    },
+    {
+     "item": "夜明珠",
+     "num": 224
+    },
+    {
+     "item": "银币",
+     "num": 3200000
+    },
+    {
+     "item": "夜明珠",
+     "num": 224
+    },
+    {
+     "item": "银币",
+     "num": 3200000
+    },
+    {
+     "item": "夜明珠",
+     "num": 224
+    },
+    {
+     "item": "银币",
+     "num": 3200000
+    },
+    {
+     "item": "夜明珠",
+     "num": 224
+    },
+    {
+     "item": "银币",
+     "num": 3200000
+    },
+    {
+     "item": "夜明珠",
+     "num": 224
+    }
+   ],
+   "orderTimeSec": 4723920
+  },
+  {
+   "level": 12,
+   "orderSlots": [
+    4,
+    4,
+    4,
+    3
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 3840000
+    },
+    {
+     "item": "夜明珠",
+     "num": 280
+    },
+    {
+     "item": "银币",
+     "num": 3840000
+    },
+    {
+     "item": "夜明珠",
+     "num": 280
+    },
+    {
+     "item": "银币",
+     "num": 3840000
+    },
+    {
+     "item": "夜明珠",
+     "num": 280
+    },
+    {
+     "item": "银币",
+     "num": 3840000
+    },
+    {
+     "item": "夜明珠",
+     "num": 280
+    },
+    {
+     "item": "银币",
+     "num": 3840000
+    },
+    {
+     "item": "夜明珠",
+     "num": 280
+    }
+   ],
+   "orderTimeSec": 5668704
+  },
+  {
+   "level": 13,
+   "orderSlots": [
+    4,
+    4,
+    4,
+    4
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 4480000
+    },
+    {
+     "item": "夜明珠",
+     "num": 336
+    },
+    {
+     "item": "银币",
+     "num": 4480000
+    },
+    {
+     "item": "夜明珠",
+     "num": 336
+    },
+    {
+     "item": "银币",
+     "num": 4480000
+    },
+    {
+     "item": "夜明珠",
+     "num": 336
+    },
+    {
+     "item": "银币",
+     "num": 4480000
+    },
+    {
+     "item": "夜明珠",
+     "num": 336
+    },
+    {
+     "item": "银币",
+     "num": 4480000
+    },
+    {
+     "item": "夜明珠",
+     "num": 336
+    }
+   ],
+   "orderTimeSec": 7085880
+  },
+  {
+   "level": 14,
+   "orderSlots": [
+    5,
+    4,
+    4,
+    4
+   ],
+   "nextLevelOrders": 5,
+   "costPerOrder": [
+    {
+     "item": "银币",
+     "num": 5120000
+    },
+    {
+     "item": "夜明珠",
+     "num": 392
+    },
+    {
+     "item": "银币",
+     "num": 5120000
+    },
+    {
+     "item": "夜明珠",
+     "num": 392
+    },
+    {
+     "item": "银币",
+     "num": 5120000
+    },
+    {
+     "item": "夜明珠",
+     "num": 392
+    },
+    {
+     "item": "银币",
+     "num": 5120000
+    },
+    {
+     "item": "夜明珠",
+     "num": 392
+    },
+    {
+     "item": "银币",
+     "num": 5120000
+    },
+    {
+     "item": "夜明珠",
+     "num": 392
+    }
+   ],
+   "orderTimeSec": 8503056
+  },
+  {
+   "level": 15,
+   "orderSlots": [
+    5,
+    5,
+    4,
+    4
+   ],
+   "nextLevelOrders": 0,
+   "costPerOrder": [],
+   "orderTimeSec": 0
+  }
+ ],
+ "sceneUnlocks": [
+  {
+   "sceneId": 1,
+   "name": "荒沙古城",
+   "unlockOrder": 1,
+   "taskGroup": 1,
+   "conditions": [
+    "提升等级至1级"
+   ]
+  },
+  {
+   "sceneId": 2,
+   "name": "青铜祭坛",
+   "unlockOrder": 2,
+   "taskGroup": 2,
+   "conditions": [
+    "通关商路挑战110",
+    "通过出售宝物获取5000银币",
+    "挖出20个器物类型宝物"
+   ]
+  },
+  {
+   "sceneId": 3,
+   "name": "云岭古墓",
+   "unlockOrder": 3,
+   "taskGroup": 3,
+   "conditions": [
+    "通关商路挑战140",
+    "通过出售宝物获取15000银币",
+    "挖出60个奇珍类型宝物"
+   ]
+  },
+  {
+   "sceneId": 4,
+   "name": "江南旧窑",
+   "unlockOrder": 4,
+   "taskGroup": 4,
+   "conditions": [
+    "通关商路挑战160",
+    "通过出售宝物获取6万银币",
+    "挖出80个书画类型宝物"
+   ]
+  },
+  {
+   "sceneId": 5,
+   "name": "皇城遗址",
+   "unlockOrder": 5,
+   "taskGroup": 5,
+   "conditions": [
+    "通关商路挑战180",
+    "通过出售宝物获取20万银币",
+    "挖出300个典籍类型宝物"
+   ]
+  },
+  {
+   "sceneId": 6,
+   "name": "海底沉船",
+   "unlockOrder": 6,
+   "taskGroup": 6,
+   "conditions": [
+    "通过出售宝物获取40万银币",
+    "挖出35件红色品质及以上的宝物",
+    "挖出600个器物类型宝物"
+   ]
+  },
+  {
+   "sceneId": 7,
+   "name": "边塞烽燧",
+   "unlockOrder": 7,
+   "taskGroup": 6,
+   "conditions": [
+    "通过出售宝物获取40万银币",
+    "挖出35件红色品质及以上的宝物",
+    "挖出600个器物类型宝物"
+   ]
+  }
+ ],
+ "note": "orderSlots=[器物,奇珍,书画,典籍]可同时接单数；nextLevelOrders=升到下一级需完成订单数；costPerOrder 为逐单消耗（10级起每单额外含夜明珠，即突破材料）；orderTimeSec=每单耗时秒。"
+}

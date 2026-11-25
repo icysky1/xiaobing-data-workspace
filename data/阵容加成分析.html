@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>阵容加成分析 · 鸣蛇 vs 九尾狐</title>
+<style>
+:root{--bg:#f6f2e9;--card:#fffdf7;--ink:#2c2620;--dim:#8b8073;--line:#e6ddc9;--red:#b5392b;--gold:#a8791f;--green:#2f7a52}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 "PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 20px 60px}
+h1{font-size:26px;margin:0 0 6px;letter-spacing:.5px}
+.sub{color:var(--dim);font-size:13px;margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+h2{font-size:17px;margin:0 0 14px;padding-left:10px;border-left:4px solid var(--red)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:#fbf7ee;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.stat .k{font-size:12px;color:var(--dim)}
+.stat .v{font-size:20px;font-weight:700;margin-top:2px}
+.stat .v.red{color:var(--red)}.stat .v.green{color:var(--green)}.stat .v.gold{color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{font-size:12px;color:var(--dim);font-weight:600;background:#fbf7ee}
+td.pos{white-space:nowrap;color:var(--dim);font-size:12px}
+td.nm{white-space:nowrap;font-weight:600}
+td.nm em{font-style:normal;font-weight:400;color:var(--dim);font-size:11px;margin-left:4px}
+span.g{display:inline-block;font-size:10px;color:#b5392b;border:1px solid #e0b7ae;border-radius:4px;padding:0 3px;margin-left:4px;vertical-align:1px}
+td.sk{color:#4a4238;font-size:12.5px;line-height:1.55}
+td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pos2{color:var(--red);font-weight:600}.neg{color:var(--green)}
+.note{font-size:12.5px;color:var(--dim);margin-top:10px}
+.bar{height:10px;border-radius:6px;background:#ece4d3;overflow:hidden;display:flex;margin:6px 0 2px}
+.bar i{display:block;height:100%}
+</style></head><body><div class="wrap">
+<h1>阵容加成分析 · 鸣蛇 vs 九尾狐</h1>
+<div class="sub">众生平等口径（全员 1 级基础值 · 神兽仅 1 级技能 · 军师技按双方后排智力比）｜引擎真实结算</div>
+
+<div class="card">
+  <h2>总体拆解</h2>
+  <div class="stats">
+    <div class="stat"><div class="k">我方总战力</div><div class="v">12,012~13,084</div></div>
+    <div class="stat"><div class="k">敌方总战力</div><div class="v">4,057~4,584</div></div>
+    <div class="stat"><div class="k">净胜差</div><div class="v red">+8,228</div></div>
+    <div class="stat"><div class="k">裸面板+阵营</div><div class="v gold">7,671</div></div>
+  </div>
+  <div class="bar">
+    <i style="width:61.1%;background:#c9bda3"></i>
+    <i style="width:7.3%;background:#b5392b"></i>
+    <i style="width:30.9%;background:#a8791f"></i>
+  </div>
+  <div class="note">灰＝面板与阵营　红＝英雄技能（+3,968）　金＝羁绊（+998）；另有技能对敌削减 2,273</div>
+  <table style="margin-top:14px">
+    <tr><th>项目</th><th>我方战力</th><th>敌方战力</th><th>说明</th></tr>
+    <tr><td>完整体</td><td class="num">12,548</td><td class="num">4,321</td><td>14 条羁绊 · 20 条英雄技能 · 神兽 1 条</td></tr>
+    <tr><td>关掉英雄技能</td><td class="num">8,581</td><td class="num">6,593</td><td>技能给我方 +3,968，同时削敌方 2,273</td></tr>
+    <tr><td>关掉羁绊</td><td class="num">11,550</td><td class="num">4,329</td><td>羁绊净值 +998</td></tr>
+    <tr><td>两者都关</td><td class="num">7,671</td><td class="num">6,593</td><td>只剩面板 + 阵营，倍率 ×1.64</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>逐人技能与贡献（17 人）</h2>
+  <table>
+    <tr><th>位置</th><th>英雄</th><th>面板</th><th>技能</th><th>对我方</th><th>削敌方</th></tr>
+    <tr>
+      <td class="pos">前排1</td>
+      <td class="nm">黄金甲·邓婵玉<span class="g">女</span><em>商</em></td>
+      <td>武116 / 智55</td>
+      <td class="sk"><b>惊鸿·金</b><br>敌方异性:武力-4%,智力-4%<br>我方异性:武力+4%,智力+4%</td>
+      <td class="num pos2">+51</td>
+      <td class="num pos2">−73</td>
+    </tr><tr>
+      <td class="pos">前排2</td>
+      <td class="nm">吴刚<em>巅峰</em></td>
+      <td>武111 / 智35</td>
+      <td class="sk"><b>狂斧</b><br>我方前排:武力+20%</td>
+      <td class="num pos2">+443</td>
+      <td class="num ">0</td>
+    </tr><tr>
+      <td class="pos">前排3</td>
+      <td class="nm">平阳昭公主<span class="g">女</span><em>巅峰</em></td>
+      <td>武90 / 智65</td>
+      <td class="sk"><b>王女</b><br>我方武力最高的3名女性：武力+30%</td>
+      <td class="num pos2">+379</td>
+      <td class="num ">0</td>
+    </tr><tr>
+      <td class="pos">前排4</td>
+      <td class="nm">戏魂·阿青<span class="g">女</span><em>侠</em></td>
+      <td>武126 / 智25</td>
+      <td class="sk"><b>无双·戏</b><br>我方全体:武力+12%</td>
+      <td class="num pos2">+419</td>
+      <td class="num ">0</td>
+    </tr><tr>
+      <td class="pos">前排5</td>
+      <td class="nm">戏魂·祝融<span class="g">女</span><em>三国</em></td>
+      <td>武155 / 智38</td>
+      <td class="sk"><b>神火·戏</b><br>敌方全体:智力-5%<br>敌方武力最高的1名英雄:武力-30%</td>
+      <td class="num pos2">+0</td>
+      <td class="num pos2">−196</td>
+    </tr><tr>
+      <td class="pos">前排6</td>
+      <td class="nm">戏魂·九天玄女<span class="g">女</span><em>巅峰</em></td>
+      <td>武140 / 智65</td>
+      <td class="sk"><b>女仙·戏</b><br>敌方前排:武力-10%<br>双方全体男性:武力-20%,智力-20%</td>
+      <td class="num pos2">+0</td>
+      <td class="num pos2">−441</td>
+    </tr><tr>
+      <td class="pos">中排1</td>
+      <td class="nm">妇好<span class="g">女</span><em>商</em></td>
+      <td>武89 / 智48</td>
+      <td class="sk"><b>神将</b><br>敌方前排:武力-10%</td>
+      <td class="num pos2">+0</td>
+      <td class="num pos2">−78</td>
+    </tr><tr>
+      <td class="pos">中排2</td>
+      <td class="nm">黄金甲·聂隐娘<span class="g">女</span><em>侠</em></td>
+      <td>武125 / 智45</td>
+      <td class="sk"><b>隐刃·金</b><br>自身:武力+5%<br>50%概率同位置敌方英雄:武力-60%,智力-60%</td>
+      <td class="num pos2">+15</td>
+      <td class="num pos2">−642</td>
+    </tr><tr>
+      <td class="pos">中排3</td>
+      <td class="nm">戏魂·华胥氏<span class="g">女</span><em>商</em></td>
+      <td>武65 / 智151</td>
+      <td class="sk"><b>母仪·戏</b><br>我方后排:智力+17%<br>我方女性英雄:受到的技能负面效果-20%</td>
+      <td class="num pos2">+374</td>
+      <td class="num pos2">−8</td>
+    </tr><tr>
+      <td class="pos">中排4</td>
+      <td class="nm">黄金甲·精卫<span class="g">女</span><em>南北朝</em></td>
+      <td>武108 / 智113</td>
+      <td class="sk"><b>填海·金</b><br>敌方中排:武力-20%,智力-20%<br>敌方中排随机1名英雄:受到所有技能负面效果+50%</td>
+      <td class="num neg">-422</td>
+      <td class="num pos2">−562</td>
+    </tr><tr>
+      <td class="pos">中排5</td>
+      <td class="nm">孙悟空<em>巅峰</em></td>
+      <td>武145 / 智35</td>
+      <td class="sk"><b>齐天</b><br>我方前排:武力+13%<br>自身:武力+15%</td>
+      <td class="num pos2">+340</td>
+      <td class="num ">0</td>
+    </tr><tr>
+      <td class="pos">后排1</td>
+      <td class="nm">黄金甲·嫦娥<span class="g">女</span><em>夏</em></td>
+      <td>武45 / 智148</td>
+      <td class="sk"><b>闭月·金</b><br>我方后排:智力+8%<br>敌方异性武力、智力:减少(4+异性数量*0.3)%</td>
+      <td class="num pos2">+48</td>
+      <td class="num pos2">−39</td>
+    </tr><tr>
+      <td class="pos">后排2</td>
+      <td class="nm">飞仙·李白<em>巅峰</em></td>
+      <td>武53 / 智133</td>
+      <td class="sk"><b>云想·仙</b><br>我方后排:智力+10%<br>我方异性:武力+20%,智力+20%</td>
+      <td class="num pos2">+1,029</td>
+      <td class="num pos2">−8</td>
+    </tr><tr>
+      <td class="pos">后排3</td>
+      <td class="nm">太阴星君<span class="g">女</span><em>巅峰</em></td>
+      <td>武45 / 智108</td>
+      <td class="sk"><b>月华</b><br>我方智力最高的2名女性:智力+30%</td>
+      <td class="num pos2">+189</td>
+      <td class="num ">0</td>
+    </tr><tr>
+      <td class="pos">后排4</td>
+      <td class="nm">飞仙·苏妲己<span class="g">女</span><em>商</em></td>
+      <td>武40 / 智127</td>
+      <td class="sk"><b>惑心·仙</b><br>敌方前排:武力-8%<br>我方女性:武力+8%,智力+8%</td>
+      <td class="num pos2">+355</td>
+      <td class="num pos2">−62</td>
+    </tr><tr>
+      <td class="pos">后排5</td>
+      <td class="nm">红线<span class="g">女</span><em>侠</em></td>
+      <td>武39 / 智76</td>
+      <td class="sk"><b>隐刃</b><br>50%概率同位置敌方英雄:武力-60%,智力-60%</td>
+      <td class="num pos2">+0</td>
+      <td class="num pos2">−261</td>
+    </tr><tr>
+      <td class="pos">后排6</td>
+      <td class="nm">飞仙·黄帝<em>秦</em></td>
+      <td>武118 / 智118</td>
+      <td class="sk"><b>天命·仙</b><br>我方中排:武力+15%,智力+15%<br>我方中排随机1名英雄:受到所有技能加成效果+50%</td>
+      <td class="num pos2">+757</td>
+      <td class="num ">0</td>
+    </tr>
+  </table>
+  <div class="note">「对我方」＝关掉该技能后我方总战力的损失；「削敌方」＝关掉后敌方总战力的回升。带绿色的负值表示该技能净拖累我方面板（靠削敌方赚净胜差）。</div>
+</div>
+
+<div class="card">
+  <h2>激活羁绊（14 条）</h2>
+  <table>
+    <tr><th>羁绊</th><th>搭档</th><th>效果</th><th>价值</th></tr>
+    <tr><td class="nm">衔恨终古</td><td>与精卫</td><td>智力+60%</td><td class="num pos2">+0</td></tr><tr><td class="nm">仙凡遥望</td><td>与邓婵玉</td><td>智力+30%</td><td class="num pos2">+0</td></tr><tr><td class="nm">古今豪杰</td><td>与妇好</td><td>智力+50%</td><td class="num pos2">+0</td></tr><tr><td class="nm">月宫属臣</td><td>与吴刚</td><td>智力+50%</td><td class="num pos2">+0</td></tr><tr><td class="nm">仙府侍主</td><td>与嫦娥</td><td>智力+50%</td><td class="num pos2">+148</td></tr><tr><td class="nm">女武神</td><td>与阿青</td><td>武力+50%</td><td class="num pos2">+189</td></tr><tr><td class="nm">孤影长存</td><td>与嫦娥</td><td>武力+40%,智力+40%</td><td class="num pos2">+0</td></tr><tr><td class="nm">战至终篇</td><td>给持有者</td><td>和任意1位神话英雄同时上阵，武力+40%</td><td class="num pos2">+140</td></tr><tr><td class="nm">天庭三大反骨</td><td>给持有者</td><td>和任意2位神话英雄同时上阵，武力+40%</td><td class="num pos2">+174</td></tr><tr><td class="nm">天庭三大反骨</td><td>给持有者</td><td>和任意3位神话英雄同时上阵，武力+50%</td><td class="num pos2">+174</td></tr><tr><td class="nm">开天造石</td><td>给持有者</td><td>和任意4位神话英雄同时上阵，武力+60%</td><td class="num pos2">+209</td></tr><tr><td class="nm">月宫属臣</td><td>与太阴星君</td><td>武力+50%</td><td class="num pos2">+0</td></tr><tr><td class="nm">广寒同栖</td><td>与嫦娥</td><td>武力+50%</td><td class="num pos2">+0</td></tr><tr><td class="nm">女中剑仙</td><td>与聂隐娘</td><td>武力+30%</td><td class="num pos2">+0</td></tr>
+  </table>
+  <div class="note">羁绊价值为「全局拆除该羁绊」后的战力损失；多条羁绊作用于同一属性时会互相摊薄，故单条数值之和大于羁绊总贡献 998。</div>
+</div>
+
+<div class="card">
+  <h2>阵营与神兽</h2>
+  <table>
+    <tr><th>来源</th><th>效果</th></tr>
+    <tr><td class="nm">阵营</td><td>商×10（含巅峰×6）：全体武力智力+18%</td></tr><tr><td class="nm">阵营</td><td>侠×3：全体武力智力+4%</td></tr>
+    <tr><td class="nm">阵营技能</td><td>商×10 惑心：我军女性英雄:武力智力+30%</td></tr><tr><td class="nm">阵营技能</td><td>侠×3 隐刃：50%概率敌军全体英雄:武力智力-10%</td></tr>
+    <tr><td class="nm">神兽</td><td>鸣蛇：鸣蛇施加咒语，我军中排英雄武力+8%，智力+8%</td></tr>
+  </table>
+  <div class="note">鸣蛇在众生平等下只有 1 级技能段：中排武智 +8%、后排智 +8%；「龟裂禁域」需 50 级，本模式不生效。</div>
+</div>
+</div></body></html>

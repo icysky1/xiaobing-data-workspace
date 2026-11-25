@@ -1,0 +1,59 @@
+<view wx:if="{{d}}" class="detail">
+  <view class="hero-card" style="background:{{d.qcolor}}">
+    <view class="hc-badge">{{d.qi}}</view>
+    <view class="hc-name">{{d.name}}</view>
+    <view class="hc-pos">{{d.pos}}</view>
+  </view>
+
+  <view class="card">
+    <view class="kv"><text class="k">继承加成</text><text class="v gold">{{d.inheritText}}</text></view>
+    <view class="kv" wx:for="{{d.stats}}" wx:key="label" wx:for-item="s">
+      <text class="k">{{s.label}}成长</text><text class="v">{{s.range}}</text>
+    </view>
+    <view wx:if="{{d.story}}" class="story dim">{{d.story}}</view>
+  </view>
+
+  <view class="card" wx:if="{{d.skills.length}}">
+    <view class="sec-toggle" bindtap="toggle" data-k="skills">
+      <text class="sec-label">⚔️ 技能（随神兽升级逐步解锁）</text>
+      <text class="arrow {{open === 'skills' ? 'on' : ''}}">›</text>
+    </view>
+    <block wx:if="{{open === 'skills'}}">
+      <view wx:for="{{d.skills}}" wx:key="n" wx:for-item="sk" class="skill">
+        <view class="skill-name">{{sk.n}}</view>
+        <view wx:for="{{sk.levels}}" wx:key="lv" wx:for-item="l" class="skill-lv">
+          <text class="lv">Lv{{l.lv}}</text>
+          <view class="skill-body">
+            <text class="dim">{{l.d}}</text>
+            <text class="ul">需要神兽等级：{{l.ul}} 级</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="sec-toggle" bindtap="toggle" data-k="recipes">
+      <text class="sec-label">⚗️ 合成配方（材料 → 本神兽）</text>
+      <text class="arrow {{open === 'recipes' ? 'on' : ''}}">›</text>
+    </view>
+    <block wx:if="{{open === 'recipes'}}">
+      <view wx:for="{{d.recipes}}" wx:key="text" class="r-line">🜛 {{item.text}}</view>
+      <view wx:if="{{!d.recipes.length}}" class="dim">无（不可通过合成获得，为基础神兽）</view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="sec-toggle" bindtap="toggle" data-k="asMat">
+      <text class="sec-label">🧪 作为材料可合出</text>
+      <text class="arrow {{open === 'asMat' ? 'on' : ''}}">›</text>
+    </view>
+    <block wx:if="{{open === 'asMat'}}">
+      <view wx:for="{{d.asMat}}" wx:key="with" class="r-line">
+        与 <text class="f-name">{{item.with}}</text> → {{item.outs}}
+      </view>
+      <view wx:if="{{!d.asMat.length}}" class="dim">无</view>
+    </block>
+  </view>
+</view>
+<ad-banner />

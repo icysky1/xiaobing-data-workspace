@@ -1,0 +1,247 @@
+/* 小兵工具箱：羁绊反查 / 招募文案 */
+.lab {
+  font-weight: 700;
+  color: #4e7a68;
+  margin-bottom: 12rpx;
+}
+.note {
+  margin-top: 12rpx;
+  line-height: 1.6;
+}
+.clear-all {
+  float: right;
+  font-weight: 400;
+  font-size: 22rpx;
+  color: #b05a1a;
+}
+
+/* 英雄 chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 14rpx;
+}
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  background: #fffdf6;
+  border: 2rpx solid;
+  border-radius: 999rpx;
+  padding: 8rpx 18rpx 8rpx 8rpx;
+}
+.chip-q {
+  min-width: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  color: #fff;
+  font-size: 20rpx;
+  font-weight: 700;
+}
+.chip-n {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #4b3f2f;
+}
+
+/* 朝代筛选：多行平铺，与英雄图鉴一致 */
+.era-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  margin-top: 14rpx;
+}
+.era-tab {
+  padding: 6rpx 14rpx;
+  font-size: 21rpx;
+  line-height: 1.4;
+  color: #6b5d48;
+  background: #f2ecd9;
+  border: 1rpx solid #d8cba8;
+  border-radius: 999rpx;
+}
+.era-tab.on {
+  background: #5f8d7c;
+  color: #fff;
+  border-color: #5f8d7c;
+  font-weight: 600;
+}
+
+/* 我的阵容 chips */
+.mine-chip {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  background: rgba(95, 141, 124, 0.1);
+  border: 1rpx solid #cfe0d4;
+  border-radius: 999rpx;
+  padding: 8rpx 16rpx;
+  font-size: 24rpx;
+  color: #3f6355;
+}
+.mine-x {
+  color: #8a7a63;
+  font-size: 26rpx;
+}
+
+/* 羁绊结果 */
+.f-line {
+  font-size: 24rpx;
+  line-height: 1.7;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid #eee4c8;
+}
+.f-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12rpx;
+}
+.f-sub {
+  font-size: 21rpx;
+  line-height: 1.5;
+}
+.f-top .f-eff { text-align: right; }
+.f-top .f-name { flex-shrink: 0; }
+.f-name {
+  font-weight: 700;
+  color: #4e7a68;
+}
+.f-eff {
+  color: #b05a1a;
+}
+.need {
+  color: #c0392b;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* 活动日历 */
+.cal-hero {
+  border-radius: 14rpx;
+  padding: 22rpx 24rpx;
+  text-align: center;
+}
+.cal-name {
+  font-size: 40rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+}
+.cal-range {
+  font-size: 26rpx;
+  font-weight: 600;
+  margin-top: 6rpx;
+}
+.cal-desc {
+  font-size: 22rpx;
+  margin-top: 8rpx;
+  opacity: 0.85;
+}
+.cal-row {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  padding: 12rpx 0;
+  border-bottom: 1rpx solid #eee4c8;
+}
+.cal-row:last-child { border-bottom: none; }
+.cal-row.cur { background: #f6f2e2; border-radius: 10rpx; padding-left: 10rpx; padding-right: 10rpx; }
+.cal-dot {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cal-mid {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.cal-n { font-size: 26rpx; font-weight: 700; }
+.cal-d { font-size: 20rpx; }
+.cal-r { font-size: 22rpx; flex-shrink: 0; }
+.cal-tag {
+  flex-shrink: 0;
+  font-size: 20rpx;
+  font-weight: 700;
+  color: #fff;
+  background: #5f8d7c;
+  border-radius: 999rpx;
+  padding: 4rpx 14rpx;
+  margin-left: 10rpx;
+}
+
+/* 招募文案表单 */
+.f-row {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1rpx dashed #e3d9bd;
+}
+.f-k {
+  width: 130rpx;
+  color: #8a7a63;
+  font-size: 24rpx;
+  flex-shrink: 0;
+}
+.f-v {
+  flex: 1;
+  font-size: 26rpx;
+  min-height: 40rpx;
+}
+.tag-lab {
+  margin-top: 16rpx;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 10rpx;
+}
+.tag-chip {
+  padding: 8rpx 20rpx;
+  font-size: 22rpx;
+  border-radius: 999rpx;
+  background: #f2ecd9;
+  border: 1rpx solid #d8cba8;
+  color: #6b5d48;
+}
+.tag-chip.on {
+  background: #5f8d7c;
+  border-color: #5f8d7c;
+  color: #fff;
+  font-weight: 600;
+}
+.preview {
+  background: #fffdf6;
+  border: 1rpx dashed #d8cba8;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  font-size: 24rpx;
+  line-height: 1.7;
+  color: #4b3f2f;
+  white-space: pre-wrap;
+}
+.copy-tip {
+  margin-top: 12rpx;
+  font-size: 23rpx;
+  line-height: 1.6;
+  color: #a8752f;
+  background: #fdf3dc;
+  border-radius: 10rpx;
+  padding: 10rpx 14rpx;
+}
+.copy-btn {
+  margin-top: 18rpx;
+  background: linear-gradient(180deg, #6fae8f, #5f8d7c);
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 28rpx;
+  padding: 18rpx 0;
+  border-radius: 999rpx;
+}

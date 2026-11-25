@@ -1,0 +1,38 @@
+<view class="card">
+  <view class="lab">🏷️ 反馈类型</view>
+  <view class="cats">
+    <view
+      wx:for="{{cats}}"
+      wx:key="*this"
+      class="cat {{cat === index ? 'on' : ''}}"
+      bindtap="pickCat"
+      data-idx="{{index}}"
+    >{{item}}</view>
+  </view>
+</view>
+
+<view class="card">
+  <view class="row-head">
+    <view class="lab">✍️ 反馈内容</view>
+    <text class="dim counter">{{content.length}}/500</text>
+  </view>
+  <textarea
+    class="f-ta"
+    placeholder="请详细描述您的问题或建议，我们会认真对待每一条反馈"
+    placeholder-class="f-ph"
+    maxlength="500"
+    value="{{content}}"
+    bindinput="onContent"
+  ></textarea>
+</view>
+
+<view class="card">
+  <view class="row-head">
+    <view class="lab">📮 联系方式</view>
+    <text class="dim">选填</text>
+  </view>
+  <input class="f-inp" placeholder="微信号 / 手机号 / 邮箱" placeholder-class="f-ph" value="{{contact}}" bindinput="onContact" />
+  <view class="dim hint">方便我们跟进反馈结果</view>
+</view>
+
+<view class="btn submit {{submitting ? 'disabled' : ''}}" bindtap="submit">提交反馈</view>

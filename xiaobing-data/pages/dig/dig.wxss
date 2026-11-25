@@ -1,0 +1,63 @@
+/* 顶层三大块页签 */
+.top-tabs { display: flex; background: #fffdf6; border-bottom: 3rpx solid #e3c98f; }
+.top-tab { flex: 1; text-align: center; padding: 22rpx 0; color: #8a7a63; font-size: 30rpx; letter-spacing: 4rpx; position: relative; }
+.top-tab.on { color: #4e7a68; font-weight: 700; }
+.top-tab.on::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72rpx;
+  height: 8rpx;
+  background: #e8a23d;
+  border-radius: 4rpx;
+}
+
+/* 子页签 */
+.tabs { display: flex; background: #fffdf6; border-bottom: 3rpx solid #e3c98f; }
+.sub { border-top: 1rpx solid #eee4c8; }
+.tab { flex: 1; text-align: center; padding: 18rpx 0; color: #7d6a52; }
+.tab.on { color: #4e7a68; font-weight: 700; border-bottom: 6rpx solid #e3c98f; }
+
+/* 图鉴横向滚动场景页签：不用 flex，避免堆叠；真机可左右滑动 */
+.scene-tabs { white-space: nowrap; display: block; }
+.scene-tabs .tab { display: inline-block; flex: none; padding: 14rpx 20rpx; font-size: 24rpx; }
+
+.lab { font-weight: 600; margin-bottom: 8rpx; }
+.g-name { color: #5f8d7c; font-weight: 600; margin: 16rpx 0 8rpx; }
+.it { display: flex; align-items: center; gap: 10rpx; padding: 8rpx 0; border-bottom: 1rpx solid #eee4c8; }
+.it.sp .row1 { color: #b03a2e; font-weight: 600; }
+/* 列宽固定：类型88 + 品相176 + 细锤100（4字刚好，普通行留空占位），宝物名吃掉剩余宽度（约256rpx，8字完整显示） */
+.row1 { font-size: 28rpx; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.it-type { width: 88rpx; flex-shrink: 0; text-align: center; box-sizing: border-box; padding: 2rpx 0; margin-right: 0; }
+.it-grade { width: 176rpx; flex-shrink: 0; white-space: nowrap; }
+.it-hammer { width: 100rpx; flex-shrink: 0; text-align: right; white-space: nowrap; }
+.hot { color: #b03a2e; }
+.f-line { margin-top: 8rpx; }
+.f-name { color: #b03a2e; font-weight: 600; }
+
+/* 装备升级表：固定列宽，保证表头与数据行任何时刻都严格对齐 */
+.row { display: flex; padding: 6rpx 0; border-bottom: 1rpx solid #eee4c8; }
+.c-lv { width: 110rpx; flex-shrink: 0; }
+.c-cost, .c-cum { width: 130rpx; flex-shrink: 0; text-align: right; }
+.c-attr { flex: 1; text-align: right; }
+.hd { color: #5f8d7c; font-weight: 600; }
+.num { font-variant-numeric: tabular-nums; }
+.attr { color: #4e7a68; }
+
+/* 收藏品表：小号字体挂在卡片容器上整体继承；所有单元格禁换行（超宽省略），列宽按大一号字体也能容纳来算，杜绝换行把行高撑成两倍 */
+.card.collections { font-size: 22rpx; }
+.card.collections .row { padding: 6rpx 0; align-items: center; }
+.card.collections .lab { margin-bottom: 4rpx; }
+.col-name { width: 200rpx; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.col-loc { width: 116rpx; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.col-dig { width: 180rpx; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.col-est { width: 140rpx; flex-shrink: 0; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.col-bonus { color: #b03a2e; font-weight: 600; margin-bottom: 8rpx; }
+.co-foot { margin-top: 6rpx; }
+.bx { padding: 10rpx 0; border-bottom: 1rpx dashed #e3d9bd; }
+.bx:last-child { border-bottom: none; }
+.bx-head { display: flex; align-items: center; justify-content: space-between; gap: 12rpx; }
+.bx-lv { font-weight: 700; color: #4e7a68; }
+.tag.lock { background: #b0a58e; color: #fff; }

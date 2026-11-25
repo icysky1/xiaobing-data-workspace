@@ -1,0 +1,15 @@
+<view class="head">
+  <view class="h-title">{{title}}</view>
+  <view wx:if="{{time}}" class="dim h-time">{{time}}</view>
+</view>
+<view class="card">
+  <block wx:for="{{blocks}}" wx:key="index">
+    <view wx:if="{{item.type === 'h'}}" class="b-h">{{item.text}}</view>
+    <view wx:elif="{{item.type === 'li'}}" class="b-li">
+      <text class="b-dot">•</text>
+      <text class="b-text">{{item.text}}</text>
+    </view>
+    <view wx:else class="b-p">{{item.text}}</view>
+  </block>
+</view>
+<ad-banner />

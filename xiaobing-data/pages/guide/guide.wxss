@@ -1,0 +1,34 @@
+.head { padding: 24rpx 28rpx 8rpx; }
+.h-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #3f6355;
+  line-height: 1.4;
+}
+.h-time { margin-top: 8rpx; font-size: 22rpx; }
+
+.b-h {
+  margin: 20rpx 0 6rpx;
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #4e7a68;
+  border-left: 6rpx solid #6fae8f;
+  padding-left: 14rpx;
+}
+.b-h:first-child { margin-top: 0; }
+.b-li {
+  display: flex;
+  gap: 10rpx;
+  padding: 8rpx 0;
+  font-size: 25rpx;
+  line-height: 1.7;
+  color: #4b3f2f;
+}
+.b-dot { color: #b05a1a; font-weight: 700; flex-shrink: 0; }
+.b-text { flex: 1; min-width: 0; }
+.b-p {
+  padding: 8rpx 0;
+  font-size: 25rpx;
+  line-height: 1.7;
+  color: #4b3f2f;
+}

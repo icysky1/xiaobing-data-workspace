@@ -1,0 +1,13 @@
+# 系统与临时文件
+Thumbs.db
+Desktop.ini
+*.tmp
+~$*
+# Node
+node_modules/
+# 小程序构建产物
+xiaobing-data/miniprogram_npm/
+# 工作区运行时状态（保留 memory 记忆与部署标记，见下方例外）
+.workbuddy/*
+!.workbuddy/applications.yaml
+!.workbuddy/memory/

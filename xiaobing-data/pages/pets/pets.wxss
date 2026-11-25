@@ -1,0 +1,49 @@
+/* 神兽图鉴：站位+品质双过滤，紧凑 chip 展示（与阵容模拟器选将列表一致） */
+.head-row {
+  font-weight: 700;
+  color: #4e7a68;
+  font-size: 28rpx;
+}
+.filter-lab {
+  font-size: 22rpx;
+  color: #8a7a63;
+  margin: 14rpx 0 0;
+}
+
+.era-tabs { white-space: nowrap; margin-top: 8rpx; }
+.era-tab {
+  display: inline-block;
+  padding: 10rpx 22rpx;
+  margin-right: 10rpx;
+  font-size: 24rpx;
+  color: #6b5d48;
+  background: #f2ecd9;
+  border: 1rpx solid #d8cba8;
+  border-radius: 999rpx;
+}
+.era-tab.on { background: #5f8d7c; color: #fff; border-color: #5f8d7c; font-weight: 600; }
+
+.pool-grid { display: flex; flex-wrap: wrap; gap: 12rpx; margin-top: 16rpx; }
+.pool-chip {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  background: #fffdf6;
+  border: 2rpx solid;
+  border-radius: 999rpx;
+  padding: 8rpx 18rpx 8rpx 8rpx;
+}
+.chip-badge {
+  min-width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  color: #fff;
+  font-size: 20rpx;
+  font-weight: 700;
+  padding: 0 6rpx;
+  box-sizing: border-box;
+}
+.chip-name { font-size: 26rpx; font-weight: 600; }
+.empty { text-align: center; padding: 20rpx 0; }

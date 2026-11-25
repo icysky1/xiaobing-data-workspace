@@ -1,0 +1,34 @@
+.ad-wrap { padding: 16rpx 24rpx 28rpx; }
+.ad-banner {
+  height: 120rpx;
+  background: repeating-linear-gradient(90deg, #efe3c2, #efe3c2 26rpx, #e9dab2 26rpx, #e9dab2 52rpx);
+  border: 2rpx solid #e3c98f;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0.85;
+}
+.ad-corner {
+  position: absolute;
+  top: -2rpx;
+  width: 36rpx;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(224, 196, 143, 0.35), transparent);
+}
+.ad-corner.l { left: 0; }
+.ad-corner.r { right: 0; transform: scaleX(-1); }
+.ad-text {
+  color: #4e7a68;
+  font-size: 24rpx;
+  letter-spacing: 8rpx;
+  font-family: "Kaiti SC", "STKaiti", "KaiTi", serif;
+}
+.ad-card {
+  border: 2rpx dashed #e3c98f;
+  border-radius: 14rpx;
+  padding: 28rpx;
+  text-align: center;
+  background: rgba(255, 251, 240, 0.6);
+}

@@ -1,0 +1,2 @@
+id + '/' + pagePath;    		        return require(realPath);    		    }    		}    		else {    		    console.error('not found alias: ', alias);    		    throw new Error('Plugin ' + alias + ' is not defined.')    		}	};	define("subpackages/scripts/game.js", function(require, module, exports){ 			
+"use strict";require("../../@babel/runtime/he

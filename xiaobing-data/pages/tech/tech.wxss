@@ -1,0 +1,8 @@
+.hint { padding: 8rpx 28rpx; }
+.list { height: calc(100vh - 460rpx); }
+.row { display: flex; gap: 12rpx; align-items: baseline; margin-bottom: 4rpx; flex-wrap: wrap; }
+.t-name { font-weight: 600; }
+.t-eff { color: #4e7a68; }
+.more-btn { margin: 20rpx 28rpx 30rpx; text-align: center; font-size: 26rpx; }
+.clear-btn { padding: 10rpx 24rpx; border-radius: 10rpx; font-size: 26rpx; align-self: stretch; display: flex; align-items: center; }
+.empty { text-align: center; padding: 60rpx 0; }

@@ -1,0 +1,10 @@
+<view class="ad-wrap {{type}}" wx:if="{{visible}}">
+  <view wx:if="{{type === 'banner'}}" class="ad-banner">
+    <view class="ad-corner l"></view>
+    <text class="ad-text">— 广 告 位 —</text>
+    <view class="ad-corner r"></view>
+  </view>
+  <view wx:else class="ad-card">
+    <text class="ad-text">推广位虚位以待</text>
+  </view>
+</view>

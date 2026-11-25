@@ -1,0 +1,32 @@
+<view class="search-bar">
+  <input placeholder="输入英雄名、称号或技能名检索" bindinput="onInput" bindblur="onBlur" value="{{keyword}}" focus="{{focusKw}}" />
+  <text wx:if="{{keyword}}" class="clear-x" bindtap="clearKeyword">×</text>
+</view>
+<view class="era-tabs">
+  <view
+    wx:for="{{eras}}"
+    wx:key="*this"
+    class="era-tab {{curEra === index && !keyword ? 'on' : ''}}"
+    bindtap="pickEra"
+    data-idx="{{index}}"
+  >{{item}}</view>
+</view>
+<view class="dim hint">共 {{total}} 名英雄 · 点击查看技能与羁绊</view>
+<view class="card">
+  <view class="h-grid">
+    <view
+      wx:for="{{list}}"
+      wx:key="id"
+      class="h-chip"
+      style="border-color:{{item.qcolor}}"
+      bindtap="open"
+      data-id="{{item.id}}"
+    >
+      <view class="h-dot" style="background:{{item.qcolor}}"></view>
+      <view class="h-name" style="color:{{item.qcolor}}">{{item.name}}</view>
+      <view class="h-title dim">{{item.title}}</view>
+    </view>
+  </view>
+  <view wx:if="{{!list.length}}" class="dim" style="text-align:center;padding:40rpx 0">没有匹配的英雄</view>
+</view>
+<ad-banner />

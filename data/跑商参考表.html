@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小兵有前途 · 跑商参考表</title>
+<style>
+body{font-family:"Microsoft YaHei",sans-serif;background:#f5f5f0;color:#333;margin:0;padding:24px}
+h1{font-size:22px;margin:0 0 4px} h2{font-size:17px;margin:28px 0 10px;border-left:4px solid #b8860b;padding-left:8px}
+.sub{color:#888;font-size:13px;margin-bottom:8px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:13px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+th{background:#3e2723;color:#f5deb3;padding:7px 9px;text-align:left;position:sticky;top:0}
+td{padding:5px 9px;border-bottom:1px solid #eee}
+tr:hover td{background:#fdf6e3}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.hot{color:#c62828;font-weight:600}
+.lv{color:#aaa;font-size:11px;margin-left:1px}
+.dead{color:#e53935;font-size:11px}
+.formula{background:#fff8e1;border:1px solid #ffe082;border-radius:6px;padding:12px 16px;font-size:13px;line-height:1.9}
+.formula b{color:#b8860b}
+.tip{color:#777;font-size:12px;margin-top:6px}
+.count{color:#2e7d32;font-size:12px}
+</style>
+</head>
+<body>
+<h1>跑商参考表</h1>
+<div class="sub">数据来源：小程序配置表 product / city / productType（172 商品 · 39 城池）</div>
+
+<h2>利润计算公式（客户端实时计算）</h2>
+<div class="formula">
+单件卖价 = <b>⌈商品基础价 × (订单溢价系数 + 个人加成)⌉ + 固定利润加成</b><br>
+单件利润 = 单件卖价 − 商品基础价<br>
+城市总利润(allProfit) = 最佳商品单件利润 × <b>载货容量</b><br>
+<span class="tip">订单溢价系数：特殊需求 = specialPremium（1600~1700‰），今日需求 = todayPremium（1200~1300‰），由服务端定时随机刷新；
+个人加成 = 结义/联盟加成 + 角色 profitAdd + 占城加成（千分比）；固定加成来自宝物/装备的 profitValue 效果。</span>
+</div>
+<div class="tip">💡 最佳城池排序规则：路程 &lt;20 分钟的城优先 → 按利润降序 → 同利润按路程短优先。溢价越高越好：特殊订单（红色气泡）160%~170% &gt; 今日订单 120%~130%。</div>
+
+<h2>城池总表（39 城）<span class="count">特产商品后小字 = 解锁所需城池等级</span></h2>
+<table id="t1">
+<thead><tr><th>城池</th><th>本城特产（库存各 1 万）</th><th>需求大类</th><th>特殊需求溢价</th><th>今日需求溢价</th></tr></thead>
+<tbody><tr><td>燕京</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>美食（素）、海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>津门</td><td>麻花<span class="lv">1</span>、鱼<span class="lv">1</span>、煎饼果子<span class="lv">2</span>、蟹<span class="lv">3</span>、快板<span class="lv">4</span>、鲍鱼<span class="lv">5</span>、海参<span class="lv">6</span>、彩塑泥人<span class="lv">7</span></td><td>美食（荤）、水果、饮品</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>塞北</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>燕赵</td><td>凉粉<span class="lv">1</span>、凉茶<span class="lv">1</span>、雪花梨<span class="lv">2</span>、甜粽子<span class="lv">3</span>、小白干<span class="lv">4</span>、香蕉<span class="lv">5</span>、炸豆腐<span class="lv">6</span>、陶瓷<span class="lv">7</span></td><td>美食（荤）、干货、海鲜、特产</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>江户</td><td>鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span></td><td>矿石</td><td class="num hot">10‰~10‰</td><td class="num">10‰~10‰</td></tr>
+<tr><td>虾夷</td><td>鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span></td><td>矿石</td><td class="num hot">10‰~10‰</td><td class="num">10‰~10‰</td></tr>
+<tr><td>木叶村</td><td>鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span>、鱼<span class="lv">1</span></td><td>矿石</td><td class="num hot">10‰~10‰</td><td class="num">10‰~10‰</td></tr>
+<tr><td>柳京</td><td>白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span></td><td>矿石</td><td class="num hot">10‰~10‰</td><td class="num">10‰~10‰</td></tr>
+<tr><td>汉阳</td><td>白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span>、白菜<span class="lv">1</span></td><td>矿石</td><td class="num hot">10‰~10‰</td><td class="num">10‰~10‰</td></tr>
+<tr><td>辽东</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>齐鲁</td><td>白菜<span class="lv">1</span>、烧烤<span class="lv">1</span>、扒鸡<span class="lv">2</span>、萝卜<span class="lv">3</span>、土豆<span class="lv">4</span>、阿胶<span class="lv">5</span>、西兰花<span class="lv">6</span>、鲁绣<span class="lv">7</span></td><td>美食（素）、水果、饮品</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>扶余</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>龙江</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>扬州</td><td>苹果<span class="lv">1</span>、大闸蟹<span class="lv">1</span>、盐水鸭<span class="lv">2</span>、橘子<span class="lv">3</span>、苏绣<span class="lv">4</span>、大曲酒<span class="lv">5</span>、熏鱼<span class="lv">6</span>、碧螺春茶叶<span class="lv">7</span></td><td>蔬菜、工艺品、美食（素）、药材、干货、海鲜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>徽州</td><td>苹果<span class="lv">1</span>、折扇<span class="lv">1</span>、橘子<span class="lv">2</span>、毛峰茶<span class="lv">3</span>、蓝莓<span class="lv">4</span>、宣纸<span class="lv">5</span>、铁画<span class="lv">6</span>、贡酒<span class="lv">7</span></td><td>药材、美食（素）、海鲜、蔬菜、干货、美食（荤）</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>荆州</td><td>板蓝根<span class="lv">1</span>、猕猴桃<span class="lv">1</span>、金银花<span class="lv">2</span>、玉露茶<span class="lv">3</span>、热干面<span class="lv">4</span>、枸杞<span class="lv">5</span>、当归<span class="lv">6</span>、米酒<span class="lv">7</span></td><td>美食（荤）、特产、工艺品、海鲜、蔬菜、干货</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>豫章</td><td>苹果<span class="lv">1</span>、凉茶<span class="lv">1</span>、橘子<span class="lv">2</span>、腊肉<span class="lv">3</span>、梨<span class="lv">4</span>、特曲酒<span class="lv">5</span>、瓷器<span class="lv">6</span>、云雾茶<span class="lv">7</span></td><td>蔬菜、干货、美食（素）、特产、海鲜、药材</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>湘</td><td>陈皮<span class="lv">1</span>、花炮<span class="lv">1</span>、杜仲<span class="lv">2</span>、剁椒鱼头<span class="lv">3</span>、黄连<span class="lv">4</span>、油茶<span class="lv">5</span>、湘绣<span class="lv">6</span>、茯苓<span class="lv">7</span></td><td>蔬菜、干货、水果、美食（素）、海鲜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>巴郡</td><td>火锅<span class="lv">1</span>、火锅底料<span class="lv">1</span>、辣子鸡<span class="lv">2</span>、榨菜<span class="lv">3</span>、烤鱼<span class="lv">4</span>、小白酒<span class="lv">5</span>、水煮鱼<span class="lv">6</span>、麻辣小龙虾<span class="lv">7</span></td><td>蔬菜、家禽、工艺品、药材、干货、海鲜、美食（素）</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>沪</td><td>鱼<span class="lv">1</span>、素菜包<span class="lv">1</span>、甜豆腐脑<span class="lv">2</span>、蟹<span class="lv">3</span>、蟠桃<span class="lv">4</span>、葱油面<span class="lv">5</span>、西瓜<span class="lv">6</span>、河豚<span class="lv">7</span></td><td>蔬菜、药材、美食（荤）、饮品、药材、干货</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>吴越</td><td>白术<span class="lv">1</span>、东坡肉<span class="lv">1</span>、覆盆子<span class="lv">2</span>、龙井茶<span class="lv">3</span>、咸粽子<span class="lv">4</span>、丝绸<span class="lv">5</span>、当归<span class="lv">6</span>、鸭舌<span class="lv">7</span></td><td>蔬菜、干货、美食（素）、水果、工艺品、海鲜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>建州</td><td>烧仙草<span class="lv">1</span>、虾<span class="lv">1</span>、铁观音<span class="lv">2</span>、海蚌<span class="lv">3</span>、大黄鱼<span class="lv">4</span>、德化白瓷<span class="lv">5</span>、大红袍<span class="lv">6</span>、佛跳墙<span class="lv">7</span></td><td>蔬菜、干货、家禽、药材、特产、美食（素）</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>夷洲</td><td>珍珠奶茶<span class="lv">1</span>、鱼<span class="lv">1</span>、卤肉饭<span class="lv">2</span>、莲雾<span class="lv">3</span>、蚵仔煎<span class="lv">4</span>、释迦<span class="lv">5</span>、龙虾<span class="lv">6</span>、石斑鱼<span class="lv">7</span></td><td>蔬菜、干货、药材、工艺品、特产、美食（素）</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>琼州</td><td>菠萝蜜<span class="lv">1</span>、鱼<span class="lv">1</span>、槟榔<span class="lv">2</span>、蟹<span class="lv">3</span>、芒果<span class="lv">4</span>、文昌鸡<span class="lv">5</span>、椰子<span class="lv">6</span>、沉香<span class="lv">7</span></td><td>蔬菜、干货、饮品、家禽、工艺品、美食（素）</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>香江</td><td>蛋卷<span class="lv">1</span>、虾酱<span class="lv">1</span>、老婆饼<span class="lv">2</span>、丝袜奶茶<span class="lv">3</span>、煲仔饭<span class="lv">4</span>、药油<span class="lv">5</span>、炒蟹<span class="lv">6</span>、花旗参<span class="lv">7</span></td><td>蔬菜、水果、干货、海鲜、药材、工艺品</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>濠江</td><td>杏仁饼<span class="lv">1</span>、猪扒包<span class="lv">1</span>、水蟹粥<span class="lv">2</span>、手工香薰<span class="lv">3</span>、葡式蛋挞<span class="lv">4</span>、瓷砖画<span class="lv">5</span>、皮皮虾<span class="lv">6</span>、葡萄酒<span class="lv">7</span></td><td>蔬菜、水果、家禽、药材、特产</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>粤</td><td>肠粉<span class="lv">1</span>、叉烧<span class="lv">1</span>、白切鸡<span class="lv">2</span>、生蚝<span class="lv">3</span>、陶塑<span class="lv">4</span>、卤狮头鹅<span class="lv">5</span>、粤绣<span class="lv">6</span>、帝王蟹<span class="lv">7</span></td><td>蔬菜、水果、饮品、药材、特产</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>桂</td><td>鸡<span class="lv">1</span>、苹果<span class="lv">1</span>、鸭<span class="lv">2</span>、橘子<span class="lv">3</span>、螺蛳粉<span class="lv">4</span>、兔<span class="lv">5</span>、西瓜<span class="lv">6</span>、羊<span class="lv">7</span></td><td>美食（荤）、干货、海鲜、特产、药材、饮品</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>黔州</td><td>凉茶<span class="lv">1</span>、白术<span class="lv">1</span>、橘子<span class="lv">2</span>、覆盆子<span class="lv">3</span>、梨<span class="lv">4</span>、枸杞<span class="lv">5</span>、西瓜<span class="lv">6</span>、茅苔酒<span class="lv">7</span></td><td>美食（荤）、美食（素）、干货、海鲜、特产</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>蜀</td><td>水煮牛肉<span class="lv">1</span>、鸡<span class="lv">1</span>、鸭<span class="lv">2</span>、六良液酒<span class="lv">3</span>、兔<span class="lv">4</span>、回锅肉<span class="lv">5</span>、老窖酒<span class="lv">6</span>、山茶<span class="lv">7</span></td><td>蔬菜、干货、水果、美食（素）、海鲜、药材、工艺品、特产</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>大理</td><td>猕猴桃<span class="lv">1</span>、白术<span class="lv">1</span>、橘子<span class="lv">2</span>、覆盆子<span class="lv">3</span>、香蕉<span class="lv">4</span>、百药<span class="lv">5</span>、西瓜<span class="lv">6</span>、茯苓<span class="lv">7</span></td><td>美食（荤）、美食（素）、干货、海鲜、工艺品</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>雪域</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>西海</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>西域</td><td>卤煮<span class="lv">1</span>、木雕<span class="lv">1</span>、烤鸭<span class="lv">2</span>、漆器<span class="lv">3</span>、铜人堂药材<span class="lv">4</span>、青花瓷<span class="lv">5</span>、玉器<span class="lv">6</span>、景泰蓝<span class="lv">7</span></td><td>海鲜、蔬菜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>凉州</td><td>苹果<span class="lv">1</span>、牛肉拉面<span class="lv">1</span>、金银花<span class="lv">2</span>、手抓羊肉<span class="lv">3</span>、兔<span class="lv">4</span>、绿茶<span class="lv">5</span>、牛<span class="lv">6</span>、金酒<span class="lv">7</span></td><td>蔬菜、干货、美食（素）、工艺品、海鲜、特产</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>西夏</td><td>瓜子<span class="lv">1</span>、羊肉臊子面<span class="lv">1</span>、花生<span class="lv">2</span>、烩羊杂碎<span class="lv">3</span>、核桃<span class="lv">4</span>、枸杞<span class="lv">5</span>、腰果<span class="lv">6</span>、鹅<span class="lv">7</span></td><td>蔬菜、水果、美食（素）、饮品、工艺品、特产、海鲜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>并州</td><td>刀削面<span class="lv">1</span>、苹果<span class="lv">1</span>、老陈醋<span class="lv">2</span>、咸豆腐脑<span class="lv">3</span>、清酒<span class="lv">4</span>、太谷饼<span class="lv">5</span>、西瓜<span class="lv">6</span>、煤炭<span class="lv">7</span></td><td>美食（荤）、蔬菜、工艺品、干货</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>关中</td><td>鸡<span class="lv">1</span>、油泼面<span class="lv">1</span>、鸭<span class="lv">2</span>、凉皮<span class="lv">3</span>、兔<span class="lv">4</span>、兵马俑人偶<span class="lv">5</span>、凤香酒<span class="lv">6</span>、羊<span class="lv">7</span></td><td>蔬菜、水果、美食（荤）、特产、药材、干货、海鲜</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr>
+<tr><td>中原</td><td>牛肉胡辣汤<span class="lv">1</span>、瓜子<span class="lv">1</span>、烧鸡<span class="lv">2</span>、花生<span class="lv">3</span>、大枣<span class="lv">4</span>、核桃<span class="lv">5</span>、灌汤包<span class="lv">6</span>、毛尖茶<span class="lv">7</span></td><td>美食（素）、水果、工艺品</td><td class="num hot">1600‰~1700‰</td><td class="num">1200‰~1300‰</td></tr></tbody>
+</table>
+
+<h2>商品总表（172 种，按大类分组、大类内按基础价降序）</h2>
+<table id="t2">
+<thead><tr><th>商品</th><th>大类</th><th>品质</th><th>基础价(铜钱)</th><th>产地</th></tr></thead>
+<tbody><tr><td>西兰花</td><td style="color:#ab47bc;font-weight:600">蔬菜</td><td style="color:#ab47bc">Q4</td><td class="num">440</td><td>齐鲁</td></tr>
+<tr><td>土豆</td><td style="color:#42a5f5;font-weight:600">蔬菜</td><td style="color:#42a5f5">Q3</td><td class="num">330</td><td>齐鲁</td></tr>
+<tr><td>萝卜</td><td style="color:#4caf50;font-weight:600">蔬菜</td><td style="color:#4caf50">Q2</td><td class="num">220</td><td>齐鲁</td></tr>
+<tr><td>白菜</td><td style="color:#9d9d9d;font-weight:600">蔬菜</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>齐鲁</td></tr>
+<tr><td>佛跳墙</td><td style="color:#ff9800;font-weight:600">美食（荤）</td><td style="color:#ff9800">Q5</td><td class="num">950</td><td>建州</td></tr>
+<tr><td>鸭舌</td><td style="color:#ff9800;font-weight:600">美食（荤）</td><td style="color:#ff9800">Q5</td><td class="num">580</td><td>吴越</td></tr>
+<tr><td>麻辣小龙虾</td><td style="color:#ff9800;font-weight:600">美食（荤）</td><td style="color:#ff9800">Q5</td><td class="num">580</td><td>巴郡</td></tr>
+<tr><td>卤狮头鹅</td><td style="color:#42a5f5;font-weight:600">美食（荤）</td><td style="color:#42a5f5">Q3</td><td class="num">570</td><td>粤</td></tr>
+<tr><td>文昌鸡</td><td style="color:#42a5f5;font-weight:600">美食（荤）</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>琼州</td></tr>
+<tr><td>炒蟹</td><td style="color:#ab47bc;font-weight:600">美食（荤）</td><td style="color:#ab47bc">Q4</td><td class="num">500</td><td>香江</td></tr>
+<tr><td>灌汤包</td><td style="color:#ab47bc;font-weight:600">美食（荤）</td><td style="color:#ab47bc">Q4</td><td class="num">460</td><td>中原</td></tr>
+<tr><td>熏鱼</td><td style="color:#ab47bc;font-weight:600">美食（荤）</td><td style="color:#ab47bc">Q4</td><td class="num">460</td><td>扬州</td></tr>
+<tr><td>水煮鱼</td><td style="color:#ab47bc;font-weight:600">美食（荤）</td><td style="color:#ab47bc">Q4</td><td class="num">460</td><td>巴郡</td></tr>
+<tr><td>咸粽子</td><td style="color:#42a5f5;font-weight:600">美食（荤）</td><td style="color:#42a5f5">Q3</td><td class="num">350</td><td>吴越</td></tr>
+<tr><td>烤鱼</td><td style="color:#42a5f5;font-weight:600">美食（荤）</td><td style="color:#42a5f5">Q3</td><td class="num">350</td><td>巴郡</td></tr>
+<tr><td>回锅肉</td><td style="color:#42a5f5;font-weight:600">美食（荤）</td><td style="color:#42a5f5">Q3</td><td class="num">350</td><td>蜀</td></tr>
+<tr><td>煲仔饭</td><td style="color:#42a5f5;font-weight:600">美食（荤）</td><td style="color:#42a5f5">Q3</td><td class="num">350</td><td>香江</td></tr>
+<tr><td>蚵仔煎</td><td style="color:#42a5f5;font-weight:600">美食（荤）</td><td style="color:#42a5f5">Q3</td><td class="num">350</td><td>夷洲</td></tr>
+<tr><td>烧鸡</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">340</td><td>中原</td></tr>
+<tr><td>扒鸡</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">270</td><td>齐鲁</td></tr>
+<tr><td>烤鸭</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>燕京</td></tr>
+<tr><td>盐水鸭</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>扬州</td></tr>
+<tr><td>剁椒鱼头</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>湘</td></tr>
+<tr><td>腊肉</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>豫章</td></tr>
+<tr><td>烩羊杂碎</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>西夏</td></tr>
+<tr><td>辣子鸡</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>巴郡</td></tr>
+<tr><td>手抓羊肉</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>凉州</td></tr>
+<tr><td>白切鸡</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>粤</td></tr>
+<tr><td>水蟹粥</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>濠江</td></tr>
+<tr><td>卤肉饭</td><td style="color:#4caf50;font-weight:600">美食（荤）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>夷洲</td></tr>
+<tr><td>叉烧</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">170</td><td>粤</td></tr>
+<tr><td>烧烤</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">130</td><td>齐鲁</td></tr>
+<tr><td>猪扒包</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">130</td><td>濠江</td></tr>
+<tr><td>卤煮</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>燕京</td></tr>
+<tr><td>牛肉胡辣汤</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>中原</td></tr>
+<tr><td>东坡肉</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>吴越</td></tr>
+<tr><td>羊肉臊子面</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>西夏</td></tr>
+<tr><td>火锅</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>巴郡</td></tr>
+<tr><td>水煮牛肉</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>蜀</td></tr>
+<tr><td>牛肉拉面</td><td style="color:#9d9d9d;font-weight:600">美食（荤）</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>凉州</td></tr>
+<tr><td>释迦</td><td style="color:#42a5f5;font-weight:600">水果</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>夷洲</td></tr>
+<tr><td>西瓜</td><td style="color:#ab47bc;font-weight:600">水果</td><td style="color:#ab47bc">Q4</td><td class="num">480</td><td>并州、沪、黔州、桂、大理</td></tr>
+<tr><td>椰子</td><td style="color:#ab47bc;font-weight:600">水果</td><td style="color:#ab47bc">Q4</td><td class="num">480</td><td>琼州</td></tr>
+<tr><td>香蕉</td><td style="color:#42a5f5;font-weight:600">水果</td><td style="color:#42a5f5">Q3</td><td class="num">360</td><td>燕赵、大理</td></tr>
+<tr><td>蟠桃</td><td style="color:#42a5f5;font-weight:600">水果</td><td style="color:#42a5f5">Q3</td><td class="num">360</td><td>沪</td></tr>
+<tr><td>蓝莓</td><td style="color:#42a5f5;font-weight:600">水果</td><td style="color:#42a5f5">Q3</td><td class="num">360</td><td>徽州</td></tr>
+<tr><td>梨</td><td style="color:#42a5f5;font-weight:600">水果</td><td style="color:#42a5f5">Q3</td><td class="num">360</td><td>豫章、黔州</td></tr>
+<tr><td>芒果</td><td style="color:#42a5f5;font-weight:600">水果</td><td style="color:#42a5f5">Q3</td><td class="num">360</td><td>琼州</td></tr>
+<tr><td>莲雾</td><td style="color:#4caf50;font-weight:600">水果</td><td style="color:#4caf50">Q2</td><td class="num">300</td><td>夷洲</td></tr>
+<tr><td>橘子</td><td style="color:#4caf50;font-weight:600">水果</td><td style="color:#4caf50">Q2</td><td class="num">240</td><td>扬州、徽州、豫章、黔州、桂、大理</td></tr>
+<tr><td>雪花梨</td><td style="color:#4caf50;font-weight:600">水果</td><td style="color:#4caf50">Q2</td><td class="num">220</td><td>燕赵</td></tr>
+<tr><td>猕猴桃</td><td style="color:#9d9d9d;font-weight:600">水果</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>荆州、大理</td></tr>
+<tr><td>菠萝蜜</td><td style="color:#9d9d9d;font-weight:600">水果</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>琼州</td></tr>
+<tr><td>苹果</td><td style="color:#9d9d9d;font-weight:600">水果</td><td style="color:#9d9d9d">Q1</td><td class="num">70</td><td>并州、扬州、徽州、豫章、凉州、桂</td></tr>
+<tr><td>腰果</td><td style="color:#ab47bc;font-weight:600">干货</td><td style="color:#ab47bc">Q4</td><td class="num">500</td><td>西夏</td></tr>
+<tr><td>核桃</td><td style="color:#42a5f5;font-weight:600">干货</td><td style="color:#42a5f5">Q3</td><td class="num">380</td><td>中原、西夏</td></tr>
+<tr><td>花生</td><td style="color:#4caf50;font-weight:600">干货</td><td style="color:#4caf50">Q2</td><td class="num">250</td><td>中原、西夏</td></tr>
+<tr><td>瓜子</td><td style="color:#9d9d9d;font-weight:600">干货</td><td style="color:#9d9d9d">Q1</td><td class="num">130</td><td>中原、西夏</td></tr>
+<tr><td>毛尖茶</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>中原</td></tr>
+<tr><td>贡酒</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>徽州</td></tr>
+<tr><td>米酒</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>荆州</td></tr>
+<tr><td>云雾茶</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>豫章</td></tr>
+<tr><td>山茶</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>蜀</td></tr>
+<tr><td>金酒</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>凉州</td></tr>
+<tr><td>茅苔酒</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>黔州</td></tr>
+<tr><td>葡萄酒</td><td style="color:#ff9800;font-weight:600">饮品</td><td style="color:#ff9800">Q5</td><td class="num">650</td><td>濠江</td></tr>
+<tr><td>大红袍</td><td style="color:#ab47bc;font-weight:600">饮品</td><td style="color:#ab47bc">Q4</td><td class="num">580</td><td>建州</td></tr>
+<tr><td>凤香酒</td><td style="color:#ab47bc;font-weight:600">饮品</td><td style="color:#ab47bc">Q4</td><td class="num">520</td><td>关中</td></tr>
+<tr><td>老窖酒</td><td style="color:#ab47bc;font-weight:600">饮品</td><td style="color:#ab47bc">Q4</td><td class="num">520</td><td>蜀</td></tr>
+<tr><td>小白干</td><td style="color:#42a5f5;font-weight:600">饮品</td><td style="color:#42a5f5">Q3</td><td class="num">390</td><td>燕赵</td></tr>
+<tr><td>清酒</td><td style="color:#42a5f5;font-weight:600">饮品</td><td style="color:#42a5f5">Q3</td><td class="num">390</td><td>并州</td></tr>
+<tr><td>大曲酒</td><td style="color:#42a5f5;font-weight:600">饮品</td><td style="color:#42a5f5">Q3</td><td class="num">390</td><td>扬州</td></tr>
+<tr><td>油茶</td><td style="color:#42a5f5;font-weight:600">饮品</td><td style="color:#42a5f5">Q3</td><td class="num">390</td><td>湘</td></tr>
+<tr><td>特曲酒</td><td style="color:#42a5f5;font-weight:600">饮品</td><td style="color:#42a5f5">Q3</td><td class="num">390</td><td>豫章</td></tr>
+<tr><td>小白酒</td><td style="color:#42a5f5;font-weight:600">饮品</td><td style="color:#42a5f5">Q3</td><td class="num">390</td><td>巴郡</td></tr>
+<tr><td>绿茶</td><td style="color:#42a5f5;font-weight:600">饮品</td><td style="color:#42a5f5">Q3</td><td class="num">390</td><td>凉州</td></tr>
+<tr><td>龙井茶</td><td style="color:#4caf50;font-weight:600">饮品</td><td style="color:#4caf50">Q2</td><td class="num">260</td><td>吴越</td></tr>
+<tr><td>毛峰茶</td><td style="color:#4caf50;font-weight:600">饮品</td><td style="color:#4caf50">Q2</td><td class="num">260</td><td>徽州</td></tr>
+<tr><td>玉露茶</td><td style="color:#4caf50;font-weight:600">饮品</td><td style="color:#4caf50">Q2</td><td class="num">260</td><td>荆州</td></tr>
+<tr><td>六良液酒</td><td style="color:#4caf50;font-weight:600">饮品</td><td style="color:#4caf50">Q2</td><td class="num">260</td><td>蜀</td></tr>
+<tr><td>铁观音</td><td style="color:#4caf50;font-weight:600">饮品</td><td style="color:#4caf50">Q2</td><td class="num">260</td><td>建州</td></tr>
+<tr><td>丝袜奶茶</td><td style="color:#4caf50;font-weight:600">饮品</td><td style="color:#4caf50">Q2</td><td class="num">260</td><td>香江</td></tr>
+<tr><td>烧仙草</td><td style="color:#9d9d9d;font-weight:600">饮品</td><td style="color:#9d9d9d">Q1</td><td class="num">130</td><td>建州</td></tr>
+<tr><td>珍珠奶茶</td><td style="color:#9d9d9d;font-weight:600">饮品</td><td style="color:#9d9d9d">Q1</td><td class="num">120</td><td>夷洲</td></tr>
+<tr><td>凉茶</td><td style="color:#9d9d9d;font-weight:600">饮品</td><td style="color:#9d9d9d">Q1</td><td class="num">70</td><td>燕赵、豫章、黔州</td></tr>
+<tr><td>鹅</td><td style="color:#ff9800;font-weight:600">家禽</td><td style="color:#ff9800">Q5</td><td class="num">1250</td><td>西夏</td></tr>
+<tr><td>羊</td><td style="color:#ff9800;font-weight:600">家禽</td><td style="color:#ff9800">Q5</td><td class="num">1250</td><td>关中、桂</td></tr>
+<tr><td>牛</td><td style="color:#ab47bc;font-weight:600">家禽</td><td style="color:#ab47bc">Q4</td><td class="num">1000</td><td>凉州</td></tr>
+<tr><td>兔</td><td style="color:#42a5f5;font-weight:600">家禽</td><td style="color:#42a5f5">Q3</td><td class="num">750</td><td>关中、蜀、凉州、桂</td></tr>
+<tr><td>鸭</td><td style="color:#4caf50;font-weight:600">家禽</td><td style="color:#4caf50">Q2</td><td class="num">500</td><td>关中、蜀、桂</td></tr>
+<tr><td>鸡</td><td style="color:#9d9d9d;font-weight:600">家禽</td><td style="color:#9d9d9d">Q1</td><td class="num">250</td><td>关中、蜀、桂</td></tr>
+<tr><td>帝王蟹</td><td style="color:#ff9800;font-weight:600">海鲜</td><td style="color:#ff9800">Q5</td><td class="num">850</td><td>粤</td></tr>
+<tr><td>石斑鱼</td><td style="color:#ff9800;font-weight:600">海鲜</td><td style="color:#ff9800">Q5</td><td class="num">750</td><td>夷洲</td></tr>
+<tr><td>河豚</td><td style="color:#ff9800;font-weight:600">海鲜</td><td style="color:#ff9800">Q5</td><td class="num">730</td><td>沪</td></tr>
+<tr><td>海参</td><td style="color:#ab47bc;font-weight:600">海鲜</td><td style="color:#ab47bc">Q4</td><td class="num">580</td><td>津门</td></tr>
+<tr><td>皮皮虾</td><td style="color:#ab47bc;font-weight:600">海鲜</td><td style="color:#ab47bc">Q4</td><td class="num">550</td><td>濠江</td></tr>
+<tr><td>龙虾</td><td style="color:#ab47bc;font-weight:600">海鲜</td><td style="color:#ab47bc">Q4</td><td class="num">550</td><td>夷洲</td></tr>
+<tr><td>鲍鱼</td><td style="color:#42a5f5;font-weight:600">海鲜</td><td style="color:#42a5f5">Q3</td><td class="num">440</td><td>津门</td></tr>
+<tr><td>大黄鱼</td><td style="color:#42a5f5;font-weight:600">海鲜</td><td style="color:#42a5f5">Q3</td><td class="num">440</td><td>建州</td></tr>
+<tr><td>生蚝</td><td style="color:#4caf50;font-weight:600">海鲜</td><td style="color:#4caf50">Q2</td><td class="num">380</td><td>粤</td></tr>
+<tr><td>蟹</td><td style="color:#4caf50;font-weight:600">海鲜</td><td style="color:#4caf50">Q2</td><td class="num">290</td><td>津门、沪、琼州</td></tr>
+<tr><td>海蚌</td><td style="color:#4caf50;font-weight:600">海鲜</td><td style="color:#4caf50">Q2</td><td class="num">290</td><td>建州</td></tr>
+<tr><td>鱼</td><td style="color:#9d9d9d;font-weight:600">海鲜</td><td style="color:#9d9d9d">Q1</td><td class="num">150</td><td>津门、沪、琼州、夷洲</td></tr>
+<tr><td>虾</td><td style="color:#9d9d9d;font-weight:600">海鲜</td><td style="color:#9d9d9d">Q1</td><td class="num">150</td><td>建州</td></tr>
+<tr><td>茯苓</td><td style="color:#ff9800;font-weight:600">药材</td><td style="color:#ff9800">Q5</td><td class="num">950</td><td>湘、大理</td></tr>
+<tr><td>当归</td><td style="color:#ab47bc;font-weight:600">药材</td><td style="color:#ab47bc">Q4</td><td class="num">760</td><td>吴越、荆州</td></tr>
+<tr><td>枸杞</td><td style="color:#42a5f5;font-weight:600">药材</td><td style="color:#42a5f5">Q3</td><td class="num">570</td><td>荆州、西夏、黔州</td></tr>
+<tr><td>黄连</td><td style="color:#42a5f5;font-weight:600">药材</td><td style="color:#42a5f5">Q3</td><td class="num">570</td><td>湘</td></tr>
+<tr><td>覆盆子</td><td style="color:#4caf50;font-weight:600">药材</td><td style="color:#4caf50">Q2</td><td class="num">380</td><td>吴越、黔州、大理</td></tr>
+<tr><td>金银花</td><td style="color:#4caf50;font-weight:600">药材</td><td style="color:#4caf50">Q2</td><td class="num">380</td><td>荆州、凉州</td></tr>
+<tr><td>杜仲</td><td style="color:#4caf50;font-weight:600">药材</td><td style="color:#4caf50">Q2</td><td class="num">380</td><td>湘</td></tr>
+<tr><td>白术</td><td style="color:#9d9d9d;font-weight:600">药材</td><td style="color:#9d9d9d">Q1</td><td class="num">190</td><td>吴越、黔州、大理</td></tr>
+<tr><td>板蓝根</td><td style="color:#9d9d9d;font-weight:600">药材</td><td style="color:#9d9d9d">Q1</td><td class="num">190</td><td>荆州</td></tr>
+<tr><td>陈皮</td><td style="color:#9d9d9d;font-weight:600">药材</td><td style="color:#9d9d9d">Q1</td><td class="num">190</td><td>湘</td></tr>
+<tr><td>景泰蓝</td><td style="color:#ff9800;font-weight:600">工艺品</td><td style="color:#ff9800">Q5</td><td class="num">750</td><td>燕京</td></tr>
+<tr><td>彩塑泥人</td><td style="color:#ff9800;font-weight:600">工艺品</td><td style="color:#ff9800">Q5</td><td class="num">750</td><td>津门</td></tr>
+<tr><td>陶瓷</td><td style="color:#ff9800;font-weight:600">工艺品</td><td style="color:#ff9800">Q5</td><td class="num">750</td><td>燕赵</td></tr>
+<tr><td>鲁绣</td><td style="color:#ff9800;font-weight:600">工艺品</td><td style="color:#ff9800">Q5</td><td class="num">750</td><td>齐鲁</td></tr>
+<tr><td>玉器</td><td style="color:#ab47bc;font-weight:600">工艺品</td><td style="color:#ab47bc">Q4</td><td class="num">600</td><td>燕京</td></tr>
+<tr><td>铁画</td><td style="color:#ab47bc;font-weight:600">工艺品</td><td style="color:#ab47bc">Q4</td><td class="num">600</td><td>徽州</td></tr>
+<tr><td>湘绣</td><td style="color:#ab47bc;font-weight:600">工艺品</td><td style="color:#ab47bc">Q4</td><td class="num">600</td><td>湘</td></tr>
+<tr><td>瓷器</td><td style="color:#ab47bc;font-weight:600">工艺品</td><td style="color:#ab47bc">Q4</td><td class="num">600</td><td>豫章</td></tr>
+<tr><td>粤绣</td><td style="color:#ab47bc;font-weight:600">工艺品</td><td style="color:#ab47bc">Q4</td><td class="num">600</td><td>粤</td></tr>
+<tr><td>青花瓷</td><td style="color:#42a5f5;font-weight:600">工艺品</td><td style="color:#42a5f5">Q3</td><td class="num">450</td><td>燕京</td></tr>
+<tr><td>兵马俑人偶</td><td style="color:#42a5f5;font-weight:600">工艺品</td><td style="color:#42a5f5">Q3</td><td class="num">450</td><td>关中</td></tr>
+<tr><td>德化白瓷</td><td style="color:#42a5f5;font-weight:600">工艺品</td><td style="color:#42a5f5">Q3</td><td class="num">450</td><td>建州</td></tr>
+<tr><td>陶塑</td><td style="color:#42a5f5;font-weight:600">工艺品</td><td style="color:#42a5f5">Q3</td><td class="num">450</td><td>粤</td></tr>
+<tr><td>瓷砖画</td><td style="color:#42a5f5;font-weight:600">工艺品</td><td style="color:#42a5f5">Q3</td><td class="num">450</td><td>濠江</td></tr>
+<tr><td>手工香薰</td><td style="color:#4caf50;font-weight:600">工艺品</td><td style="color:#4caf50">Q2</td><td class="num">320</td><td>濠江</td></tr>
+<tr><td>漆器</td><td style="color:#4caf50;font-weight:600">工艺品</td><td style="color:#4caf50">Q2</td><td class="num">300</td><td>燕京</td></tr>
+<tr><td>木雕</td><td style="color:#9d9d9d;font-weight:600">工艺品</td><td style="color:#9d9d9d">Q1</td><td class="num">150</td><td>燕京</td></tr>
+<tr><td>煤炭</td><td style="color:#ff9800;font-weight:600">特产</td><td style="color:#ff9800">Q5</td><td class="num">850</td><td>并州</td></tr>
+<tr><td>碧螺春茶叶</td><td style="color:#ff9800;font-weight:600">特产</td><td style="color:#ff9800">Q5</td><td class="num">850</td><td>扬州</td></tr>
+<tr><td>花旗参</td><td style="color:#ff9800;font-weight:600">特产</td><td style="color:#ff9800">Q5</td><td class="num">850</td><td>香江</td></tr>
+<tr><td>沉香</td><td style="color:#ff9800;font-weight:600">特产</td><td style="color:#ff9800">Q5</td><td class="num">750</td><td>琼州</td></tr>
+<tr><td>铜人堂药材</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>燕京</td></tr>
+<tr><td>快板</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>津门</td></tr>
+<tr><td>大枣</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>中原</td></tr>
+<tr><td>阿胶</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>齐鲁</td></tr>
+<tr><td>苏绣</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>扬州</td></tr>
+<tr><td>丝绸</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>吴越</td></tr>
+<tr><td>宣纸</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>徽州</td></tr>
+<tr><td>百药</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>大理</td></tr>
+<tr><td>药油</td><td style="color:#42a5f5;font-weight:600">特产</td><td style="color:#42a5f5">Q3</td><td class="num">510</td><td>香江</td></tr>
+<tr><td>榨菜</td><td style="color:#4caf50;font-weight:600">特产</td><td style="color:#4caf50">Q2</td><td class="num">340</td><td>巴郡</td></tr>
+<tr><td>槟榔</td><td style="color:#4caf50;font-weight:600">特产</td><td style="color:#4caf50">Q2</td><td class="num">260</td><td>琼州</td></tr>
+<tr><td>老陈醋</td><td style="color:#4caf50;font-weight:600">特产</td><td style="color:#4caf50">Q2</td><td class="num">210</td><td>并州</td></tr>
+<tr><td>大闸蟹</td><td style="color:#9d9d9d;font-weight:600">特产</td><td style="color:#9d9d9d">Q1</td><td class="num">170</td><td>扬州</td></tr>
+<tr><td>折扇</td><td style="color:#9d9d9d;font-weight:600">特产</td><td style="color:#9d9d9d">Q1</td><td class="num">170</td><td>徽州</td></tr>
+<tr><td>花炮</td><td style="color:#9d9d9d;font-weight:600">特产</td><td style="color:#9d9d9d">Q1</td><td class="num">170</td><td>湘</td></tr>
+<tr><td>火锅底料</td><td style="color:#9d9d9d;font-weight:600">特产</td><td style="color:#9d9d9d">Q1</td><td class="num">170</td><td>巴郡</td></tr>
+<tr><td>虾酱</td><td style="color:#9d9d9d;font-weight:600">特产</td><td style="color:#9d9d9d">Q1</td><td class="num">170</td><td>香江</td></tr>
+<tr><td>炸豆腐</td><td style="color:#ab47bc;font-weight:600">美食（素）</td><td style="color:#ab47bc">Q4</td><td class="num">450</td><td>燕赵</td></tr>
+<tr><td>太谷饼</td><td style="color:#42a5f5;font-weight:600">美食（素）</td><td style="color:#42a5f5">Q3</td><td class="num">340</td><td>并州</td></tr>
+<tr><td>葱油面</td><td style="color:#42a5f5;font-weight:600">美食（素）</td><td style="color:#42a5f5">Q3</td><td class="num">340</td><td>沪</td></tr>
+<tr><td>热干面</td><td style="color:#42a5f5;font-weight:600">美食（素）</td><td style="color:#42a5f5">Q3</td><td class="num">340</td><td>荆州</td></tr>
+<tr><td>螺蛳粉</td><td style="color:#42a5f5;font-weight:600">美食（素）</td><td style="color:#42a5f5">Q3</td><td class="num">340</td><td>桂</td></tr>
+<tr><td>葡式蛋挞</td><td style="color:#42a5f5;font-weight:600">美食（素）</td><td style="color:#42a5f5">Q3</td><td class="num">340</td><td>濠江</td></tr>
+<tr><td>煎饼果子</td><td style="color:#4caf50;font-weight:600">美食（素）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>津门</td></tr>
+<tr><td>甜粽子</td><td style="color:#4caf50;font-weight:600">美食（素）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>燕赵</td></tr>
+<tr><td>咸豆腐脑</td><td style="color:#4caf50;font-weight:600">美食（素）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>并州</td></tr>
+<tr><td>甜豆腐脑</td><td style="color:#4caf50;font-weight:600">美食（素）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>沪</td></tr>
+<tr><td>凉皮</td><td style="color:#4caf50;font-weight:600">美食（素）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>关中</td></tr>
+<tr><td>老婆饼</td><td style="color:#4caf50;font-weight:600">美食（素）</td><td style="color:#4caf50">Q2</td><td class="num">230</td><td>香江</td></tr>
+<tr><td>麻花</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">130</td><td>津门</td></tr>
+<tr><td>素菜包</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">110</td><td>沪</td></tr>
+<tr><td>油泼面</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">110</td><td>关中</td></tr>
+<tr><td>肠粉</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">110</td><td>粤</td></tr>
+<tr><td>蛋卷</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">110</td><td>香江</td></tr>
+<tr><td>杏仁饼</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">110</td><td>濠江</td></tr>
+<tr><td>凉粉</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">90</td><td>燕赵</td></tr>
+<tr><td>刀削面</td><td style="color:#9d9d9d;font-weight:600">美食（素）</td><td style="color:#9d9d9d">Q1</td><td class="num">90</td><td>并州</td></tr></tbody>
+</table>
+
+<script>
+var inp=document.createElement('input');
+inp.placeholder='输入关键字筛选两个表格…';
+inp.style.cssText='width:280px;padding:6px 10px;border:1px solid #ccc;border-radius:4px;margin:14px 0';
+document.body.insertBefore(inp,document.getElementById('t1'));
+inp.oninput=function(){
+  var k=this.value.trim();
+  ['t1','t2'].forEach(function(id){
+    document.querySelectorAll('#'+id+' tbody tr').forEach(function(tr){
+      tr.style.display=(!k||tr.textContent.indexOf(k)>=0)?'':'none';
+    });
+  });
+};
+</script>
+</body>
+</html>
