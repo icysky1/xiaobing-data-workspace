@@ -1,4 +1,4 @@
 {
   "navigationBarTitleText": "神兽图鉴",
-  "usingComponents": { "ad-banner": "/components/ad-banner/ad-banner" }
+  "usingComponents": { "ad-banner": "../../components/ad-banner/ad-banner" }
 }

@@ -1,4 +1,4 @@
 {
   "navigationBarTitleText": "小兵集中营",
-  "usingComponents": { "ad-banner": "/components/ad-banner/ad-banner" }
+  "usingComponents": { "ad-banner": "../../components/ad-banner/ad-banner" }
 }

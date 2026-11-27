@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "英雄详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "ad-banner": "../../components/ad-banner/ad-banner"
+  }
 }
